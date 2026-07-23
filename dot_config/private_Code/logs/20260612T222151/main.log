@@ -1,0 +1,6 @@
+2026-06-12 22:21:51.388 [info] StorageMainService: creating application shared storage
+2026-06-12 22:21:51.516 [info] [shared storage] Creating shared storage database at '/home/brozi/.vscode-shared/sharedStorage/state.vscdb' (wasCreated: false)
+2026-06-12 22:21:51.516 [info] [shared storage] Initializing fallback application storage (path: /home/brozi/.config/Code/User/globalStorage/state.vscdb)
+2026-06-12 22:21:51.541 [info] [shared storage] Fallback application storage initialized with 77 items
+2026-06-12 22:21:51.544 [info] update#setState idle
+2026-06-12 22:21:57.271 [info] Extension host with pid 525815 exited with code: 0, signal: unknown.

@@ -1,0 +1,47 @@
+starshgip
+starship
+chsh -s $(which bash)
+echo $0
+apt install plank
+curl -fsSL christitus.com/linux | sh
+ls
+starship
+starship
+iotop
+sudo iotop -ao
+curl -fsSL christitus.com/linux | sh
+apt install iotop
+sudo iotop -ao
+btop
+btop
+s
+s
+vim .zshrc
+vim .zshrc
+exit
+vim .zshrc
+h
+h grep
+h siema
+starshgip
+starship
+starship config
+bash
+zsh
+: 1780437870:33;vim .zshrc
+: 1780437935:0;source ~/.zshrc
+: 1780437947:0;da
+: 1780438218:0;source ~/.zshrc
+: 1780438296:0;where zshg
+: 1780438297:0;where zsh
+: 1780438303:0;where bash
+: 1780438326:0;which zsh
+: 1780438329:0;which bash
+: 1780438343:0;echo $0
+: 1780438363:0;chsh -s $(which zsh)
+: 1780438385:0;kitty
+: 1780438400:0;kitty -help
+: 1780438402:0;kitty -h
+zsh
+echo $0
+echo $ZDOTDIR

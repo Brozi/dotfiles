@@ -1,0 +1,18 @@
+# This is Git's per-user configuration file.
+[user]
+	email = jasiubar@gmail.com
+	name = BroziLinux
+# Please adapt and uncomment the following lines:
+#	name = Brozi
+#	email = brozi@brozi-desktop.(none)
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	untrackedCache = true
+	fsmonitor = true
