@@ -1,0 +1,12 @@
+terminal_emulator = "kitty"
+
+[laptop]
+    dpi = 120
+    rofi_font_size = 14
+    rofi_font_size_alt = 16
+
+
+[desktop]
+    dpi = 96
+    rofi_font_size = 10
+    rofi_font_size_alt = 12
