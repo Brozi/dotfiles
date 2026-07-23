@@ -1,0 +1,21 @@
+new_tab System Managment
+#Monitoring terminal setup
+layout tall
+#Launch cpu monitoring
+launch btop -p 1
+#Launch gpu monitoring
+launch nvtop
+#Launch memory monitoring
+launch btop -p 2
+#Launch net monitoring
+launch btop -p 4
+#Process managment tab
+new_tab Process Managment
+layout tall
+launch btop -p 3
+launch btop -p 2
+launch btop -p 1
+#File managment setup
+new_tab Disk Cleanup
+cd /
+launch ncdu
