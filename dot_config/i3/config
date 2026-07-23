@@ -47,7 +47,7 @@ exec_always --no-startup-id ~/.config/picom/scripts/launch.sh
 # exec --no-startup-id nm-applet
 
 # automatically configure multimonitor setup
-exec_always --no-startup-id ~/.screenlayout/monitor.sh
+exec_always --no-startup-id ~/.config/scripts/screenlayout/monitor.sh
 
 # restore the wallpaper
 exec --no-startup-id nitrogen --restore
