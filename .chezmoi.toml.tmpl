@@ -1,0 +1,15 @@
+{{- $email := promptStringOnce . "email" "What is your git email address" -}}
+{{- $machineType := promptStringOnce . "machineType" "Is this a (w)ork or (p)ersonal machine" -}}
+
+[data]
+    email = {{ $email | quote }}
+    machineType = {{ $machineType | quote }}
+
+[merge]
+    command = "nvim"
+    args = [
+        "-d", 
+        "{{ "{{" }} .Destination {{ "}}" }}", 
+        "{{ "{{" }} .Source {{ "}}" }}", 
+        "{{ "{{" }} .Target {{ "}}" }}"
+    ]
