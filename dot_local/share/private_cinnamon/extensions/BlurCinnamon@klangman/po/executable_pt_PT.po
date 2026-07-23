@@ -1,0 +1,1411 @@
+# BLUR CINNAMON
+# This file is put in the public domain.
+# klangman, 2025
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BlurCinnamon@klangman 2.5.2\n"
+"Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-"
+"extensions/issues\n"
+"POT-Creation-Date: 2026-07-03 10:34-0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: André Silva\n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. 6.0/extension.js:2819 6.0/extension.js:2822 6.0/extension.js:2932
+msgid "Default window settings"
+msgstr "Opções padrão para janelas"
+
+#. 6.0/extension.js:3080
+msgid "Error"
+msgstr "Erro"
+
+#. 6.0/extension.js:3081
+msgid ""
+"Unable to determine the application or the WM_CLASS of the previously "
+"focused window, therefore Blur Cinnamon effects can not be applied to that "
+"window"
+msgstr ""
+"Não foi possível determinar a aplicação ou a WM_CLASS da janela em foco mais "
+"recente e, por esse motivo, os efeitos do Blur Cinnamon não podem ser "
+"aplicados a essa janela"
+
+#. 6.0/extension.js:3963
+msgid "Welcome to Blur Cinnamon"
+msgstr "Bem-vindo ao Blur Cinnamon"
+
+#. 6.0/extension.js:3964
+msgid ""
+"Hope you are enjoying your new Panel, Expo, Overview and Alt-Tab effects.\n"
+"\n"
+"Open the Blur Cinnamon Settings to enable additional effects on several "
+"other desktop elements like menus, notifications and windows, or disable "
+"effects on components that were enabled by default. You can also make "
+"changes to the effect properties like blur intensity, color saturation and "
+"dimming."
+msgstr ""
+"Espero que goste dos efeitos de Painel, Expo, Vista Global e Alt-Tab.\n"
+"\n"
+"Abra as definições do Blur Cinnamon para ativar efeitos adicionais noutros "
+"elementos de ambiente de trabalho como menus, notificações e janelas, ou "
+"desative efeitos em componentes para as quais os efeitos foram ativados por "
+"omissão. Também pode fazer alterações às propriedades dos efeitos como a "
+"intensidade de desfoque, saturação da cor ou escurecimento."
+
+#. 6.0/extension.js:3968
+msgid "Open Blur Cinnamon Settings"
+msgstr "Abrir definições do Blur Cinnamon"
+
+#. 6.0/extension.js:4058
+msgid "Testing Blur Cinnamon Notification Effects"
+msgstr "Teste dos Efeitos de Notificação do Blur Cinnamon"
+
+#. 6.0/extension.js:4059
+msgid ""
+"This is how notifications will appear when using the current Blur Cinnamon "
+"Notification Popup effects.\n"
+"\n"
+"Making further changes to the notification effect settings will "
+"automatically apply to this notification message."
+msgstr ""
+"É assim que as notificações irão aparecer com a configuração atual dos "
+"efeitos de Notificação do Blur Cinnamon.\n"
+"\n"
+"Alterações à configuração das notificações irão refletir-se automaticamente "
+"nesta mensagem de notificação."
+
+#. metadata.json->name
+msgid "Blur Cinnamon"
+msgstr "Blur Cinnamon"
+
+#. metadata.json->description
+msgid ""
+"Allows you to blur, colorize, desaturate and adjust the dimming of several "
+"Cinnamon Desktop components"
+msgstr ""
+"Permite desfocar, colorir, dessaturar e ajustar a opacidade de vários "
+"componentes de ambiente de trabalho do Cinnamon"
+
+#. 6.0->settings-schema.json->general-page->title
+msgid "General setup"
+msgstr "Geral"
+
+#. 6.0->settings-schema.json->generic-settings-page->title
+#. 6.0->settings-schema.json->generic-effect-settings->title
+msgid "Generic effect settings"
+msgstr "Definições genéricas de efeitos"
+
+#. 6.0->settings-schema.json->component-setting-page->title
+msgid "Component specific settings"
+msgstr "Definições de componentes"
+
+#. 6.0->settings-schema.json->about-page->title
+msgid "About"
+msgstr "Acerca"
+
+#. 6.0->settings-schema.json->general-settings->title
+msgid "Cinnamon desktop components where effects will be applied"
+msgstr "Componentes do Cinammon onde serão aplicados os efeitos"
+
+#. 6.0->settings-schema.json->monte-carlo-settings->title
+msgid "Monte Carlo specific settings"
+msgstr "Definições específicas Monte Carlo"
+
+#. 6.0->settings-schema.json->component-selector-section->title
+msgid "Component Selector"
+msgstr "Seleção de Componentes"
+
+#. 6.0->settings-schema.json->component-specific-section->title
+msgid "Component Specific Settings"
+msgstr "Definições Específicas do Componente"
+
+#. 6.0->settings-schema.json->about-section->title
+msgid "About Blur Cinnamon"
+msgstr "Sobre o Blur Cinnamon"
+
+#. 6.0->settings-schema.json->appswitcher-warning->description
+msgid ""
+"Note: The Alt-Tab effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos do alternador Alt-Tab estão atualmente desativados no "
+"separador \"Geral\"."
+
+#. 6.0->settings-schema.json->desklets-warning->description
+msgid ""
+"Note: The Desklet effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos das Mini-Aplicações estão atualmente desativados no "
+"separador \"Geral\"."
+
+#. 6.0->settings-schema.json->desktop-warning->description
+msgid ""
+"Note: The Desktop effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos do Fundo do ambiente de trabalho estão atualmente "
+"desativados no separador \"Geral\"."
+
+#. 6.0->settings-schema.json->expo-warning->description
+msgid ""
+"Note: The Expo effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos do Expo estão atualmente desativados no separador \"Geral\"."
+
+#. 6.0->settings-schema.json->popup-warning->description
+msgid ""
+"Note: The Menu effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos dos Menus estão atualmente desativados no separador "
+"\"Geral\"."
+
+#. 6.0->settings-schema.json->notification-warning->description
+msgid ""
+"Note: The Notification effects are currently disabled under the \"General "
+"setup\" tab."
+msgstr ""
+"Nota: Os efeitos das Notificações estão atualmente desativados no separador "
+"\"Geral\"."
+
+#. 6.0->settings-schema.json->osd-warning->description
+msgid ""
+"Note: The On-Screen-Display effects are currently disabled under the "
+"\"General setup\" tab."
+msgstr ""
+"Nota: Os efeitos das Janelas de ecrã (OSD) estão atualmente desativados no "
+"separador \"Geral\"."
+
+#. 6.0->settings-schema.json->overview-warning->description
+msgid ""
+"Note: The Overview effects are currently disabled under the \"General "
+"setup\" tab."
+msgstr ""
+"Nota: Os efeitos da Vista Global estão atualmente desativados no separador "
+"\"Geral\"."
+
+#. 6.0->settings-schema.json->panel-warning->description
+msgid ""
+"Note: The Panel effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos dos Painéis estão atualmente desativados no separador "
+"\"Geral\"."
+
+#. 6.0->settings-schema.json->tooltips-warning->description
+msgid ""
+"Note: The Tooltip effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos da Dicas de painel estão atualmente desativados no "
+"separador \"Geral\"."
+
+#. 6.0->settings-schema.json->windows-warning->description
+msgid ""
+"Note: The Window effects are currently disabled under the \"General setup\" "
+"tab."
+msgstr ""
+"Nota: Os efeitos das Janelas de aplicações estão atualmente desativados no "
+"separador \"Geral\"."
+
+#. 6.0->settings-schema.json->desklets-label->description
+msgid ""
+"<b>Note:</b> You must configure your Desklets to be transparent! (see "
+"tooltip)"
+msgstr ""
+"<b>Nota:</b> É necessário configurar as Mini-Aplicações para serem "
+"transparentes! (leia a dica)"
+
+#. 6.0->settings-schema.json->desklets-label->tooltip
+msgid ""
+"In order for Blur Cinnamon Desklet effects to be visible, a Desklets "
+"background must be transparent. This allows the blur effect to be visible "
+"below the Desklet. Most Desklets can be configured to have transparent "
+"backgrounds. On the Desktop, right-click on a Desklet, select the "
+"\"Configure...\" menu item to open a Desklet's configuration window."
+msgstr ""
+"Para que os efeitos do Blur Cinnamon sejam visíveis nas Mini-Aplicações, "
+"estas devem ter o fundo definido como transparente. Esta configuração "
+"permite que o efeito de desfoque seja visível por baixo da Mini-Aplicação. A "
+"maioria das Mini-Aplicações suporta fundos transparentes. No Ambiente de "
+"trabalho, clique com o botão direito do rato numa Mini-Aplicação e selecione "
+"a opção \"Configurar...\" para abrir as respetivas definições."
+
+#. 6.0->settings-schema.json->windows-label->description
+msgid ""
+"<b>Note:</b> Read tooltip for information about the \"Default window "
+"settings\""
+msgstr ""
+"<b>Nota:</b> Leia a dica para obter informação sobre as \"Opções padrão para "
+"janelas\""
+
+#. 6.0->settings-schema.json->windows-label->tooltip
+msgid ""
+"If the special \"Default window settings\" table entry is enabled then all "
+"windows will have effects applied. If it is disabled then only the "
+"applications defined in the table will have effects applied. If the "
+"\"Enabled\" option is unchecked for a particular application then effects "
+"will be disabled even if the \"Default window settings\" row is enabled."
+msgstr ""
+"Se a entrada especial \"Opções padrão para janelas\" estiver ativada, serão "
+"aplicados efeitos para todas as janelas. Se a opção estiver desativada, "
+"então apenas as janelas das aplicações definidas na tabela irão ter efeitos. "
+"Se a opção \"Ativado\" estiver desmarcada para uma aplicação em particular, "
+"então os efeitos serão desativados para as janelas dessa aplicação mesmo que "
+"a definição \"Opções padrão para janelas\" esteja ativa."
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Alt-Tab"
+msgstr "Alt-Tab"
+
+#. 6.0->settings-schema.json->component-selector->options
+#. 6.0->settings-schema.json->enable-desklet-effects->description
+msgid "Desklets"
+msgstr "Mini-Aplicações"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Desktop"
+msgstr "Ambiente de trabalho"
+
+#. 6.0->settings-schema.json->component-selector->options
+#. 6.0->settings-schema.json->enable-expo-effects->description
+msgid "Expo"
+msgstr "Expo"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Menus"
+msgstr "Menus"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Notifications"
+msgstr "Notificações"
+
+#. 6.0->settings-schema.json->component-selector->options
+#. 6.0->settings-schema.json->enable-overview-effects->description
+msgid "Overview"
+msgstr "Vista Global"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Panels"
+msgstr "Painéis"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Tooltips"
+msgstr "Dicas"
+
+#. 6.0->settings-schema.json->component-selector->options
+msgid "Windows"
+msgstr "Janelas"
+
+#. 6.0->settings-schema.json->component-selector->description
+msgid "Show settings for component:"
+msgstr "Mostrar definições para o componente:"
+
+#. 6.0->settings-schema.json->about-text->description
+msgid ""
+"\n"
+"<b>Bringing your style into focus</b>\n"
+"Version: ext-version\n"
+"\n"
+"Developed by: Kevin Langman\n"
+"<a href=\"https://github.com/klangman/BlurCinnamon\">Github</a> / <a "
+"href=\"https://github.com/klangman/BlurCinnamon/issues/new\">Report an "
+"issue</a> / <a href=\"https://cinnamon-spices.linuxmint.com/extensions/"
+"view/104\">Website</a>\n"
+"\n"
+"The rounded corners, Gaussian and Monte Carlo effects\n"
+"are based on code by aunetx (Blur-my-shell)\n"
+"<a href=\"https://github.com/aunetx/blur-my-shell\">Github</a> / <a "
+"href=\"https://ko-fi.com/aunetx\">Ko-fi</a>\n"
+"\n"
+"The Overview effect is partially based on the BlurOverview extension by "
+"nailfarmer"
+msgstr ""
+"\n"
+"<b>Coloca o seu estilo em foco</b>\n"
+"Versão: ext-version\n"
+"\n"
+"Desenvolvido por: Kevin Langman\n"
+"<a href=\"https://github.com/klangman/BlurCinnamon\">Github</a> / <a "
+"href=\"https://github.com/klangman/BlurCinnamon/issues/new\">Reportar um "
+"problema</a> / <a href=\"https://cinnamon-spices.linuxmint.com/extensions/"
+"view/104\">Website</a>\n"
+"\n"
+"Os efeitos de cantos arredondados, Guassiano e Monte Carlo\n"
+"têm por base código desenvolvido por aunetx (Blur-my-shell)\n"
+"<a href=\"https://github.com/aunetx/blur-my-shell\">Github</a> / <a "
+"href=\"https://ko-fi.com/aunetx\">Ko-fi</a>\n"
+"\n"
+"O efeito da Vista Global foi desenvolvido em parte com base na extensão "
+"BlurOverview por nailfarmer"
+
+#. 6.0->settings-schema.json->enable-overview-effects->tooltip
+msgid ""
+"Apply effects to the Overview (default: Ctrl+Alt+Down / 'Show all windows` "
+"hot corner)"
+msgstr ""
+"Aplicar efeitos à Vista Global (por omissão: Ctrl+Alt+Down / 'Mostrar todas "
+"as janelas` em Locais de ativação)"
+
+#. 6.0->settings-schema.json->enable-expo-effects->tooltip
+msgid ""
+"Apply effects to the Expo (default: Ctrl+Alt+Up / 'Show all workspaces` hot "
+"corner)"
+msgstr ""
+"Aplicar efeitos ao Expo (por omissão: Ctrl+Alt+Up / 'Mostrar todas as áreas "
+"de trabalho` em Locais de ativação)"
+
+#. 6.0->settings-schema.json->enable-panels-effects->description
+msgid "Panels  (Please read tooltip)"
+msgstr "Painéis  (Por favor leia a dica)"
+
+#. 6.0->settings-schema.json->enable-panels-effects->tooltip
+msgid ""
+"Apply effects to the Panels. This option should work well with most dark "
+"desktop themes but light themes could also be made to work with some "
+"creative use of the dimming color settings and an appropriate background "
+"image. It overrides some themes settings to achieve a (semi-)transparent "
+"panel so that the blurred background is visible."
+msgstr ""
+"Aplicar efeitos aos Painéis. Esta opção deverá funcionar bem com a maioria "
+"dos temas escuros mas temas claros também poderão funcionar ao dar um uso "
+"criativo às definições de cor de escurecimento e uma imagem de fundo "
+"apropriada. A opção sobrepõe-se a algumas definições do tema para atingir um "
+"painel (semi-)transparente de forma a que o fundo desfocado seja visível."
+
+#. 6.0->settings-schema.json->enable-popup-effects->description
+msgid "Popup Menus  (Please read tooltip)"
+msgstr "Menus  (Por favor leia a dica)"
+
+#. 6.0->settings-schema.json->enable-popup-effects->tooltip
+msgid ""
+"Apply effects to panel popup menus. This option is intended for the Cinnamon "
+"(6.4) and Mint-Y dark desktop themes but might work well with other themes. "
+"Light themes are unlikely to give good results but might be made to work "
+"with some creative use of the dimming color settings and an appropriate "
+"background image. It overrides some theme settings to achieve a "
+"(semi-)transparent menu so that the blurred background is visible."
+msgstr ""
+"Aplicar efeitos aos menus de popup do painel. Esta opção é indicada para o "
+"Cinnamon (6.4) e para o tema de ambiente de trabalho Mint-Y-Dark mas poderá "
+"funcionar bem com outros temas. Temas claros poderão não produzir resultados "
+"satisfatórios mas poderá funcionar com uso criativo dos efeitos de "
+"escurecimento e uma imagem de fundo apropriada. Esta opção sobrepõe-se a "
+"algumas definições do tema atual de forma a criar um efeito "
+"(semi-)transparente e tornar a imagem de fundo desfocada."
+
+#. 6.0->settings-schema.json->enable-desktop-effects->description
+msgid "Desktop background"
+msgstr "Fundo do ambiente de trabalho"
+
+#. 6.0->settings-schema.json->enable-desktop-effects->tooltip
+msgid ""
+"Apply effects to desktop background image. Desktop effects can be applies "
+"always or just when a window has the focus."
+msgstr ""
+"Aplicar efeitos ao fundo do ambiente de trabalho. Os efeitos podem ser "
+"aplicados sempre ou apenas quando uma janela está em foco."
+
+#. 6.0->settings-schema.json->enable-notification-effects->description
+msgid "Notification popups (Please read tooltip)"
+msgstr "Notificações (Por favor leia a dica)"
+
+#. 6.0->settings-schema.json->enable-notification-effects->tooltip
+msgid ""
+"Apply effects to the notification popups. This option has been tested with "
+"the Cinnamon (6.4) and Mint-Y dark desktop themes but might work will with "
+"other themes. It overrides some theme settings to achieve a "
+"(semi-)transparent Notification popup window so that the blurred background "
+"is visible."
+msgstr ""
+"Aplicar efeitos aos popups de notificação. Esta opção foi testada com o "
+"Cinnamon (6.4) e a versão escura do tema Mint-Y mas poderá funcionar bem com "
+"outros temas. Sobrepõe-se a algumas definições de temas de forma a atingir "
+"uma notificação (semi-)transparente para que o fundo desfocado seja visível."
+
+#. 6.0->settings-schema.json->enable-appswitcher-effects->description
+msgid "Alt-Tab application switcher"
+msgstr "Alternador de aplicações Alt-Tab"
+
+#. 6.0->settings-schema.json->enable-appswitcher-effects->tooltip
+msgid "Apply effects to the Alt-Tab application switcher background"
+msgstr "Aplicar efeitos ao fundo do alternador de aplicações Alt-Tab"
+
+#. 6.0->settings-schema.json->enable-tooltips-effects->description
+msgid "Panel tooltips (Please read tooltip)"
+msgstr "Dicas de painel (Por favor leia a dica)"
+
+#. 6.0->settings-schema.json->enable-tooltips-effects->tooltip
+msgid ""
+"Apply effects to the panel tooltip backgrounds. It overrides some theme "
+"settings to achieve a (semi-)transparent tooltip so that the blurred "
+"background is visible."
+msgstr ""
+"Aplicar efeitos às dicas do painel. A opção sobrepõe-se a algumas definições "
+"do tema para atingir uma dica de painel (semi-)transparente de forma a que o "
+"fundo desfocado seja visível."
+
+#. 6.0->settings-schema.json->enable-window-effects->description
+msgid "Application windows (Please read tooltip)"
+msgstr "Janelas de aplicações (Por favor leia a dica)"
+
+#. 6.0->settings-schema.json->enable-window-effects->tooltip
+msgid ""
+"Allow application window background effects by adding an effect actor below "
+"all existing graphical elements of affected windows. This means the effects "
+"will NOT be visible unless the application is setup to be transparent or the "
+"\"Opacity\" setting for the window is less than 100%. The table under the "
+"\"Windows\" component settings is used to determine which applications (if "
+"any) will have effects applied to its windows, enabling this option alone "
+"will not add effects to any windows."
+msgstr ""
+"Permitir efeitos no fundo das janelas ao adicionar um elemento gráfico por "
+"baixo de todos os outros já existentes na janelas afetadas. Isto significa "
+"que os efeitos NÃO irão ser visíveis até que a aplicação seja configurada "
+"para ser transparente ou o valor \"Opacidade\" para a janela seja inferior a "
+"100%. A tabela na configuração do componente \"Janelas\" determina que "
+"aplicações (se alguma) terão efeitos aplicados às suas janelas, portanto "
+"ativar esta opção por si só não irá adicionar quaisquer efeitos às janelas."
+
+#. 6.0->settings-schema.json->enable-desklet-effects->tooltip
+msgid ""
+"Apply effects to Desklet backgrounds. Desklets must be setup to be "
+"transparent in order for the Blur Cinnamon effects to be visible."
+msgstr ""
+"Aplicar efeitos ao fundos das Mini-Aplicações. As Mini-Aplicações devem ser "
+"configuradas pare terem fundo transparente para que os efeitos do Blur "
+"Cinnamon sejam visíveis."
+
+#. 6.0->settings-schema.json->enable-osd-effects->description
+msgid "On-screen display"
+msgstr "Janelas de ecrã (OSD)"
+
+#. 6.0->settings-schema.json->enable-osd-effects->tooltip
+msgid ""
+"Apply effects to the on-screen display (OSD) background. The OSD is used "
+"when changing volumn using the media keys, changing the screen brightness, "
+"and switching workspaces."
+msgstr ""
+"Aplicar efeitos ao fundo das janelas de ecrã (OSD). Estas janelas aparecem "
+"quando altera o volume usando atalhos de teclado, altera o brilho do ecrã, e "
+"quando alterna entre espaços de trabalho."
+
+#. 6.0->settings-schema.json->focused-window-backlight->description
+msgid "Focused window backlight effect"
+msgstr "Efeito de retroiluminação para a janela em foco"
+
+#. 6.0->settings-schema.json->focused-window-backlight->tooltip
+msgid ""
+"Apply a background image based backlight effect to the currently focused "
+"window. The effect spills over the focused windows borders making the window "
+"appear to glow around the edges. If the focused window is transparent, this "
+"effect will also show a blurred background image behind the window."
+msgstr ""
+"Aplica um efeito de retroiluminação com cores do fundo do ambiente de "
+"trabalho à janela atualmente em foco. Este efeito é aplicado às bordas da "
+"janela por forma a iluminar os seus limites. Se a janela em foco for "
+"transparente, este efeito também irá mostrar uma imagem embaciada baseada no "
+"fundo de ambiente de trabalho por baixo da janela."
+
+#. 6.0->settings-schema.json->allow-transparent-color-panels->description
+msgid "Override some of the panels theme settings (recommended)"
+msgstr "Sobrepor algumas definições de temas para os painéis (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-panels->tooltip
+msgid ""
+"Allow this extension to modify the panels transparency and background color "
+"settings. If this is disabled the extension will only apply a blur "
+"background under the panels. This setting should only be disabled when the "
+"theme already uses transparent panels and you want the themes setting to "
+"apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo dos painéis. Se este valor estiver desativado, a extensão apenas irá "
+"aplicar um efeito de desfoque ao fundo por baixo dos painéis. Este valor "
+"deve apenas ser desativado quando o tema já usa transparência nos painéis e "
+"pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->allow-transparent-color-popup->description
+msgid "Override some of the popup menu theme settings (recommended)"
+msgstr "Sobrepor algumas definições de temas para os menus (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-popup->tooltip
+msgid ""
+"Allow this extension to modify the popup Menu transparency and background "
+"color settings. If this is disabled the extension will only apply a blur "
+"background under the popup menus. This setting should only be disabled when "
+"the theme already uses transparent popup menus and you want the themes "
+"setting to apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo dos menus. Se este valor estiver desativado, a extensão apenas irá "
+"aplicar um efeito de desfoque ao fundo por baixo dos menus. Este valor deve "
+"apenas ser desativado quando o tema já usa transparência nos menus e "
+"pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->allow-transparent-color-
+#. notifications->description
+msgid "Override some of the notification theme settings (recommended)"
+msgstr ""
+"Sobrepor algumas definições de temas para as notificações (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-notifications->tooltip
+msgid ""
+"Allow this extension to modify the notification transparency and background "
+"color settings. If this is disabled the extension will only apply a blur "
+"background under the notifications. This setting should only be disabled "
+"when the theme already uses transparent notifications and you want the "
+"themes setting to apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo da notificação. Se este valor estiver desativado, a extensão apenas "
+"irá aplicar um efeito de desfoque ao fundo por baixo das notificações. Este "
+"valor deve apenas ser desativado quando o tema já usa transparência nas "
+"notificações e pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->allow-transparent-color-tooltips->description
+msgid "Override some of the tooltip theme settings (recommended)"
+msgstr "Sobrepor algumas definições de temas para as dicas (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-tooltips->tooltip
+msgid ""
+"Allow this extension to modify the tooltip transparency and background color "
+"settings. If this is disabled the extension will only apply a blur "
+"background under the tooltips. This setting should only be disabled when the "
+"theme already uses transparent tooltips and you want the themes setting to "
+"apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo das dicas. Se este valor estiver desativado, a extensão apenas irá "
+"aplicar um efeito de desfoque ao fundo por baixo das dicas. Este valor deve "
+"apenas ser desativado quando o tema já usa transparência nas dicas e "
+"pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->allow-transparent-color-switcher->description
+msgid ""
+"Override some of the standard Alt-Tab switcher theme settings (recommended)"
+msgstr ""
+"Sobrepor algumas definições de temas para os alternadores de aplicação Alt-"
+"Tab padrão (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-switcher->tooltip
+msgid ""
+"Allow this extension to modify the standard Alt-Tab switcher transparency "
+"and background color settings. If this is disabled the extension will only "
+"apply a blur background under the switcher. This setting should only be "
+"disabled when the theme already uses a transparent switcher and you want the "
+"themes setting to apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo dos alternadores de aplicação Alt-Tab padrão. Se este valor estiver "
+"desativado, a extensão apenas irá aplicar um efeito de desfoque ao fundo por "
+"baixo dos alternadores de aplicação Alt-Tab padrão. Este valor deve apenas "
+"ser desativado quando o tema já usa transparência nos alternadores de "
+"aplicação Alt-Tab padrão e pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->allow-transparent-color-osd->description
+msgid "Override some of the OSD theme settings (recommended)"
+msgstr "Sobrepor algumas definições de temas para as janelas OSD (recomendado)"
+
+#. 6.0->settings-schema.json->allow-transparent-color-osd->tooltip
+msgid ""
+"Allow this extension to modify the OSD transparency and background color "
+"settings. If this is disabled the extension will only apply a blur "
+"background under the OSD. This setting should only be disabled when the "
+"theme already uses a transparent OSD and you want the themes setting to "
+"apply."
+msgstr ""
+"Permite que esta extensão altere as propriedades de transparência e cor de "
+"fundo das janelas de ecrã OSD. Se este valor estiver desativado, a extensão "
+"apenas irá aplicar um efeito de desfoque ao fundo por baixo das janelas OSD. "
+"Este valor deve apenas ser desativado quando o tema já usa transparência nas "
+"janelas OSD e pretende que o tema controle o seu efeito."
+
+#. 6.0->settings-schema.json->enable-overview-override->description
+msgid "Override the generic effect settings for the Overview"
+msgstr "Personalizar as definições genéricas de efeitos para a Vista Global"
+
+#. 6.0->settings-schema.json->enable-overview-override->tooltip
+#. 6.0->settings-schema.json->enable-expo-override->tooltip
+#. 6.0->settings-schema.json->enable-panels-override->tooltip
+#. 6.0->settings-schema.json->enable-popup-override->tooltip
+#. 6.0->settings-schema.json->enable-desktop-override->tooltip
+#. 6.0->settings-schema.json->enable-notification-override->tooltip
+#. 6.0->settings-schema.json->enable-appswitcher-override->tooltip
+#. 6.0->settings-schema.json->enable-tooltips-override->tooltip
+#. 6.0->settings-schema.json->enable-desklets-override->tooltip
+#. 6.0->settings-schema.json->enable-osd-override->tooltip
+msgid ""
+"Override the settings found on the \"Generic effect settings\" tab with "
+"unique settings for this cinnamon component."
+msgstr ""
+"Sobrepor as definições do separador \"Definições genéricas de efeitos\" com "
+"valores personalizados para este componente do Cinnamon."
+
+#. 6.0->settings-schema.json->enable-expo-override->description
+msgid "Override the generic effect settings for the Expo"
+msgstr "Personalizar as definições genéricas de efeitos para o Expo"
+
+#. 6.0->settings-schema.json->enable-panels-override->description
+msgid "Override the generic effect settings for the Panels"
+msgstr "Sobrepor as definições genéricas de efeitos para os Painéis"
+
+#. 6.0->settings-schema.json->enable-popup-override->description
+msgid "Override the generic effect settings for popup menus"
+msgstr "Personalizar as definições genéricas de efeitos para os menus"
+
+#. 6.0->settings-schema.json->enable-desktop-override->description
+msgid "Override the generic effect settings for the desktop background"
+msgstr ""
+"Personalizar as definições genéricas de efeitos para o fundo do ambiente de "
+"trabalho"
+
+#. 6.0->settings-schema.json->enable-notification-override->description
+msgid "Override the generic effect settings for notification popups"
+msgstr "Personalizar as definições genéricas de efeitos para as notificações"
+
+#. 6.0->settings-schema.json->enable-appswitcher-override->description
+msgid "Override the generic effect settings for the Alt-Tab app switcher"
+msgstr ""
+"Personalizar as definições genéricas de efeitos para o alternador de "
+"aplicações Alt-Tab"
+
+#. 6.0->settings-schema.json->enable-tooltips-override->description
+msgid "Override the generic effect settings for panel tooltips"
+msgstr ""
+"Personalizar as definições genéricas de efeitos para as dicas de painel"
+
+#. 6.0->settings-schema.json->enable-desklets-override->description
+msgid "Override the generic effect settings for Desklets"
+msgstr ""
+"Personalizar as definições genéricas de efeitos para as Mini-Aplicações"
+
+#. 6.0->settings-schema.json->enable-osd-override->description
+msgid "Override the generic effect settings for OSD windows"
+msgstr "Personalizar as definições genéricas de efeitos para as janelas OSD"
+
+#. 6.0->settings-schema.json->enable-desklets-unique-settings->description
+msgid "Enable advanced options to apply unique settings for each Desklet"
+msgstr ""
+"Ativar opções avançadas para personalizar as definições por cada Mini-"
+"Aplicação"
+
+#. 6.0->settings-schema.json->enable-desklets-unique-settings->tooltip
+msgid ""
+"With this option enabled each Desklet can use different settings or you can "
+"disable effects completely for some Desklets."
+msgstr ""
+"Com esta opção ativada cada Mini-Aplicação pode usar definições "
+"personalizadas ou impedir a aplicação de efeitos para algumas Mini-"
+"Aplicações."
+
+#. 6.0->settings-schema.json->window-settings-button->description
+msgid "Open Alt-Tab Cinnamon settings"
+msgstr "Abrir definições Alt-Tab do Cinnamon"
+
+#. 6.0->settings-schema.json->enable-panel-unique-settings->description
+msgid "Enable advanced options to apply unique settings for each panel"
+msgstr ""
+"Ativar opções avançadas para personalizar as definições por cada painel"
+
+#. 6.0->settings-schema.json->enable-panel-unique-settings->tooltip
+msgid ""
+"With this option enabled each panel can use different settings or you can "
+"disable effects completely for some panels."
+msgstr ""
+"Com esta opção ativa cada painel pode usar definições individuais ou pode "
+"desativar todos os efeitos para alguns painéis."
+
+#. 6.0->settings-schema.json->panel-unique-settings->description
+msgid "Panel specific settings"
+msgstr "Definições específicas para Painel"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Enabled"
+msgstr "Ativado"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+msgid "Panel"
+msgstr "Painel"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+msgid "Monitor"
+msgstr "Monitor"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Custom"
+msgstr "Personalizar"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Dim"
+msgstr "Escurecer"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Color"
+msgstr "Cor"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Background"
+msgstr "Fundo"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Intensity"
+msgstr "Intensidade"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Saturation"
+msgstr "Saturação"
+
+#. 6.0->settings-schema.json->panel-unique-settings->columns->title
+msgid "Custom CSS"
+msgstr "CSS personalizado"
+
+#. 6.0->settings-schema.json->panel-unique-settings->tooltip
+msgid ""
+"Defines the effects applied to different panels. If a panel does not meet "
+"the criteria of any enabled entry in this list, it will have no effects "
+"applied. The settings of the first entry in this list that can apply to a "
+"given panel will take effect. The \"Custom\" check box determines if the "
+"generic effect settings are uses or this tables custom settings. The color "
+"field is in the rgb(#,#,#) syntax and black will be used when a color is not "
+"provided or is in an incorrect syntax"
+msgstr ""
+"Define que efeitos devem ser aplicados aos diferentes painéis. Se um painel "
+"não está de acordo com os requisitos indicados nas entradas ativadas na "
+"tabela, os efeitos não serão aplicados a esse painel. Os efeitos serão "
+"aplicados para os painéis que estejam de acordo com os critérios de uma "
+"entrada da lista. A caixa de verificação \"Personalizar\" determina quando "
+"serão usadas as Definições genéricas de efeitos ou as definições "
+"personalizadas desta lista. No campo \"Cor\" as entradas devem estar no "
+"formato rgb(#,#,#). Será usada a cor preta caso o valor não seja definido ou "
+"não tenha o formato esperado"
+
+#. 6.0->settings-schema.json->no-panel-effects-maximized->description
+msgid "Restore theme settings when a window is maximized"
+msgstr "Restaurar as definições do tema quando uma janela é maximizada"
+
+#. 6.0->settings-schema.json->no-panel-effects-maximized->tooltip
+msgid ""
+"Restore the themes panel settings when any window is maximized on the same "
+"monitor as the panel. For most themes this will restore a solid panel "
+"background when a window is maximized. Note: This does not remove the "
+"blurring, so if your theme uses a transparent panel then this setting may "
+"have no effect."
+msgstr ""
+"Restaura as opções do tema do painel quando qualquer janela é maximizada no "
+"monitor onde está localizado o painel. Na maioria dos temas esta definição "
+"irá redefinir o fundo opaco do painel quando uma janela é maximizada. Nota: "
+"Esta definição não remove o efeito de desfoque; se o tema do painel já usar "
+"um fundo transparente esta definição poderá não ter efeito."
+
+#. 6.0->settings-schema.json->hover-brighten-panels->description
+msgid "Brighten panel when mouse is hovering a panel"
+msgstr "Iluminar o painel quando o cursor está em cima"
+
+#. 6.0->settings-schema.json->hover-brighten-panels->tooltip
+msgid ""
+"While the mouse is hovering over a panel, set the panels dimming to 0 and "
+"the saturation to 100 so that the panel appears brighter. This setting is "
+"only effective when either dimming is greater than 0 or saturation is less "
+"than 100."
+msgstr ""
+"Enquanto o cursor do rato estiver em cima do painel, define o efeito de "
+"escurecimento a 0 e a saturação a 100 de forma a mostrar o painel iluminado. "
+"Este efeito apenas é válido quando o efeito de escurecimento é maior que 0 e "
+"a saturação menor que 100."
+
+#. 6.0->settings-schema.json->opacity->description
+#. 6.0->settings-schema.json->overview-opacity->description
+#. 6.0->settings-schema.json->expo-opacity->description
+#. 6.0->settings-schema.json->panels-opacity->description
+#. 6.0->settings-schema.json->popup-opacity->description
+#. 6.0->settings-schema.json->notification-opacity->description
+#. 6.0->settings-schema.json->appswitcher-opacity->description
+#. 6.0->settings-schema.json->tooltips-opacity->description
+msgid "Dim/Colorize Background (%)"
+msgstr "Escurecer/Colorir o fundo (%)"
+
+#. 6.0->settings-schema.json->blendColor->description
+#. 6.0->settings-schema.json->overview-blendColor->description
+#. 6.0->settings-schema.json->expo-blendColor->description
+#. 6.0->settings-schema.json->panels-blendColor->description
+#. 6.0->settings-schema.json->popup-blendColor->description
+#. 6.0->settings-schema.json->desktop-blendColor->description
+#. 6.0->settings-schema.json->notification-blendColor->description
+#. 6.0->settings-schema.json->appswitcher-blendColor->description
+#. 6.0->settings-schema.json->tooltips-blendColor->description
+#. 6.0->settings-schema.json->desklets-blendColor->description
+#. 6.0->settings-schema.json->osd-blendColor->description
+msgid "Dimming overlay color"
+msgstr "Cor de escurecimento"
+
+#. 6.0->settings-schema.json->blendColor->tooltip
+#. 6.0->settings-schema.json->overview-blendColor->tooltip
+#. 6.0->settings-schema.json->expo-blendColor->tooltip
+#. 6.0->settings-schema.json->panels-blendColor->tooltip
+#. 6.0->settings-schema.json->popup-blendColor->tooltip
+#. 6.0->settings-schema.json->desktop-blendColor->tooltip
+#. 6.0->settings-schema.json->notification-blendColor->tooltip
+#. 6.0->settings-schema.json->appswitcher-blendColor->tooltip
+#. 6.0->settings-schema.json->tooltips-blendColor->tooltip
+#. 6.0->settings-schema.json->desklets-blendColor->tooltip
+#. 6.0->settings-schema.json->osd-blendColor->tooltip
+msgid ""
+"Defines the color that is blended into the background based on the dimming "
+"control above. Use black for a normal dimming effect or some other color for "
+"a color blend effect"
+msgstr ""
+"Define a cor que é misturada com o fundo do ambiente de trabalho seguindo a "
+"definição Escurecer/Colorir acima. Use cor preta para um efeito de "
+"escurecimento tradicional o qualquer outra cor para obter um efeito de "
+"mistura"
+
+#. 6.0->settings-schema.json->blurType->options
+msgid "None / Transparent to wallpaper"
+msgstr "Nenhum / Transparente para fundo de ambiente de trabalho"
+
+#. 6.0->settings-schema.json->blurType->options
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "Simple static blur"
+msgstr "Desfoque estático simples"
+
+#. 6.0->settings-schema.json->blurType->options
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "Gaussian static blur"
+msgstr "Desfoque Guassiano estático"
+
+#. 6.0->settings-schema.json->blurType->options
+msgid "Gaussian dynamic blur (if applicable)"
+msgstr "Desfoque Guassiano dinâmico (se disponível)"
+
+#. 6.0->settings-schema.json->blurType->options
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "Monte Carlo static blur"
+msgstr "Desfoque Monte Carlo estático"
+
+#. 6.0->settings-schema.json->blurType->options
+msgid "Monte Carlo dynamic blur (if applicable)"
+msgstr "Desfoque Monte Carlo dinâmico (quando disponível)"
+
+#. 6.0->settings-schema.json->blurType->description
+#. 6.0->settings-schema.json->overview-blurType->description
+#. 6.0->settings-schema.json->expo-blurType->description
+#. 6.0->settings-schema.json->desktop-blurType->description
+#. 6.0->settings-schema.json->appswitcher-blurType->description
+#. 6.0->settings-schema.json->desklets-blurType->description
+#. 6.0->settings-schema.json->osd-blurType->description
+msgid "Type of blur effect"
+msgstr "Tipo de efeito de desfoque"
+
+#. 6.0->settings-schema.json->blurType->tooltip
+#. 6.0->settings-schema.json->overview-blurType->tooltip
+#. 6.0->settings-schema.json->expo-blurType->tooltip
+#. 6.0->settings-schema.json->desktop-blurType->tooltip
+#. 6.0->settings-schema.json->desklets-blurType->tooltip
+#. 6.0->settings-schema.json->osd-blurType->tooltip
+msgid "What type of blur algorithm should be used to blur the background"
+msgstr "Qual o tipo de algoritmo a utilizar para desfocar o fundo"
+
+#. 6.0->settings-schema.json->radius->description
+#. 6.0->settings-schema.json->overview-radius->description
+#. 6.0->settings-schema.json->expo-radius->description
+#. 6.0->settings-schema.json->panels-radius->description
+#. 6.0->settings-schema.json->popup-radius->description
+#. 6.0->settings-schema.json->desktop-radius->description
+#. 6.0->settings-schema.json->notification-radius->description
+#. 6.0->settings-schema.json->appswitcher-radius->description
+#. 6.0->settings-schema.json->tooltips-radius->description
+#. 6.0->settings-schema.json->desklets-radius->description
+#. 6.0->settings-schema.json->osd-radius->description
+msgid "Blur intensity"
+msgstr "Intensidade de desfoque"
+
+#. 6.0->settings-schema.json->radius->tooltip
+#. 6.0->settings-schema.json->overview-radius->tooltip
+#. 6.0->settings-schema.json->expo-radius->tooltip
+#. 6.0->settings-schema.json->panels-radius->tooltip
+#. 6.0->settings-schema.json->popup-radius->tooltip
+#. 6.0->settings-schema.json->desktop-radius->tooltip
+#. 6.0->settings-schema.json->notification-radius->tooltip
+#. 6.0->settings-schema.json->appswitcher-radius->tooltip
+#. 6.0->settings-schema.json->tooltips-radius->tooltip
+#. 6.0->settings-schema.json->desklets-radius->tooltip
+#. 6.0->settings-schema.json->osd-radius->tooltip
+msgid ""
+"Adjusts the intensity of the blur effect by changing the radius use by the "
+"effect."
+msgstr ""
+"Ajusta a intensidade do efeito de desfoque ao alterar o raio de ação usado "
+"pelo efeito."
+
+#. 6.0->settings-schema.json->saturation->description
+#. 6.0->settings-schema.json->overview-saturation->description
+#. 6.0->settings-schema.json->expo-saturation->description
+#. 6.0->settings-schema.json->panels-saturation->description
+#. 6.0->settings-schema.json->desktop-saturation->description
+#. 6.0->settings-schema.json->notification-saturation->description
+#. 6.0->settings-schema.json->appswitcher-saturation->description
+#. 6.0->settings-schema.json->tooltips-saturation->description
+#. 6.0->settings-schema.json->desklets-saturation->description
+#. 6.0->settings-schema.json->osd-saturation->description
+msgid "Background color saturation"
+msgstr "Saturação da cor de fundo"
+
+#. 6.0->settings-schema.json->saturation->tooltip
+#. 6.0->settings-schema.json->overview-saturation->tooltip
+#. 6.0->settings-schema.json->expo-saturation->tooltip
+#. 6.0->settings-schema.json->panels-saturation->tooltip
+#. 6.0->settings-schema.json->popup-saturation->tooltip
+#. 6.0->settings-schema.json->desktop-saturation->tooltip
+#. 6.0->settings-schema.json->notification-saturation->tooltip
+#. 6.0->settings-schema.json->appswitcher-saturation->tooltip
+#. 6.0->settings-schema.json->tooltips-saturation->tooltip
+#. 6.0->settings-schema.json->desklets-saturation->tooltip
+#. 6.0->settings-schema.json->osd-saturation->tooltip
+msgid ""
+"Adjusts the color saturation of the background image from gray-scale to full "
+"color."
+msgstr ""
+"Ajusta a saturação da cor da imagem de fundo desde escala de cinzentos até "
+"colorido."
+
+#. 6.0->settings-schema.json->monte-carlo-iterations->description
+msgid "Iterations"
+msgstr "Iterações"
+
+#. 6.0->settings-schema.json->monte-carlo-iterations->tooltip
+msgid ""
+"Increasing number of iterations will make the blur appear smoother at the "
+"cost of some CPU power."
+msgstr ""
+"Aumentar o número de iterações irá tornar o efeito de desfoque mais suave à "
+"custa de maior utilização da CPU."
+
+#. 6.0->settings-schema.json->monte-carlo-use-base-pixel->description
+msgid "Use base pixel"
+msgstr "Usar pixel base"
+
+#. 6.0->settings-schema.json->monte-carlo-use-base-pixel->tooltip
+msgid ""
+"Whether or not the original pixel is counted for the blur. If it is, the "
+"image will be more legible."
+msgstr ""
+"Define se pixel original irá ou não ser considerado para o efeito de "
+"desfoque. Caso seja, a imagem irá ser mais legível."
+
+#. 6.0->settings-schema.json->monte-carlo-prefer-closer-pixels->description
+msgid "Prefer closer pixels"
+msgstr "Preferir pixeis próximos"
+
+#. 6.0->settings-schema.json->monte-carlo-prefer-closer-pixels->tooltip
+msgid ""
+"Whether or not the pixels that are closer to the original pixel will have "
+"more weight."
+msgstr ""
+"Define se os pixeis que estão mais perto irão ou não ter maior ponderação."
+
+#. 6.0->settings-schema.json->monte-carlo-label->description
+msgid ""
+"<b>Note:</b> These Monte Carlo settings are used globally for all components"
+msgstr ""
+"<b>Nota:</b> Estas definições Monte Carlo são usadas de forma geral para "
+"todos os componentes"
+
+#. 6.0->settings-schema.json->monte-carlo-label->tooltip
+msgid ""
+"The above Monte Carlo settings are used globally for all components that are "
+"configured to use the Monte Carlo blur algorithm, these settings can not be "
+"configured separately for each component"
+msgstr ""
+"As definições Monte Carlo acima são usadas de forma global para todos os "
+"componentes que estejam configurados para usar o algoritmo de desfoque Monte "
+"Carlo. Estas definições podem ser configuradas individualmente para cada "
+"componente"
+
+#. 6.0->settings-schema.json->overview-blurType->options
+#. 6.0->settings-schema.json->expo-blurType->options
+#. 6.0->settings-schema.json->desktop-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "None"
+msgstr "Nenhum"
+
+#. 6.0->settings-schema.json->overview-blurType->options
+#. 6.0->settings-schema.json->expo-blurType->options
+#. 6.0->settings-schema.json->desktop-blurType->options
+msgid "Simple"
+msgstr "Simples"
+
+#. 6.0->settings-schema.json->overview-blurType->options
+#. 6.0->settings-schema.json->expo-blurType->options
+#. 6.0->settings-schema.json->desktop-blurType->options
+msgid "Gaussian"
+msgstr "Guassiano"
+
+#. 6.0->settings-schema.json->overview-blurType->options
+#. 6.0->settings-schema.json->expo-blurType->options
+#. 6.0->settings-schema.json->desktop-blurType->options
+msgid "Monte Carlo"
+msgstr "Monte Carlo"
+
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+msgid "Transparent"
+msgstr "Transparente"
+
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+msgid "Transparent to wallpaper"
+msgstr "Transparente para fundo de ambiente de trabalho"
+
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "Gaussian dynamic blur"
+msgstr "Desfoque Guassiano dinâmico"
+
+#. 6.0->settings-schema.json->panels-blurType->options
+#. 6.0->settings-schema.json->popup-blurType->options
+#. 6.0->settings-schema.json->notification-blurType->options
+#. 6.0->settings-schema.json->appswitcher-blurType->options
+#. 6.0->settings-schema.json->tooltips-blurType->options
+#. 6.0->settings-schema.json->desklets-blurType->options
+#. 6.0->settings-schema.json->osd-blurType->options
+msgid "Monte Carlo dynamic blur"
+msgstr "Desfoque Monte Carlo dinâmico"
+
+#. 6.0->settings-schema.json->panels-blurType->description
+#. 6.0->settings-schema.json->popup-blurType->description
+#. 6.0->settings-schema.json->notification-blurType->description
+#. 6.0->settings-schema.json->tooltips-blurType->description
+msgid "Type of background effect"
+msgstr "Tipo de efeito de fundo"
+
+#. 6.0->settings-schema.json->panels-blurType->tooltip
+#. 6.0->settings-schema.json->popup-blurType->tooltip
+#. 6.0->settings-schema.json->notification-blurType->tooltip
+#. 6.0->settings-schema.json->tooltips-blurType->tooltip
+msgid "What type of background effect should be applied"
+msgstr "Qual tipo de efeito de fundo deve ser aplicado"
+
+#. 6.0->settings-schema.json->popup-applet-menu-effects->description
+msgid "Apply effects to applet popup menus"
+msgstr "Aplicar efeitos aos menus de popup das applets"
+
+#. 6.0->settings-schema.json->popup-panel-menu-effects->description
+msgid "Apply effects to panel context menus"
+msgstr "Aplicar efeitos aos menus de contexto do painel"
+
+#. 6.0->settings-schema.json->popup-title-menu-effects->description
+msgid "Apply effects to window title bar context menus"
+msgstr ""
+"Aplicar efeitos aos menus de contexto abertos a partir da barra de título da "
+"janela"
+
+#. 6.0->settings-schema.json->popup-accent-opacity->description
+msgid "Additional popup menu accent elements dimming (%)"
+msgstr ""
+"Escurecimento adicional para os elementos em destaque dos menus de popup (%)"
+
+#. 6.0->settings-schema.json->popup-accent-opacity->tooltip
+msgid ""
+"Defines the additional dimming applied to the popup menu accent elements (i."
+"e. the main menu favorites box and entry boxes) which allow these elements "
+"to stand out from the other popup menu areas"
+msgstr ""
+"Define o efeito de escurecimento adicional aplicado às cores de destaque do "
+"menu (ex: caixa de favoritos do menu principal e caixas de entrada) "
+"permitindo que estes elementos se destaquem de outras áreas do menu"
+
+#. 6.0->settings-schema.json->popup-saturation->description
+msgid "Background image color saturation"
+msgstr "Saturação da cor da imagem de fundo"
+
+#. 6.0->settings-schema.json->desktop-without-focus->description
+msgid "Only apply effect settings if the desktop is not in focus"
+msgstr "Apenas aplicar efeitos se o ambiente de trabalho não estiver em foco"
+
+#. 6.0->settings-schema.json->desktop-without-focus->tooltip
+msgid ""
+"When enabled, the desktop background image effects will only apply when the "
+"desktop is not in focus"
+msgstr ""
+"Quando ativado, os efeitos do fundo do ambiente de trabalho apenas serão "
+"aplicados quando o ambiente de trabalho não estiver em foco"
+
+#. 6.0->settings-schema.json->desktop-with-focus->description
+msgid "Apply the generic effect settings when the desktop is in focus"
+msgstr ""
+"Aplicar as definições genéricas de efeitos quando o ambiente de trabalho "
+"está em foco"
+
+#. 6.0->settings-schema.json->desktop-with-focus->tooltip
+msgid ""
+"When enabled, the generic effect settings (on the \"Generic effect "
+"settings\" tab) will apply to the desktop background image when the desktop "
+"is in focus"
+msgstr ""
+"Quando ativado, as definições genéricas de efeitos (no separador "
+"\"Definições genéricas de efeitos\") irão ser aplicadas ao fundo do ambiente "
+"de trabalho quando o ambiente de trabalho estiver em foco"
+
+#. 6.0->settings-schema.json->desktop-opacity->description
+#. 6.0->settings-schema.json->desklets-opacity->description
+#. 6.0->settings-schema.json->osd-opacity->description
+msgid "Dim/Colorize background Image (%)"
+msgstr "Escurecer/Colorir a imagem de fundo (%)"
+
+#. 6.0->settings-schema.json->notification-test-button->description
+msgid "Send a test notification"
+msgstr "Enviar uma notificação de teste"
+
+#. 6.0->settings-schema.json->notification-test-button->tooltip
+msgid ""
+"This button will cause a notification message to appear so you can see how "
+"your notification setting behave."
+msgstr ""
+"Este botão irá lançar uma notificação para que possa ver como as opções "
+"afetam o comportamento das notificações."
+
+#. 6.0->settings-schema.json->appswitcher-disable-3d-panels->description
+msgid "Hide panels while using the Coverflow/Timeline 3D Alt-Tab switchers"
+msgstr "Ocultar painéis ao usar os alternadores Alt-Tab 3D Coverflow/Timeline"
+
+#. 6.0->settings-schema.json->appswitcher-disable-3d-panels->tooltip
+msgid ""
+"Make the panels invisible when using the Coverflow or the Timeline 3D Alt-"
+"Tab switchers"
+msgstr ""
+"Tornar os painéis invisíveis ao usar os alternadores Alt-Tab 3D Coverflow/"
+"Timeline"
+
+#. 6.0->settings-schema.json->appswitcher-allow-classic->description
+msgid "Apply effects to the standard Alt-Tab switcher"
+msgstr "Aplicar efeitos ao alternador de aplicações Alt-Tab padrão"
+
+#. 6.0->settings-schema.json->appswitcher-allow-classic->tooltip
+msgid ""
+"Allow applying effects to the standard Alt-Tab switcher. Only the switcher "
+"options without \"previews\" are supported. The standard Alt-Tab switcher "
+"can use static or dynamic blur, but dynamic is recommended."
+msgstr ""
+"Permite aplicar efeitos aos alternadores de aplicação Alt-Tab padrão. Apenas "
+"os alternadores sem \"pré-visualizações\" são suportados. O alternador Alt-"
+"Tab pode usar efeitos de desfoque estáticos ou dinâmicos, mas é recomendado "
+"usar um efeito dinâmico."
+
+#. 6.0->settings-schema.json->appswitcher-allow-3d->description
+msgid "Apply effects to the 3D Alt-Tab switchers"
+msgstr "Aplicar efeitos ao alternador de aplicações Alt-Tab 3D"
+
+#. 6.0->settings-schema.json->appswitcher-allow-3d->tooltip
+msgid ""
+"Allow applying effects to the Coverflow and Timeline 3D Alt-Tab switchers. "
+"The 3D Alt-Tab switchers will use static blurring even when dynamic blurring "
+"is selected since they don't benifit from dynamic blurring."
+msgstr ""
+"Permitir aplicar efeitos aos alternadores de aplicação Alt-Tab 3D Coverflow "
+"e Timeline. Os alternadores de aplicação Alt-Tab 3D irão usar um efeito de "
+"desfoque estático mesmo se o efeito de desfoque dinâmico estiver selecionado "
+"visto que estes alternadores 3D não beneficiam deste tipo de desfoque."
+
+#. 6.0->settings-schema.json->appswitcher-blurType->tooltip
+msgid ""
+"What type of blur algorithm should be used to blur the background. A dynamic "
+"blur type can be used for the standard switcher but static blurring is "
+"always used for the 3D switchers as they do not benefit from dynamic effects."
+msgstr ""
+"Qual o tipo de algoritmo de desfoque deve ser utilizado para desfocar o "
+"fundo. Um tipo de desfoque dinâmico pode ser utilizado para o alternador de "
+"aplicações padrão, mas o efeito de desfoque estático irá ser sempre usado "
+"para os alternadores de aplicação 3D uma vez que estes não beneficiam dos "
+"efeitos dinâmicos."
+
+#. 6.0->settings-schema.json->osd-slider-effects->description
+msgid "Apply effects to volumn and brightness OSD windows"
+msgstr "Aplicar efeitos à janela OSD na mudança de volume e brilho de ecrã"
+
+#. 6.0->settings-schema.json->osd-workspace-effects->description
+msgid "Apply effects to the workspace switching OSD window"
+msgstr "Aplicar efeitos à janela OSD da mudança de espaço de trabalho"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->description
+msgid "Application window inclusion list"
+msgstr "Lista de janelas de aplicação incluídas"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Application"
+msgstr "Aplicação"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Opacity"
+msgstr "Opacidade"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Corner Radius"
+msgstr "Raio de canto"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Rounded Top"
+msgstr "Cantos superiores arrendondados"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->columns->title
+msgid "Rounded Bottom"
+msgstr "Cantos inferiores arredondados"
+
+#. 6.0->settings-schema.json->windows-inclusion-list->tooltip
+msgid ""
+"This table controls which application windows will have effects applied and "
+"the effect settings. When \"Custom\" is enabled the setting defined by this "
+"table will apply, otherwise the \"Generic effect settings\" will apply. The "
+"\"Application\" field can be a WM_CLASS or a desktop file name."
+msgstr ""
+"Esta tabela controla as janelas de aplicações para as quais serão aplicados "
+"efeitos. Quando a opção \"Personalizar\" está ativada, as definições "
+"indicadas pela tabela irão sobrepor-se às \"Definições de efeitos "
+"genéricas\". O campo \"Aplicação\" pode ser definido como uma WM_CLASS ou um "
+"nome de ficheiro .desktop."
+
+#. 6.0->settings-schema.json->windows-add-button->description
+msgid "Add entry for the application of the most recently focused window"
+msgstr ""
+"Adicionar entrada na tabela para a aplicação com a janela em foco mais "
+"recente"
+
+#. 6.0->settings-schema.json->windows-add-button->tooltip
+msgid ""
+"Focus a window you want to enable window effects on then return here and "
+"press this button."
+msgstr ""
+"Abra a janela para a qual pretende aplicar os efeitos de janela e em seguida "
+"prima este botão."
+
+#. 6.0->settings-schema.json->windows-compiz-mitigation->description
+msgid "Disable \"Compiz\" effects for windows with Blur Cinnamon effects"
+msgstr ""
+"Desativar efeitos do \"Compiz\" para as janelas com efeitos do Blur Cinnamon"
+
+#. 6.0->settings-schema.json->windows-compiz-mitigation->tooltip
+msgid ""
+"When enabled, the window moving effect created by the \"Compiz windows "
+"effect\" extension will be disabled for windows with Blur Cinnamon effects "
+"applied. This option will have no effect unless the \"Compiz window effect\" "
+"extension is installed and active."
+msgstr ""
+"Quanto ativado, o efeito de movimento de janelas criado pela extensão "
+"\"Compiz windows effect\" serão desativados para as janelas com efeitos "
+"aplicados pelo Blur Cinnamon. Esta opção não terá efeito caso a extensão "
+"\"Compiz window effect\" não esteja instalada e ativa."
+
+#. 6.0->settings-schema.json->windows-atrifact-mitigation->description
+msgid "Use artifact mitigation techniques"
+msgstr "Usar técnicas para reduzir artefactos"
+
+#. 6.0->settings-schema.json->windows-atrifact-mitigation->tooltip
+msgid ""
+"When enabled, steps will be taken to eliminate background graphical "
+"artifacts for windows that use dynamic blur effects. The mitigation steps "
+"will have some minor persistent CPU costs when a dynamic blurred window is "
+"on top of two or more other windows. This option is recommended unless you "
+"are using video wallpaper like Hidamari"
+msgstr ""
+"Quando ativado, irão ser tomadas medidas para eliminar os artefactos "
+"gráficos de fundo de janelas que usem efeitos de desfoque dinâmico. Estas "
+"medidas de mitigação necessitam de um pequeno processamento persistente pela "
+"CPU quando uma janela com efeitos de desfoque dinâmico está sobre duas ou "
+"mais janelas. Esta opção é recomendada a não ser que esteja em uso um fundo "
+"de ambiente de trabalho em forma de vídeo como o Hidamari"
+
+#. 6.0->settings-schema.json->desklets-auto->description
+msgid "Automatically enable effects for newly added Desklets"
+msgstr "Ativar efeitos para Mini-Aplicações recém adicionadas automaticamente"
+
+#. 6.0->settings-schema.json->desklets-auto->tooltip
+msgid ""
+"When enabled, new Desklets added to the desktop will automatically have Blur "
+"Cinnamon effects applied. When disabled, Desklets will only have effects "
+"applied when manually enabled in the table below. By default the settings "
+"applied to new Desklets will be the generic effect settings."
+msgstr ""
+"Quando ativada, os efeitos do Blur Cinnamon irão ser aplicados às novas Mini-"
+"Aplicações adicionadas ao ambiente de trabalho. Quando desativada, os "
+"efeitos apenas serão aplicados às Mini-Aplicações quando estas forem "
+"adicionadas manualmente à tabela. Por omissão as definições aplicadas às "
+"novas Mini-Aplicações serão as indicadas nas definições genéricas de efeitos."
+
+#. 6.0->settings-schema.json->desklets-list->description
+msgid "Active Desklet list"
+msgstr "Lista de Mini-Aplicações ativas"
+
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Name"
+msgstr "Nome"
+
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "ID"
+msgstr "ID"
+
+#. 6.0->settings-schema.json->desklets-list->columns->title
+msgid "Blur"
+msgstr "Desfocar"
+
+#. 6.0->settings-schema.json->desklets-list->tooltip
+msgid ""
+"The \"Enabled\" check box controls which Desklets will have effects applied. "
+"The \"Custom\" check box controls if a Desklet will use the generic effect "
+"settings or the custom settings defined in this table. The custom settings "
+"can be modified by double clicking on a table row."
+msgstr ""
+"A caixa de verificação \"Ativado\" controla as Mini-Aplicações para as quais "
+"serão aplicados efeitos. A caixa de verificação \"Personalizar\" controla se "
+"uma Mini-Aplicação irá usar definições genéricas de efeitos ou definições "
+"personalizáveis nesta tabela. As definições personalizadas podem ser "
+"modificadas ao fazer duplo clique na linha de tabela."

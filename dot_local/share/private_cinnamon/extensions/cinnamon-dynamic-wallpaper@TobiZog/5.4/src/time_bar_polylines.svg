@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="150">
+<rect fill="#00193d" x="0" y="40" width="207" height="70"/>
+<rect fill="#05597f" x="207" y="40" width="41" height="70"/>
+<rect fill="#54babf" x="248" y="40" width="12" height="70"/>
+<rect fill="#9ec3a1" x="260" y="40" width="324" height="70"/>
+<rect fill="#ffb95e" x="584" y="40" width="215" height="70"/>
+<rect fill="#fcae4e" x="799" y="40" width="216" height="70"/>
+<rect fill="#f37f73" x="1015" y="40" width="109" height="70"/>
+<rect fill="#b45bbc" x="1124" y="40" width="12" height="70"/>
+<rect fill="#7e38ce" x="1136" y="40" width="41" height="70"/>
+<rect fill="#00285f" x="1177" y="40" width="127" height="70"/>
+<polyline points="126.8,0 126.8,30 103.5,30 103.5,75.0" stroke="#00193d" fill="none" stroke-width="5" />
+<polyline points="126.8,150 126.8,120 227.5,120 227.5,75.0" stroke="#05597f" fill="none" stroke-width="5" />
+<polyline points="386.8,0 386.8,20 254.0,20 254.0,75.0" stroke="#54babf" fill="none" stroke-width="5" />
+<polyline points="386.8,150 386.8,130 422.0,130 422.0,75.0" stroke="#9ec3a1" fill="none" stroke-width="5" />
+<polyline points="646.8,0 646.8,10 691.5,10 691.5,75.0" stroke="#ffb95e" fill="none" stroke-width="5" />
+<polyline points="646.8,150 646.8,140 907.0,140 907.0,75.0" stroke="#fcae4e" fill="none" stroke-width="5" />
+<polyline points="906.8,0 906.8,20 1069.5,20 1069.5,75.0" stroke="#f37f73" fill="none" stroke-width="5" />
+<polyline points="906.8,150 906.8,130 1130.0,130 1130.0,75.0" stroke="#b45bbc" fill="none" stroke-width="5" />
+<polyline points="1166.8,0 1166.8,30 1156.5,30 1156.5,75.0" stroke="#7e38ce" fill="none" stroke-width="5" />
+<polyline points="1166.8,150 1166.8,120 1238.5,120 1238.5,75.0" stroke="#00285f" fill="none" stroke-width="5" />
+<line x1="0" y1="40" x2="0" y2="110" stroke="white" stroke-width="2" />
+<line x1="54" y1="40" x2="54" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="108" y1="40" x2="108" y2="110" stroke="white" stroke-width="0.5" />
+<text x="5" y="105" fill="white" font-size="20" font-family="Liberation Sans">0</text>
+<line x1="162" y1="40" x2="162" y2="110" stroke="white" stroke-width="2" />
+<line x1="216" y1="40" x2="216" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="270" y1="40" x2="270" y2="110" stroke="white" stroke-width="0.5" />
+<text x="167" y="105" fill="white" font-size="20" font-family="Liberation Sans">3</text>
+<line x1="324" y1="40" x2="324" y2="110" stroke="white" stroke-width="2" />
+<line x1="378" y1="40" x2="378" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="432" y1="40" x2="432" y2="110" stroke="white" stroke-width="0.5" />
+<text x="329" y="105" fill="white" font-size="20" font-family="Liberation Sans">6</text>
+<line x1="486" y1="40" x2="486" y2="110" stroke="white" stroke-width="2" />
+<line x1="540" y1="40" x2="540" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="594" y1="40" x2="594" y2="110" stroke="white" stroke-width="0.5" />
+<text x="491" y="105" fill="white" font-size="20" font-family="Liberation Sans">9</text>
+<line x1="648" y1="40" x2="648" y2="110" stroke="white" stroke-width="2" />
+<line x1="702" y1="40" x2="702" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="756" y1="40" x2="756" y2="110" stroke="white" stroke-width="0.5" />
+<text x="653" y="105" fill="white" font-size="20" font-family="Liberation Sans">12</text>
+<line x1="810" y1="40" x2="810" y2="110" stroke="white" stroke-width="2" />
+<line x1="864" y1="40" x2="864" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="918" y1="40" x2="918" y2="110" stroke="white" stroke-width="0.5" />
+<text x="815" y="105" fill="white" font-size="20" font-family="Liberation Sans">15</text>
+<line x1="972" y1="40" x2="972" y2="110" stroke="white" stroke-width="2" />
+<line x1="1026" y1="40" x2="1026" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="1080" y1="40" x2="1080" y2="110" stroke="white" stroke-width="0.5" />
+<text x="977" y="105" fill="white" font-size="20" font-family="Liberation Sans">18</text>
+<line x1="1134" y1="40" x2="1134" y2="110" stroke="white" stroke-width="2" />
+<line x1="1188" y1="40" x2="1188" y2="110" stroke="white" stroke-width="0.5" />
+<line x1="1242" y1="40" x2="1242" y2="110" stroke="white" stroke-width="0.5" />
+<text x="1139" y="105" fill="white" font-size="20" font-family="Liberation Sans">21</text>
+</svg>
