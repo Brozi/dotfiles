@@ -1,0 +1,24 @@
+{
+    "name": "Cinnamon Maximus",
+    "cinnamon-version": [
+        "2.4",
+        "2.6",
+        "2.8",
+        "3.0",
+        "3.2",
+        "3.4",
+        "3.6",
+        "3.8",
+        "4.0",
+        "4.2",
+        "4.4",
+        "4.6",
+        "4.8"
+    ],
+    "description": "Undecorate windows as you like.",
+    "version": "0.4.7",
+    "uuid": "cinnamon-maximus@fmete",
+    "url": "https://cinnamon-spices.linuxmint.com/extensions",
+    "author": "none",
+    "last-edited": 1768248951
+}
