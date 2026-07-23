@@ -249,8 +249,7 @@ move position center
 # Scratchpad programs
 exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class monitor \
 --override window_margin_width=0 \
---override startup_mode=fulscreen \
---override remember_window_size=yes \
+--override startup_mode=fullscreen \
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
 exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch' || kitty --class kitty-scrtch
