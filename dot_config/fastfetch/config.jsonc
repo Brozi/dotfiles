@@ -6,7 +6,7 @@
     "type": "auto",
     "color": {
       "1": "#CBA6F7",
-      "2": "#f5c2e7"
+      "2": "#f5c2e7",
     },
     "source": "",
     "width": null,
@@ -14,182 +14,181 @@
     "padding": {
       "top": 1,
       "left": 2,
-      "right": 4 
-    }
+      "right": 4,
+    },
   },
   "display": {
     "separator": " \u001b[38;2;203;166;247m\u001b[0m ",
     "constants": [
-      "\u001b[38;2;242;205;205m─────────────────\u001b[0m" // {$1}, used in Custom module
+      "\u001b[38;2;242;205;205m─────────────────\u001b[0m", // {$1}, used in Custom module
     ],
     "key": {
       "type": "string",
-      "paddingLeft": 2
+      "paddingLeft": 2,
     },
     "size": {
-      "binaryPrefix": "iec"
-    }
+      "binaryPrefix": "iec",
+    },
   },
   "modules": [
-//    {
-//      "type": "custom", // HardwareStart
-      // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-//      "format": "\u001b[38;2;242;205;205m┌\u001b[0m{$1} \u001b[38;2;203;166;247mHardware Information\u001b[0m {$1}\u001b[38;2;242;205;205m┐\u001b[0m"
-//    },
-//    "break",
-//    "break",
+    //    {
+    //      "type": "custom", // HardwareStart
+    // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+    //      "format": "\u001b[38;2;242;205;205m┌\u001b[0m{$1} \u001b[38;2;203;166;247mHardware Information\u001b[0m {$1}\u001b[38;2;242;205;205m┐\u001b[0m"
+    //    },
+    //    "break",
+    //    "break",
     "break",
     {
       "type": "colors",
       "symbol": "circle",
-      "paddingLeft": 10
+      "paddingLeft": 10,
     },
     "break",
-    {
-      "type": "host",
-      "keyColor": "#f5c2e7"
-    },
+    // {
+    //   "type": "host",
+    //   "keyColor": "#f5c2e7"
+    // },
     {
       "type": "cpu",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{name}"
+      "format": "{name}",
     },
     {
       "type": "gpu",
       "keyColor": "#f5c2e7",
       "key": "󰢮",
-      "format": "{name} 8GB"
+      "format": "{name} 8GB",
     },
-//    {
-//      "type": "disk",
-//      "keyColor": "#f5c2e7"
-//    },
+    //    {
+    //      "type": "disk",
+    //      "keyColor": "#f5c2e7"
+    //    },
     {
       "type": "memory",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{total}"
+      "format": "{total}",
     },
-//    {
-//      "type": "display",
-//      "keyColor": "#f5c2e7"
-//    },
-//    {
-//      "type": "custom", // InformationEnd
-//      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
-//    },
-//    {
-//      "type": "custom", // Separator
-//      "format": ""
-//    },
-//    {
-//      "type": "custom", // SoftwareStart
-//      "format": "\u001b[38;2;242;205;205m┌\u001b[0m{$1} \u001b[38;2;203;166;247mSoftware Information\u001b[0m {$1}\u001b[38;2;242;205;205m┐\u001b[0m"
-//    },
+    //    {
+    //      "type": "display",
+    //      "keyColor": "#f5c2e7"
+    //    },
+    //    {
+    //      "type": "custom", // InformationEnd
+    //      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
+    //    },
+    //    {
+    //      "type": "custom", // Separator
+    //      "format": ""
+    //    },
+    //    {
+    //      "type": "custom", // SoftwareStart
+    //      "format": "\u001b[38;2;242;205;205m┌\u001b[0m{$1} \u001b[38;2;203;166;247mSoftware Information\u001b[0m {$1}\u001b[38;2;242;205;205m┐\u001b[0m"
+    //    },
     {
       "type": "os",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{pretty-name}"
+      "format": "{pretty-name}",
     },
     {
       "type": "kernel",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{release}"
+      "format": "{release}",
     },
     {
       "type": "lm",
       "keyColor": "#f5c2e7",
       "key": "󰨇",
-      "format": "{service} {version}"
+      "format": "{service} {version}",
     },
     {
       "type": "de",
-      "keyColor": "#f5c2e7"
+      "keyColor": "#f5c2e7",
     },
     {
       "type": "wm",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{pretty-name} {version}"
+      "format": "{pretty-name} {version}",
     },
     {
       "type": "theme",
       "keyColor": "#f5c2e7",
       "key": "󰉼",
-      "format": "{theme2}"
+      "format": "{theme2}",
     },
     {
       "type": "icons",
       "key": "",
-      "keyColor": "#f5c2e7"
+      "keyColor": "#f5c2e7",
     },
-//    {
-//      "type": "font",
-//      "keyColor": "#f5c2e7"
-//    },
+    //    {
+    //      "type": "font",
+    //      "keyColor": "#f5c2e7"
+    //    },
     {
       "type": "packages",
       "keyColor": "#f5c2e7",
       "key": "󰏖",
-      "format": "{all} ({appimage} appimg, {flatpak-all} flatpak)"
+      "format": "{all} ({appimage} appimg, {flatpak-all} flatpak)",
     },
     {
       "type": "uptime",
       "keyColor": "#f5c2e7",
       "key": "",
-      "format": "{hours}h {minutes}m"
+      "format": "{hours}h {minutes}m",
     },
     {
       "type": "command",
       "keyColor": "#f5c2e7",
       "key": "",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
- 
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
     },
-//    {
-//      "type": "locale",
-//      "keyColor": "#f5c2e7"
-//    },
-//    {
-//      "type": "custom", // InformationEnd
-//      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
-//    },
-//    {
-//      "type": "custom", // Separator
-//      "format": ""
-//    },
-//    {
-//      "type": "custom", // Terminal start
-      // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
-//      "format": "\u001b[38;2;242;205;205m┌\u001b[0m\u001b[38;2;242;205;205m─────────────\u001b[0m \u001b[38;2;203;166;247mTerminal & Shell Information\u001b[0m \u001b[38;2;242;205;205m─────────────\u001b[0m\u001b[38;2;242;205;205m┐\u001b[0m"
-//    },
+    //    {
+    //      "type": "locale",
+    //      "keyColor": "#f5c2e7"
+    //    },
+    //    {
+    //      "type": "custom", // InformationEnd
+    //      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
+    //    },
+    //    {
+    //      "type": "custom", // Separator
+    //      "format": ""
+    //    },
+    //    {
+    //      "type": "custom", // Terminal start
+    // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+    //      "format": "\u001b[38;2;242;205;205m┌\u001b[0m\u001b[38;2;242;205;205m─────────────\u001b[0m \u001b[38;2;203;166;247mTerminal & Shell Information\u001b[0m \u001b[38;2;242;205;205m─────────────\u001b[0m\u001b[38;2;242;205;205m┐\u001b[0m"
+    //    },
     {
       "type": "shell",
       "key": "",
-      "keyColor": "#f5c2e7"
+      "keyColor": "#f5c2e7",
     },
     {
       "type": "terminal",
       "key": "",
-      "keyColor": "#f5c2e7"
+      "keyColor": "#f5c2e7",
     },
     {
       "type": "terminalfont",
       "key": "",
-      "keyColor": "#f5c2e7"
+      "keyColor": "#f5c2e7",
     },
     "break",
-//    {
-//      "type": "custom", // Terminal End
-//      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
-//    },
+    //    {
+    //      "type": "custom", // Terminal End
+    //      "format": "\u001b[38;2;242;205;205m└\u001b[0m{$1}\u001b[38;2;242;205;205m──────────────────────\u001b[0m{$1}\u001b[38;2;242;205;205m┘\u001b[0m"
+    //    },
     {
       "type": "colors",
       "symbol": "circle",
-      "paddingLeft": 10
-    }
-  ]
+      "paddingLeft": 10,
+    },
+  ],
 }
