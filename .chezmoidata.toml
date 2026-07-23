@@ -4,11 +4,13 @@ terminal_emulator = "kitty"
 hostname = "brozi-laptop"
 dpi = 120
 rofi_font_size = 14
+rofi_icon_size = "34px"
 rofi_font_size_alt = 16
 
 
 [desktop]
 hostname = "brozi-desktop"
 dpi = 96
+rofi_icon_size = "24px"
 rofi_font_size = 10
 rofi_font_size_alt = 12
