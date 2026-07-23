@@ -1,0 +1,28 @@
+[Desktop Entry]
+Name=Notion Electron
+Exec=/home/brozi/Applications/notion_electron.appimage
+Terminal=false
+Type=Application
+Icon=notion-electron
+StartupWMClass=Notion Electron
+Categories=Utility;Office;
+Actions=Options;Updates;About;
+Comment=Unofficial Notion desktop client made with Electron for Linux
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[pl_PL]=Notion Electron
+Comment[pl_PL]=Unofficial Notion desktop client made with Electron for Linux
+X-GNOME-Autostart-Delay=3
+
+[Desktop Action Options]
+Name=Options
+Exec=dbus-send --session --type=signal --dest=io.github.anechunaev.NotionElectron /io/github/anechunaev/NotionElectron io.github.anechunaev.NotionElectron.Options
+
+[Desktop Action Updates]
+Name=Updates
+Exec=dbus-send --session --type=signal --dest=io.github.anechunaev.NotionElectron /io/github/anechunaev/NotionElectron io.github.anechunaev.NotionElectron.Updates
+
+[Desktop Action About]
+Name=About
+Exec=dbus-send --session --type=signal --dest=io.github.anechunaev.NotionElectron /io/github/anechunaev/NotionElectron io.github.anechunaev.NotionElectron.About

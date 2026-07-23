@@ -1,0 +1,3 @@
+[MIME Cache]
+x-scheme-handler/com.todoist=com.todoist.Todoist.desktop;
+x-scheme-handler/todoist=com.todoist.Todoist.desktop;

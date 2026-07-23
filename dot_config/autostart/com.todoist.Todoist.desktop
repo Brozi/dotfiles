@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=Todoist
+Exec=/bin/bash /home/brozi/Dokumenty/todoist-minimized.sh
+Terminal=false
+Type=Application
+Icon=com.todoist.Todoist
+StartupWMClass=Todoist
+MimeType=x-scheme-handler/todoist;x-scheme-handler/com.todoist;
+Comment=Todoist: Planner & Calendar
+Categories=Office;
+X-Flatpak-Tags=proprietary;
+X-Flatpak=com.todoist.Todoist
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[pl_PL]=Todoist run minimized
+Comment[pl_PL]=Todoist: Planner & Calendar
+X-GNOME-Autostart-Delay=5
+NotShowIn=i3

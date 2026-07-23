@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=it.mijorus.gearlever
+X-XDP-Autostart=it.mijorus.gearlever
+Exec=flatpak run --command=gearlever it.mijorus.gearlever --fetch-updates
+X-Flatpak=it.mijorus.gearlever
