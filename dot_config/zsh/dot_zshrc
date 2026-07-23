@@ -189,7 +189,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 #######################################################
 
 alias web='cd /var/www/html5'
-alias sortty='python3 /usr/local/bin/sortty-bin/sortty.py'
+alias sortty='python3 ~/.local/bin/sortty-bin/sortty.py'
 
 #######################################################
 # GENERAL ALIASES
