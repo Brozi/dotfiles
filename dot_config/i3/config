@@ -57,7 +57,7 @@ exec --no-startup-id nitrogen --restore
 #exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # new catppuccin polybar
-exec_always --no-startup-id ~/.config/polybar/launch_1.sh --forest --side
+exec_always --no-startup-id ~/.config/polybar/launch.sh --forest --side
 
 # i3autolayout
 exec_always --no-startup-id ~/.config/i3/scripts/autolayout.sh
