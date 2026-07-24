@@ -16,12 +16,21 @@ vim.filetype.add({
 -- Dynamic filetype resolution for Chezmoi templates
 vim.filetype.add({
   extension = {
-    tmpl = function(path)
+    tmpl = function(path, bufnr)
       -- Strip Chezmoi prefixes (dot_, executable_) and suffix (.tmpl)
       local clean_path = path:gsub("dot_", "."):gsub("executable_", ""):gsub("%.tmpl$", "")
-      -- Run Neovim's built-in filetype detector on the sanitized path
-      local ft, _ = vim.filetype.detect(clean_path)
-      -- Fall back to gotmpl if Neovim cannot determine the base filetype
+
+      -- Query Neovim's filetype registry using the sanitized path
+      local ft = vim.filetype.match({ filename = clean_path, buf = bufnr })
+
+      -- Fall back to matching just the basename if full path matching returns nil
+      if not ft then
+        local filename = clean_path:match("[^/]+$")
+        if filename then
+          ft = vim.filetype.match({ filename = filename })
+        end
+      end
+
       return ft or "gotmpl"
     end,
   },
