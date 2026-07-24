@@ -153,8 +153,11 @@ modules-left = launcher sep i3 sep title
 ; modules-left = launcher sep i3 sep i3window-main
 ; modules-center = mpd sep date
 modules-center = date
+{{ if $host.has_battery -}}
+modules-right = bluetooth network battery updates sep volume brightness sep powermenu
+{{- else -}}
 modules-right = bluetooth network hid_battery updates sep volume brightness sep powermenu
-
+{{- end }}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ; The separator will be inserted between the output of each module
