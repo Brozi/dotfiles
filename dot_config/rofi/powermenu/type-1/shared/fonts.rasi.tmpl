@@ -1,0 +1,14 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Fonts
+ *
+ **/
+
+ {{ $host := index .hosts .chezmoi.hostname | default .hosts.default}}
+
+* {
+    font: "JetBrains Mono Nerd Font {{ $host.rofi_font_size }}";
+}
