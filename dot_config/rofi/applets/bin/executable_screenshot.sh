@@ -34,7 +34,8 @@ elif [[ "$theme" == *'type-5'* ]]; then
 elif [[ ("$theme" == *'type-2'*) || ("$theme" == *'type-4'*) ]]; then
   list_col='5'
   list_row='1'
-  win_width='670px'
+  # win_width='670px'
+  win_width='35%'
 fi
 
 # Options
