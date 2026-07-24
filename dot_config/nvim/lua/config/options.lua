@@ -33,12 +33,12 @@ vim.filetype.add({
       if not ft then
         local filename = clean_path:match("[^/]+$")
         if filename then
-          ft = vim.filetype.match({ filename = filename })
+          ft, on_detect = vim.filetype.match({ filename = filename })
         end
       end
 
       -- Return both values so Neovim can execute language-specific initialization
-      return ft or "gotmpl"
+      return ft or "gotmpl", on_detect
     end,
   },
 })
