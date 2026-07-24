@@ -18,7 +18,7 @@ network_interface_name = "enp9s0"
 [hosts."brozi-laptop"]
 dpi = 120
 rofi_font_size = 10
-rofi_icon_size = "24px"
+rofi_icon_size = "35px"
 rofi_font_size_alt = 12
 polybar_height = 45
 polybar_aux_height = 25
