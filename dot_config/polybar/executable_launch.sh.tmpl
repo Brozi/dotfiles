@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
+
 dir="$HOME/.config/polybar"
 themes=($(ls --hide="launch.sh" $dir))
 
@@ -16,11 +18,14 @@ launch_bar() {
     polybar -q bottom -c "$dir/$style/config.ini" &
   elif [[ "$style" == "pwidgets" ]]; then
     bash "$dir"/pwidgets/launch.sh --main
-  elif [[ "$side" == "true" ]]; then
+  else
+    {{ if gt $host.monitor_count 1 -}}
     polybar -q main -c "$dir/$style/config.ini" &
     polybar -q side -c "$dir/$style/config.ini" &
-  else
+    {{- else -}}
     polybar -q main -c "$dir/$style/config.ini" &
+    polybar -q aux -c "$dir/$style/config.ini" &
+    {{- end }}
   fi
 }
 

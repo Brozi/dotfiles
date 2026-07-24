@@ -6,10 +6,13 @@ rofi_font_size = 10
 rofi_icon_size = "24px"
 rofi_font_size_alt = 12
 polybar_height = 34
+polybar_aux_height = 25
 has_touchpad = false
 has_numpad = true
 has_battery = false
 monitor_count = 1
+main_monitor_name = "HDMI-1"
+side_monitor_name = "DP-1"
 
 [hosts."brozi-laptop"]
 dpi = 120
@@ -17,11 +20,13 @@ rofi_font_size = 10
 rofi_icon_size = "34px"
 rofi_font_size_alt = 12
 polybar_height = 45
+polybar_aux_height = 25
 has_touchpad = true
 touchpad_name = "SYNA32F3:00 06CB:CFC5 Touchpad"
 has_numpad = false
 monitor_count = 1
 has_battery = true
+main_monitor_name = "eDP"
 
 [hosts."brozi-desktop"]
 dpi = 96
@@ -29,7 +34,10 @@ rofi_icon_size = "24px"
 rofi_font_size = 10
 rofi_font_size_alt = 12
 polybar_height = 34
+polybar_aux_height = 25
 has_touchpad = false
 has_numpad = true
 monitor_count = 2
 has_battery = false
+main_monitor_name = "HDMI-1"
+side_monitor_name = "DP-1"

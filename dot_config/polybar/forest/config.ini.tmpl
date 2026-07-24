@@ -41,7 +41,7 @@ dpi = ${xrdb:Xft.dpi:-96}
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor =
+monitor = "{{ $host.main_monitor_name }}"
 
 
 ; Use the specified monitor as a fallback if the main one is not found.
@@ -267,10 +267,28 @@ cursor-scroll =
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
 inherit = bar/main
-monitor = "DP-1"
+monitor = "{{ $host.side_monitor_name }}"
 
 modules-right = 
 modules-left = i3 sep title sep cpu temperature memory cpu-fan case-fan gpu-fan
+; modules-left = i3 sep i3window-side
+modules-center = 
+
+tray-position = right
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[bar/aux]
+; Use either of the following command to list available outputs:
+; If unspecified, the application will pick the first one it finds.
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+inherit = bar/side
+monitor = "{{ $host.main_monitor_name }}"
+height = {{ $host.polybar_aux_height }}
+
+modules-right = 
+modules-left = cpu temperature memory cpu-fan  gpu-fan
 ; modules-left = i3 sep i3window-side
 modules-center = 
 
