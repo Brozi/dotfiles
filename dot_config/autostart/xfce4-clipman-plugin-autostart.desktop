@@ -111,6 +111,6 @@ Comment[zh_TW]=剪貼簿管理員
 TryExec=xfce4-clipman
 Exec=xfce4-clipman
 Icon=xfce4-clipman-plugin
-OnlyShowIn=;
+OnlyShowIn=XFCE;
 Terminal=false
 Hidden=true
