@@ -154,9 +154,9 @@ modules-left = launcher sep i3 sep title
 ; modules-center = mpd sep date
 modules-center = date
 {{ if $host.has_battery -}}
-modules-right = bluetooth network battery updates sep volume brightness sep powermenu
+modules-right = bluetooth network battery updates sep volume backlight sep powermenu
 {{- else -}}
-modules-right = bluetooth network hid_battery updates sep volume brightness sep powermenu
+modules-right = bluetooth network hid_battery updates sep volume backlight sep powermenu
 {{- end }}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
