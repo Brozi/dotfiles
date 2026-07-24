@@ -7,6 +7,8 @@
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
+
 [module/alsa]
 type = internal/alsa
 
@@ -793,7 +795,7 @@ interface = wlp3s0
 ; Normal Module
 [module/network]
 type = internal/network
-interface = enp9s0
+interface = "{{ $host.network_module_name }}"
 
 ; Seconds to sleep between updates
 ; Default: 1
