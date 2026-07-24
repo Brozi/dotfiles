@@ -59,6 +59,7 @@ rofi_cmd() {
   rofi -theme-str "window {width: $win_width;}" \
     -theme-str "listview {columns: $list_col; lines: $list_row;}" \
     -theme-str 'textbox-prompt-colon {str: ""; padding: 11px 18px 11px 14px;}' \
+    -dpi 1 \
     -dmenu \
     -p "$prompt" \
     -mesg "$mesg" \
