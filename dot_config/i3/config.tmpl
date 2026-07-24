@@ -86,6 +86,7 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 {{ if $host.has_touchpad -}}
 # Hardware: Enable laptop touchpad tap-to-click
 exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 348 1
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 346 1
 # Enable drag lock for constrained surface area
 exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 352 1
 # enable natural scrolling
