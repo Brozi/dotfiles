@@ -7,6 +7,8 @@
  * Rofi Version: 1.7.3
  **/
 
+ {{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
+
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,window,run,filebrowser";
@@ -237,7 +239,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        24px;
+    size:                        {{ $host.rofi_icon_size }};
     cursor:                      inherit;
 }
 element-text {

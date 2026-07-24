@@ -7,6 +7,8 @@
  *
  **/
 
+ {{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
+
 * {
-    font: "JetBrains Mono Nerd Font {{ if eq .chezmoi.hostname .laptop.hostname }}{{ .laptop.rofi_font_size }}{{ else }}{{ .desktop.rofi_font_size }}{{ end }}";
+    font: "JetBrains Mono Nerd{{ $host.rofi_font_size }}";
 }
