@@ -20,10 +20,16 @@ vim.filetype.add({
       -- Strip Chezmoi prefixes (dot_, executable_) and suffix (.tmpl)
       local clean_path = path:gsub("dot_", "."):gsub("executable_", ""):gsub("%.tmpl$", "")
 
-      -- Query Neovim's filetype registry using the sanitized path
-      local ft = vim.filetype.match({ filename = clean_path, buf = bufnr })
+      -- Explicit override for shell scripts to guarantee the bash parser attaches
+      if clean_path:match("%.sh$") then
+        return "sh", function(b)
+          vim.b[b].is_bash = 1
+        end
+      end
 
-      -- Fall back to matching just the basename if full path matching returns nil
+      -- Capture both the filetype and the required setup callback
+      local ft, on_detect = vim.filetype.match({ filename = clean_path, buf = bufnr })
+
       if not ft then
         local filename = clean_path:match("[^/]+$")
         if filename then
@@ -31,6 +37,7 @@ vim.filetype.add({
         end
       end
 
+      -- Return both values so Neovim can execute language-specific initialization
       return ft or "gotmpl"
     end,
   },
