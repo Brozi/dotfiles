@@ -7,8 +7,7 @@
 set $monitor1 "HDMI-1"
 set $monitor2 "DP-1"
 set $scrtch_display scratchpad show; move position center;
-set $laptop-hostname "brozi-laptop"
-set $pc-hostname "brozi-desktop"
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 
 ### --- Autostart --- ###
 
@@ -84,14 +83,14 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput Accel Profile Enabled" 0 1 0
 
 # Enable touchpad 
-{{ if eq .chezmoi.hostname "brozi-laptop" }}
+{{ if $host.has_touchpad -}}
 # Hardware: Enable laptop touchpad tap-to-click
-exec_always --no-startup-id xinput set-prop "SYNA32F3:00 06CB:CFC5 Touchpad" 348 1
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 348 1
 # Enable drag lock for constrained surface area
-exec_always --no-startup-id xinput set-prop "SYNA32F3:00 06CB:CFC5 Touchpad" 352 1
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 352 1
 # enable natural scrolling
-exec_always --no-startup-id xinput set-prop "SYNA32F3:00 06CB:CFC5 Touchpad" 321 1
-{{ end }}
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 321 1
+{{- end }}
 
 ### --- Workspace definitions --- ###
 
