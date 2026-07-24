@@ -8,6 +8,7 @@ rofi_font_size_alt = 12
 polybar_height = 34
 has_touchpad = false
 has_numpad = true
+has_battery = false
 monitor_count = 1
 
 [hosts."brozi-laptop"]
@@ -20,7 +21,7 @@ has_touchpad = true
 touchpad_name = "SYNA32F3:00 06CB:CFC5 Touchpad"
 has_numpad = false
 monitor_count = 1
-
+has_battery = true
 
 [hosts."brozi-desktop"]
 dpi = 96
@@ -31,3 +32,4 @@ polybar_height = 34
 has_touchpad = false
 has_numpad = true
 monitor_count = 2
+has_battery = false
