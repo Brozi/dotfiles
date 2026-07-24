@@ -11,9 +11,9 @@ monitor_count = 1
 
 [hosts."brozi-laptop"]
 dpi = 120
-rofi_font_size = 14
+rofi_font_size = 13
 rofi_icon_size = "34px"
-rofi_font_size_alt = 16
+rofi_font_size_alt = 15
 has_touchpad = true
 touchpad_name = "SYNA32F3:00 06CB:CFC5 Touchpad"
 has_numpad = false
