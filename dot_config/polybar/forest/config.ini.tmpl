@@ -283,12 +283,12 @@ tray-position = right
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-inherit = bar/side
+inherit = bar/main
 monitor = "{{ $host.main_monitor_name }}"
 height = {{ $host.polybar_aux_height }}
 
 modules-right = 
-modules-left = cpu temperature memory cpu-fan  gpu-fan
+modules-left = cpu temperature memory
 ; modules-left = i3 sep i3window-side
 modules-center = 
 
