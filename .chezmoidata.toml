@@ -1,16 +1,24 @@
 terminal_emulator = "kitty"
 
-[laptop]
-hostname = "brozi-laptop"
+[hosts.default]
+dpi = 96
+rofi_font_size = 10
+rofi_icon_size = "24px"
+rofi_font_size_alt = 12
+has_touchpad = false
+
+[hosts."brozi-laptop"]
 dpi = 120
 rofi_font_size = 14
 rofi_icon_size = "34px"
 rofi_font_size_alt = 16
+has_touchpad = true
+touchpad_name = "SYNA32F3:00 06CB:CFC5 Touchpad"
 
 
-[desktop]
-hostname = "brozi-desktop"
+[hosts."brozi-desktop"]
 dpi = 96
 rofi_icon_size = "24px"
 rofi_font_size = 10
 rofi_font_size_alt = 12
+has_touchpad = false
