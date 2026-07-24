@@ -1,7 +1,2 @@
-{{ if eq .chezmoi.hostname "brozi-laptop" }}
-! Laptop High-DPI Scaling
-Xft.dpi: 120
-{{ else }}
-! Desktop Standard DPI
-Xft.dpi: 96
-{{ end }}
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
+Xft.dpi: {{ $host.dpi }}
