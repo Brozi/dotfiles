@@ -27,6 +27,7 @@ has_numpad = false
 monitor_count = 1
 has_battery = true
 main_monitor_name = "eDP"
+side_monitor_name = ""
 
 [hosts."brozi-desktop"]
 dpi = 96
