@@ -236,14 +236,7 @@ bindsym $mod+f exec --no-startup-id kitty -e yazi
 ### --- Workspace keybinds --- ###
 
 # include ~/.config/i3/normal-no-alt-binds.conf
-
-{{ if $host.has_numpad -}}
-
-include ~/.config/i3/numpad-binds.conf
-{{- else -}}
 include ~/.config/i3/normal-binds.conf
-
-{{- end}}
 
 # throw the current workspace to a specific monitor
 bindsym $mod+control+l move workspace to output $monitor2
