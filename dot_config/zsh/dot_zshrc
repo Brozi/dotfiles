@@ -226,6 +226,7 @@ alias vis='nvim "+set si"'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias cat='batcat'
 alias c='chezmoi'
+alias cedit='c edit'
 
 alias home='cd ~'
 alias cd..='cd ..'
