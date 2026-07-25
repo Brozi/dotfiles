@@ -238,7 +238,7 @@ alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
 
-alias ls='lsd -aFh --color=always'
+alias ls='lsd -AFh --color=always'
 alias la='ls -Alh'
 alias lx='ls -lXBh'
 alias lk='ls -lSrh'
