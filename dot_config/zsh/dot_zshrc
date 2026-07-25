@@ -227,6 +227,7 @@ alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=dow
 alias cat='batcat'
 alias c='chezmoi'
 alias cedit='c edit'
+alias ls='lsd'
 
 alias home='cd ~'
 alias cd..='cd ..'
