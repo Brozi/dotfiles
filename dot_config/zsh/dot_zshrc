@@ -206,7 +206,7 @@ alias -g -- --help='--help 2>&1 | batcat --language=help --style=plain'
 
 # Edit this .zshrc file
 # alias ezrc='nvim ~/.config/zsh/.zshrc'
-alias ezrc='chezmoi edit ~/.config/zsh/.zshrc'
+alias ezrc='c edit ~/.config/zsh/.zshrc'
 alias hlp='less ~/.zshrc_help'
 
 alias da='date "+%Y-%m-%d %A %T %Z"'
