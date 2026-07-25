@@ -227,7 +227,6 @@ alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=dow
 alias cat='batcat'
 alias c='chezmoi'
 alias cedit='c edit'
-alias ls='lsd'
 
 alias home='cd ~'
 alias cd..='cd ..'
@@ -239,8 +238,8 @@ alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
 
+alias ls='lsd -aFh --color=always'
 alias la='ls -Alh'
-alias ls='ls -aFh --color=always'
 alias lx='ls -lXBh'
 alias lk='ls -lSrh'
 alias lc='ls -ltcrh'
