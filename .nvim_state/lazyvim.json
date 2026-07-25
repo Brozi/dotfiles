@@ -23,10 +23,13 @@
     "lazyvim.plugins.extras.lsp.neoconf",
     "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.ui.dashboard-nvim",
     "lazyvim.plugins.extras.ui.indent-blankline",
     "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.util.chezmoi",
     "lazyvim.plugins.extras.util.dot",
+    "lazyvim.plugins.extras.util.gh",
+    "lazyvim.plugins.extras.util.gitui",
     "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "install_version": 8,
