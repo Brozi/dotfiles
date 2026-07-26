@@ -30,14 +30,16 @@ exec_always --no-startup-id xrdb -merge ~/.Xresources
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
-# Set X11 screensaver timeout to 20 minutes (1200 seconds)
-# The time to set the pc to sleep can be changed in 
-# /etc/systemd/logind.conf
-exec --no-startup-id "sleep 3 && xset s 1200 1200"
-exec --no-startup-id "sleep 3 && xset dpms 1200 1200 1200"
+# Set X11 screensaver timeout to the amount defined in .chezmoidata
+exec --no-startup-id "sleep 3 && xset s {{ $host.screensaver_time }} {{ $host.screensaver_time }}"
+exec --no-startup-id "sleep 3 && xset dpms {{ $host.screensaver_time }} {{ $host.screensaver_time }} {{ $host.screensaver_time }}"
 
 # Start xss-lock to catch the X11 timeout and systemd suspend events
 exec --no-startup-id xss-lock -l -- i3lock -n -e
+
+# Use xautolock to automatically suspend the machine
+exec --no-startup-id "xautolock -time {{ $host.suspend_time }} -locker 'systemctl suspend'"
+
 # Start caffeine so that the system wont sleep when watching a video
 exec --no-startup-id caffeine
 
