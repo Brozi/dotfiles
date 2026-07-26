@@ -1,2 +1,3 @@
 {{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 Xft.dpi: {{ $host.dpi }}
+Xcursor.size: {{ $host.cursor_size }}
