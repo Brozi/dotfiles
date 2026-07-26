@@ -3,22 +3,26 @@
 on = "z"
 run = "plugin zoxide"
 desc = "Jump to a directory via zoxide"
+
 [[mgr.prepend_keymap]]
 on = "Z"
 run = "plugin fzf"
 desc = "Jump to a file/directory via fzf"
 # Smart enter plugin
+
 [[mgr.prepend_keymap]]
 on = "l"
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 # Drop to shell vanilla function
+
 [[mgr.prepend_keymap]]
 on = "!"
 for = "unix"
 run = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
 # Vim motions plugin
+
 [[mgr.prepend_keymap]]
 on = ["1"]
 run = "plugin relative-motions 1"
@@ -63,3 +67,9 @@ desc = "Move in relative steps"
 on = ["9"]
 run = "plugin relative-motions 9"
 desc = "Move in relative steps"
+# Rofi grid image preview
+
+[[mgr.prepend_keymap]]
+on = "<C-g>"
+run = 'shell -- rofi -theme fullscreen-preview -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+desc = "Grid view"
