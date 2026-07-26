@@ -11,6 +11,7 @@ format = """
 $os\
 $username\
 [](bg:peach fg:red)\
+${env_var.yazi_level}\
 $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
@@ -185,6 +186,14 @@ style = "bg:lavender"
 disabled = false
 show_notifications = false
 min_time_to_notify = 45000
+
+[env_var.yazi_level]
+description = "Indicate the shell was launched by `yazi`"
+variable = "YAZI_LEVEL"
+# 🦆: U+1f986 Duck
+# Alternatively: " ": U+E795 <Private Use>
+symbol = "🦆"
+format = '[ $symbol ]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
