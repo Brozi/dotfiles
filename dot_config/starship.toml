@@ -30,8 +30,8 @@ $python\
 $conda\
 [](fg:sapphire bg:lavender)\
 $time\
-[ ](fg:lavender)\
 ${env_var.yazi_level}\
+[ ](fg:lavender)\
 $cmd_duration\
 $line_break\
 $character"""
