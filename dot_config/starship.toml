@@ -192,8 +192,9 @@ description = "Indicate the shell was launched by `yazi`"
 variable = "YAZI_LEVEL"
 # 🦆: U+1f986 Duck
 # Alternatively: " ": U+E795 <Private Use>
+style = "bg:lavender"
 symbol = "y"
-format = '[ $symbol ]($style)'
+format = '[[ $symbol ](fg:crust bg:lavender)]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
