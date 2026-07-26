@@ -634,7 +634,15 @@ if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
         source .venv/bin/activate
     fi
 fi
-
+# ==========================================
+# Launching yazi in y mode from i3
+# ==========================================
+if [ -n "$LAUNCH_YAZI" ]; then
+    # Unset the variable so nested shells don't also launch yazi
+    unset LAUNCH_YAZI
+    # Call your function
+    y
+fi
 # ==========================================
 # NVIM GLOBAL EXPOSE
 # ==========================================
