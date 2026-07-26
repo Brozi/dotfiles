@@ -37,8 +37,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
     local filepath = args.match
     local filename = vim.fn.fnamemodify(filepath, ":t")
-    local msg = "Update " .. filename
-
+    local msg = "Update " .. filepath
     vim.system({ "chezmoi", "apply", "--source-path", filepath }, {}, function(apply_out)
       if apply_out.code ~= 0 then
         is_syncing = false
