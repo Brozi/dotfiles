@@ -231,7 +231,7 @@ bindsym $mod+a focus parent
 
 ### --- Launcher keys --- ###
 bindsym $mod+b exec --no-startup-id vivaldi --password-store=gnome-libsecret
-bindsym $mod+f exec --no-startup-id kitty -- zsh -ic "y; exec zsh"
+bindsym $mod+f exec --no-startup-id env LAUNCH_YAZI=1 kitty
 ### --- Workspace keybinds --- ###
 
 # include ~/.config/i3/normal-no-alt-binds.conf
