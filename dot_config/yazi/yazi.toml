@@ -1,0 +1,2 @@
+[manager]
+mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
