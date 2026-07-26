@@ -60,7 +60,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
             is_syncing = false
             vim.schedule(function()
               if push_out.code == 0 then
-                vim.notify("Chezmoi: Successfully pushed " .. filename, vim.log.levels.INFO)
+                vim.notify("Chezmoi: Successfully pushed " .. filepath, vim.log.levels.INFO)
               else
                 vim.notify("Chezmoi: Push failed for " .. filename, vim.log.levels.ERROR)
               end
