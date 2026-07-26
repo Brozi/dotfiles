@@ -1,2 +1,11 @@
 [manager]
 mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
+[[plugin.prepend_fetchers]]
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url   = "*/"
+run   = "git"
+group = "git"
