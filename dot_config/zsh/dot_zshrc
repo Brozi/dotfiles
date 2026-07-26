@@ -611,10 +611,10 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 # Add rofi scripts directory to path
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
-# Force Kitty Shell Integration
-if [ -n "$KITTY_INSTALLATION_DIR" ]; then
-    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
-fi
+# # Force Kitty Shell Integration
+# if [ -n "$KITTY_INSTALLATION_DIR" ]; then
+#     source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
+# fi
 if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
