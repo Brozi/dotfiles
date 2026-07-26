@@ -257,6 +257,8 @@ alias lla='ls -Al'
 alias las='ls -A'
 alias lls='ls -l'
 
+alias yazi='y'
+
 alias mx='chmod a+x'
 alias 000='chmod -R 000'
 alias 644='chmod -R 644'
