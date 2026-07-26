@@ -16,7 +16,7 @@ main_monitor_name = "HDMI-1"
 side_monitor_name = "DP-1"
 network_interface_name = "enp9s0"
 screensaver_time = 1200
-sleep_time = 1200
+suspend_time = 1200
 
 [hosts."brozi-laptop"]
 dpi = 120
@@ -34,8 +34,8 @@ has_battery = true
 main_monitor_name = "eDP"
 side_monitor_name = ""
 network_interface_name = "wlp1s0"
-screensaver_time = 1200
-sleep_time = 1200
+screensaver_time = 600
+suspend_time = 300
 
 [hosts."brozi-desktop"]
 dpi = 96
@@ -53,4 +53,4 @@ main_monitor_name = "HDMI-1"
 side_monitor_name = "DP-1"
 network_interface_name = "enp9s0"
 screensaver_time = 1200
-sleep_time = 1200
+suspend_time = 1200
