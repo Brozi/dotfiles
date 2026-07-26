@@ -37,8 +37,7 @@ exec --no-startup-id "sleep 3 && xset s 1200 1200"
 exec --no-startup-id "sleep 3 && xset dpms 1200 1200 1200"
 
 # Start xss-lock to catch the X11 timeout and systemd suspend events
-exec --no-startup-id xss-lock -l -- i3lock -n -c ffffff
-
+exec --no-startup-id xss-lock -l -- i3lock -n -e
 # Start caffeine so that the system wont sleep when watching a video
 exec --no-startup-id caffeine
 
