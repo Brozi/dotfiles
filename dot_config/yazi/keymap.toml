@@ -76,7 +76,7 @@ desc = "Grid view"
 
 # toggle pane plugin
 [[mgr.prepend_keymap]]
-on = "T"
+on = "t"
 run = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
 [[mgr.prepend_keymap]]
