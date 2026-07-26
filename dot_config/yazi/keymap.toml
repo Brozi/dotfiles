@@ -73,3 +73,13 @@ desc = "Open $SHELL here"
 on = "<C-g>"
 run = 'shell -- rofi -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
 desc = "Grid view"
+
+# toggle pane plugin
+[[mgr.prepend_keymap]]
+on = "T"
+run = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
+[[mgr.prepend_keymap]]
+on = "T"
+run = "plugin toggle-pane min-preview"
+desc = "Show or hide the preview pane"
