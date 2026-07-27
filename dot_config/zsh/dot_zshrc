@@ -35,7 +35,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -87,10 +87,8 @@ unsetopt BEEP
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -99,8 +97,6 @@ unsetopt BEEP
 #   export EDITOR='nvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -114,11 +110,6 @@ unsetopt BEEP
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#!/usr/bin/env zsh
-#######################################################
-# SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
-# Translated for ZSH
-#######################################################
 
 if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
 fastfetch
@@ -586,6 +577,7 @@ precmd() {
      print -Pn "\e]0;%~\a"
    }
 
+# Yazi changes your cwd to the one you were in before quitting it
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
