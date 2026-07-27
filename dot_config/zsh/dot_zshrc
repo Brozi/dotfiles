@@ -15,9 +15,15 @@ ZSH_THEME=""
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+# Configure vi mode plugin
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+MODE_INDICATOR=""
+
 # source the zsh syntax highligting theme
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 
+# Load OMZ plugins
+plugins=(git kitty zsh-autosuggestions zsh-completions zsh-syntax-highlighting vi-mode)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -35,7 +41,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -50,7 +56,6 @@ ENABLE_CORRECTION="true"
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -73,13 +78,19 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git kitty zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 export HISTSIZE=10000
 export SAVEHIST=10000
 HIST_STAMPS="yyyy-mm-dd" # Oh My Zsh specific setting for history timestamps
 
 source $ZSH/oh-my-zsh.sh
+
+# Post OMZ configuration overrides
+CORRECT_IGNORE_FILE='.*'
+CORRECT_IGNORE='_*'
+
+# map shortcut to accept autosuggestions
+bindkey -M viins '^f' autosuggest-accept
 
 setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
@@ -595,7 +606,7 @@ alias lanm="systemctl --user restart lan-mouse"
 
 # Zsh native way to bind keys (replaces bash `bind`)
 if [[ $- == *i* ]]; then
-    bindkey -s '^f' 'zi\n'
+    bindkey -s '^s' 'zi\n'
 fi
 
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
@@ -603,10 +614,11 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 # Add rofi scripts directory to path
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
-# # Force Kitty Shell Integration
-# if [ -n "$KITTY_INSTALLATION_DIR" ]; then
-#     source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
-# fi
+# Force Kitty Shell Integration
+if [ -n "$KITTY_INSTALLATION_DIR" ]; then
+    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
+fi
+
 if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
