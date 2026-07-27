@@ -596,3 +596,11 @@ fi
 # Eliminate the mode-switching delay enforced by Oh My Zsh
 # 1 = 10ms. Do not set to 0, or arrow keys will break.
 export KEYTIMEOUT=1
+# ==========================================
+# NEOVIM TERMINAL KILL-SWITCH
+# ==========================================
+# If this Zsh instance is running inside Neovim's terminal emulator, 
+# forcefully revert to standard Emacs keybindings to prevent Vim-in-Vim hell.
+if [[ -n "$NVIM" || -n "$NVIM_LISTEN_ADDRESS" ]]; then
+    bindkey -e
+fi
