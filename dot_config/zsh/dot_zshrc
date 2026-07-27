@@ -72,10 +72,7 @@ export PATH="$PATH:/home/brozi/.deno/env"
 #######################################################
 
 # Load OMZ plugins
-plugins=(git kitty zsh-autosuggestions zsh-completions zsh-syntax-highlighting vi-mode)
-
-# source the zsh syntax highligting theme
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
+plugins=(git kitty zsh-autosuggestions zsh-completions vi-mode zsh-syntax-highlighting)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -129,14 +126,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-
-# Bind Vim movement keys in the completion menu
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -153,9 +142,17 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 MODE_INDICATOR=""
 
 source $ZSH/oh-my-zsh.sh
+# source the zsh syntax highligting theme
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 
 # Load the completion list module
 zmodload zsh/complist
+# Bind Vim movement keys in the completion menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 
 HIST_STAMPS="yyyy-mm-dd" # Oh My Zsh specific setting for history timestamps
 
@@ -190,33 +187,26 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # For a full list of active aliases, run `alias`.
 #
 
-
+# Stop fastfetch from running when the shell is opened from rofi
 if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
 fastfetch
 fi
 
-
 # Allow ctrl-S for history navigation (with ctrl-R)
 [[ $- == *i* ]] && stty -ixon
 
-# Set the default editor
-alias spico='sudo pico'
-alias snano='sudo nano'
 
 #######################################################
-# MACHINE SPECIFIC ALIASES
+# ALIASES
 #######################################################
 
-alias web='cd /var/www/html5'
+# Start sortty
 alias sortty='python3 ~/.local/bin/sortty-bin/sortty.py'
-
-#######################################################
-# GENERAL ALIASES
-#######################################################
 
 # Alert alias
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# topgrade alias
 alias update-all='topgrade'
 
 #colorize help messages (like cp --help | batcat -plhelp)
@@ -239,9 +229,7 @@ alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
 alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
 alias svi='sudo vi'
-alias vis='nvim "+set si"'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias cat='batcat'
 alias c='chezmoi'
@@ -267,7 +255,6 @@ alias lr='ls -lRh'
 alias lt='ls -ltrh'
 alias lm='ls -alh |more'
 alias lw='ls -xAh'
-# alias ll='ls -Fls'
 alias ll='ls -FlS'
 alias labc='ls -lap'
 alias lf="ls -l | egrep -v '^d'"
@@ -409,14 +396,6 @@ up() {
     cd $d
 }
 
-#cd ()
-#{
-#    if [ -n "$1" ]; then
-#        builtin cd "$@" && ls
-#    else
-#        builtin cd ~ && ls
-#    fi
-#}
 # Automatically run 'ls' whenever the directory changes
 chpwd() {
     ls
@@ -527,61 +506,6 @@ function whatsmyip () {
     curl -4 ifconfig.me
 }
 
-apachelog() {
-    if [ -f /etc/httpd/conf/httpd.conf ]; then
-        cd /var/log/httpd && ls -xAh && multitail --no-repeat -c -s 2 /var/log/httpd/*_log
-    else
-        cd /var/log/apache2 && ls -xAh && multitail --no-repeat -c -s 2 /var/log/apache2/*.log
-    fi
-}
-
-apacheconfig() {
-    if [ -f /etc/httpd/conf/httpd.conf ]; then
-        sedit /etc/httpd/conf/httpd.conf
-    elif [ -f /etc/apache2/apache2.conf ]; then
-        sedit /etc/apache2/apache2.conf
-    else
-        echo "Error: Apache config file could not be found."
-        sudo updatedb && locate httpd.conf && locate apache2.conf
-    fi
-}
-
-phpconfig() {
-    if [ -f /etc/php.ini ]; then
-        sedit /etc/php.ini
-    elif [ -f /etc/php/php.ini ]; then
-        sedit /etc/php/php.ini
-    elif [ -f /etc/php5/php.ini ]; then
-        sedit /etc/php5/php.ini
-    elif [ -f /usr/bin/php5/bin/php.ini ]; then
-        sedit /usr/bin/php5/bin/php.ini
-    elif [ -f /etc/php5/apache2/php.ini ]; then
-        sedit /etc/php5/apache2/php.ini
-    else
-        echo "Error: php.ini file could not be found."
-        sudo updatedb && locate php.ini
-    fi
-}
-
-mysqlconfig() {
-    if [ -f /etc/my.cnf ]; then
-        sedit /etc/my.cnf
-    elif [ -f /etc/mysql/my.cnf ]; then
-        sedit /etc/mysql/my.cnf
-    elif [ -f /usr/local/etc/my.cnf ]; then
-        sedit /usr/local/etc/my.cnf
-    elif [ -f /usr/bin/mysql/my.cnf ]; then
-        sedit /usr/bin/mysql/my.cnf
-    elif [ -f ~/my.cnf ]; then
-        sedit ~/my.cnf
-    elif [ -f ~/.my.cnf ]; then
-        sedit ~/.my.cnf
-    else
-        echo "Error: my.cnf file could not be found."
-        sudo updatedb && locate my.cnf
-    fi
-}
-
 trim() {
     local var=$*
     var="${var#"${var%%[![:space:]]*}"}"
@@ -618,10 +542,8 @@ function y() {
 # ENV & PROMPT
 #######################################################
 
-alias hug="systemctl --user restart hugo"
-alias lanm="systemctl --user restart lan-mouse"
-
 # Zsh native way to bind keys (replaces bash `bind`)
+# set Ctrl+s for zoxides interactive mode
 if [[ $- == *i* ]]; then
     bindkey -s '^s' 'zi\n'
 fi
@@ -660,6 +582,3 @@ if [ -n "$LAUNCH_YAZI" ]; then
     # Call your function
     y
 fi
-# ==========================================
-# NVIM GLOBAL EXPOSE
-# ==========================================
