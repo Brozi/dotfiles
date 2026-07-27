@@ -177,6 +177,17 @@ zstyle ':completion::complete:*' cache-path ~/.zsh/cache
 #Autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+# autoload the build-in edit-command-line function
+autoload -Uz edit-command-line
+
+# Register it as a ZLE (ZSH line editor) widget
+zle -N edit-command-line
+
+# Map 'vv' to open Neovim, preserving standard 'v' for visual mode
+bindkey -M vicmd 'vv' edit-command-line
+
+# Alternatively, map Ctrl+V in Normal mode to open Neovim
+bindkey -M vicmd '^v' edit-command-line
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -582,3 +593,6 @@ if [ -n "$LAUNCH_YAZI" ]; then
     # Call your function
     y
 fi
+# Eliminate the mode-switching delay enforced by Oh My Zsh
+# 1 = 10ms. Do not set to 0, or arrow keys will break.
+export KEYTIMEOUT=1
