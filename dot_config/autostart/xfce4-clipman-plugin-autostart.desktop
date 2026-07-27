@@ -112,5 +112,6 @@ TryExec=xfce4-clipman
 Exec=xfce4-clipman
 Icon=xfce4-clipman-plugin
 OnlyShowIn=XFCE;
+NotShowIn=i3;
 Terminal=false
 Hidden=false
