@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 #######################################################
-# EXPORTS & ZSH SETOPTS
+# EXPORTS
 #######################################################
 
 # Set up XDG folders
@@ -67,29 +67,9 @@ export PATH=$HOME/.config/rofi/scripts:$PATH
 # Add deno to path
 export PATH="$PATH:/home/brozi/.deno/env"
 
-# Load the completion list module
-zmodload zsh/complist
-
-# Bind Vim movement keys in the completion menu
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Configure vi mode plugin
-VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-MODE_INDICATOR=""
+#######################################################
+# OH MY ZSH CONFIG
+#######################################################
 
 # Load OMZ plugins
 plugins=(git kitty zsh-autosuggestions zsh-completions zsh-syntax-highlighting vi-mode)
@@ -151,9 +131,33 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 
 
-HIST_STAMPS="yyyy-mm-dd" # Oh My Zsh specific setting for history timestamps
+# Bind Vim movement keys in the completion menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME=""
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Configure vi mode plugin
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+MODE_INDICATOR=""
 
 source $ZSH/oh-my-zsh.sh
+
+# Load the completion list module
+zmodload zsh/complist
+
+HIST_STAMPS="yyyy-mm-dd" # Oh My Zsh specific setting for history timestamps
 
 # Post OMZ configuration overrides
 CORRECT_IGNORE_FILE='.*'
@@ -164,30 +168,9 @@ bindkey -M viins '^f' autosuggest-accept
 # Accept one word of the autosuggestion at a time using Ctrl+l
 bindkey -M viins '^l' forward-word
 
-
 setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
 unsetopt BEEP
-
-
-
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-fastfetch
-fi
 
 # Case-insensitive auto-completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -198,6 +181,19 @@ zstyle ':completion::complete:*' cache-path ~/.zsh/cache
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+
+
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+fastfetch
+fi
 
 
 # Allow ctrl-S for history navigation (with ctrl-R)
