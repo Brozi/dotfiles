@@ -561,38 +561,28 @@ fi
 
 
 # Force Kitty Shell Integration
-if [ -n "$KITTY_INSTALLATION_DIR" ]; then
-    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
-fi
+if [ -n "$KITTY_INSTALLATION_DIR" ]; then source
+  "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh" fi
 
-if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
-  eval "$(starship init zsh)"
-fi
+  if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then eval
+    "$(starship init zsh)" fi
 
-eval "$(zoxide init zsh)"
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+    eval "$(zoxide init zsh)" [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-# ==========================================
-# JETBRAINS VENV ACTIVATION HOOK
+# ========================================== JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
 if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
-    # Check if a standard venv exists in the current project root
-    if [[ -f "venv/bin/activate" ]]; then
-        source venv/bin/activate
+  # Check if a standard venv exists in the current project root
+  if [[ -f "venv/bin/activate" ]]; then source venv/bin/activate
     # Fallback for .venv naming convention
-    elif [[ -f ".venv/bin/activate" ]]; then
-        source .venv/bin/activate
-    fi
-fi
-# ==========================================
-# Launching yazi in y mode from i3
-# ==========================================
-if [ -n "$LAUNCH_YAZI" ]; then
+  elif [[ -f ".venv/bin/activate" ]]; then source .venv/bin/activate fi fi
+  # ========================================== Launching yazi in y mode from i3
+  # ==========================================
+  if [ -n "$LAUNCH_YAZI" ]; then
     # Unset the variable so nested shells don't also launch yazi
     unset LAUNCH_YAZI
     # Call your function
-    y
-fi
-# Eliminate the mode-switching delay enforced by Oh My Zsh
-# 1 = 10ms. Do not set to 0, or arrow keys will break.
-export KEYTIMEOUT=1
+    y fi
+    # Eliminate the mode-switching delay enforced by Oh My Zsh
+    # 1 = 10ms. Do not set to 0, or arrow keys will break.
+    export KEYTIMEOUT=1
