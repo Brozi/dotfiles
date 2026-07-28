@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Notion Electron
-Exec=/home/brozi/Applications/notion_electron.appimage
+Exec=notion-electron
 Terminal=false
 Type=Application
 Icon=notion-electron
