@@ -5,4 +5,4 @@ vim.api.nvim_set_keymap("i", ";;", "<ESC>", { noremap = false })
 
 -- Bind ce to cw in order to preserve cw's default behaviour
 -- While using nvim spider
-vim.keymap.set("n", "cw", "c<cmd>lua require('spider').motion('e')<CR>")
+-- vim.keymap.set("n", "cw", "c<cmd>lua require('spider').motion('e')<CR>")
