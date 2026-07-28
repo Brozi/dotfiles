@@ -1,6 +1,10 @@
 return {
   "chrisgrieser/nvim-spider",
-  opts = {},
+  opts = {
+    skipInsignificanPunctuation = false,
+    subwordMovement = true,
+    consistentOperatorPending = false,
+  },
   keys = {
     {
       "w",
