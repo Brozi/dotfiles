@@ -35,7 +35,7 @@ disable = ["firmware"]
 # first = ["chezmoi"]
 
 # Run these steps after all others
-# last = ["system"]
+last = ["chezmoi"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -116,7 +116,7 @@ no_self_update = false
 # Whether to show a distribution-specific summary if applicable, e.g. listing
 # Pacman backup configuration files (*.pacsave and *.pacnew)
 # (default: true)
-# show_distribution_summary = false
+show_distribution_summary = true
 
 # For NixOS/home-manager, there are multiple ways to switch to newer configurations.
 # When set to autodetect: use nh when available, fall back to vanilla
@@ -153,7 +153,7 @@ no_self_update = false
 # to run the update in this case.
 #
 # (default: false)
-# poetry_force_self_update = true
+poetry_force_self_update = true
 
 
 [conda]
