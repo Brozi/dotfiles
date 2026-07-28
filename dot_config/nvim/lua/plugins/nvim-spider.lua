@@ -3,7 +3,7 @@ return {
   opts = {
     skipInsignificanPunctuation = false,
     subwordMovement = true,
-    consistentOperatorPending = false,
+    consistentOperatorPending = true,
   },
   keys = {
     {
