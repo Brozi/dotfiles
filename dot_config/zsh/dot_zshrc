@@ -141,6 +141,9 @@ ZSH_THEME=""
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 MODE_INDICATOR=""
 
+#Autosuggest strategy
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 source $ZSH/oh-my-zsh.sh
 # source the zsh syntax highligting theme
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
@@ -170,9 +173,6 @@ unsetopt BEEP
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # Enable caching for completions to speed up slow commands
 zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path ~/.zsh/cache
-#Autosuggest strategy
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # autoload the build-in edit-command-line function
 autoload -Uz edit-command-line
@@ -241,14 +241,11 @@ alias svi='sudo vi'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias cat='batcat'
 alias c='chezmoi'
-alias cedit='c edit'
+alias ce='c edit'
+alias e='exit'
 
 alias home='cd ~'
 alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
 
 alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
@@ -531,11 +528,6 @@ lazyg() {
     git commit -m "$1"
     git push
 }
-
-#Change the default window title
-precmd() {
-     print -Pn "\e]0;%~\a"
-   }
 
 # Yazi changes your cwd to the one you were in before quitting it
 function y() {
