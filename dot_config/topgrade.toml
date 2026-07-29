@@ -482,7 +482,7 @@ upgrade = false
 [cargo]
 # If this is set to true, `cargo install-update` also updates git-originating packages.
 # (default: true)
-# git = false
+git = false
 
 # If this is set to true, `cargo install-update` is run quietly.
 # (default: false)
