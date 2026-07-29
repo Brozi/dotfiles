@@ -80,10 +80,8 @@ vim.api.nvim_create_autocmd("FileType", {
     -- 1. Disable C-style and smart indentation heuristics that break YAML
     vim.opt_local.smartindent = false
     vim.opt_local.cindent = false
-
     -- 2. Override Treesitter indent with Neovim's reliable regex-based YAML indent
     vim.bo.indentexpr = "GetYAMLIndent(v:lnum)"
-
     -- 3. Enforce strict 2-space indentation
     vim.opt_local.shiftwidth = 2
     vim.opt_local.tabstop = 2
