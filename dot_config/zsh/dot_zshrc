@@ -246,6 +246,8 @@ alias cat='batcat'
 alias c='chezmoi'
 alias ce='c edit'
 alias e='exit'
+alias nv='nvim'
+alias v='vim'
 
 alias home='cd ~'
 alias cd..='cd ..'
