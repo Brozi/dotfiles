@@ -38,7 +38,7 @@ disable = ["firmware"]
 last = ["chezmoi"]
 
 # Ignore failures for these steps
-# ignore_failures = ["powershell"]
+ignore_failures = ["jetbrains"]
 
 # List of remote machines with Topgrade installed on them
 # remote_topgrades = ["toothless", "pi", "parnas"]
