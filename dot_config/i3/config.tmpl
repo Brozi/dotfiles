@@ -233,7 +233,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
 ### --- Launcher keys --- ###
 bindsym $mod+b exec --no-startup-id vivaldi --password-store=gnome-libsecret
@@ -246,13 +246,13 @@ include ~/.config/i3/normal-no-alt-binds.conf
 # throw the current workspace to a specific monitor
 bindsym $mod+control+l move workspace to output $monitor2
 bindsym $mod+control+h move workspace to output $monitor1
-#bindings for the future 4 monitor layout
+# bindings for the future 4 monitor layout
 
-#bindsym $mod+control+k move workspace to output HDMI-2
-#bindsym $mod+control+j move workspace to output HDMI-3
+# bindsym $mod+control+k move workspace to output HDMI-2
+# bindsym $mod+control+j move workspace to output HDMI-3
 
-### --- Workspace rules --- ###
-
+### --- Window rules --- ###
+assign [class="^notion-electron$"] $ws5
 
 
 ### --- Scratchpads --- ###
