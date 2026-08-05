@@ -57,7 +57,7 @@ exec --no-startup-id nitrogen --restore
 
 # startup polybars
 # my old polybar
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # new catppuccin polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
@@ -148,7 +148,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-
 # Open clipboard selection
 bindsym $mod+c exec --no-startup-id xfce4-popup-clipman
 
@@ -175,7 +174,7 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1
 # Open the screenshot Menu
 bindsym Print exec --no-startup-id ~/.config/rofi/scripts/screenshot
 #Open the sound Menu
-bindsym $mod+Mod1+v exec --no-startup-id ~/.config/rofi/scripts/volume
+bindsym $mod+$alt+v exec --no-startup-id ~/.config/rofi/scripts/volume
 
 # change focus
 bindsym $mod+h focus left
@@ -208,7 +207,7 @@ bindsym $mod+g split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+Mod1+f fullscreen toggle
+bindsym $mod+$alt+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -232,8 +231,8 @@ bindsym $mod+b exec --no-startup-id vivaldi --password-store=gnome-libsecret
 bindsym $mod+f exec --no-startup-id env LAUNCH_YAZI=1 kitty
 ### --- Workspace keybinds --- ###
 
-# include ~/.config/i3/normal-no-alt-binds.conf
-include ~/.config/i3/normal-binds.conf
+include ~/.config/i3/normal-no-alt-binds.conf
+# include ~/.config/i3/normal-binds.conf
 
 # throw the current workspace to a specific monitor
 bindsym $mod+control+l move workspace to output $monitor2
