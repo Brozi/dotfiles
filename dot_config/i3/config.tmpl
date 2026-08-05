@@ -107,19 +107,21 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# Bind workspaces 1-5 to the primary monitor
+# Bind workspaces 1-6 to the primary monitor
 workspace $ws1 output $monitor1
 workspace $ws2 output $monitor1
 workspace $ws3 output $monitor1
 workspace $ws4 output $monitor1
 workspace $ws5 output $monitor1
+workspace $ws6 output $monitor1
 
-# Bind workspaces 6-10 to the secondary monitor
-workspace $ws6 output $monitor2
+# Bind workspaces 7-12 to the secondary monitor
 workspace $ws7 output $monitor2
 workspace $ws8 output $monitor2
 workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
+workspace $ws11 output $monitor2
+workspace $ws12 output $monitor2
 
 # Set outer gaps to 0 for all workspaces on secondary monitor
 workspace $ws6 gaps outer -6
@@ -127,6 +129,8 @@ workspace $ws7 gaps outer -6
 workspace $ws8 gaps outer -6
 workspace $ws9 gaps outer -6
 workspace $ws10 gaps outer -6
+workspace $ws11 gaps outer -6
+workspace $ws12 gaps outer -6
 
 
 ### --- Keybinds --- ###
