@@ -17,5 +17,5 @@ theme='style-6'
 ## Run
 rofi \
   -show drun \
-  -dpi 1 \
+  -dpi 0 \
   -theme ${dir}/${theme}.rasi
