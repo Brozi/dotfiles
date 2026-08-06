@@ -17,6 +17,5 @@ theme='style-6'
 ## Run
 rofi \
   -show calc \
-  -dpi 0 \
   -theme ${dir}/${theme}.rasi \
   -modi calc
