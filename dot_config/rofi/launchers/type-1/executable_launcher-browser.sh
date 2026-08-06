@@ -17,6 +17,5 @@ theme='style-6'
 ## Run
 rofi \
   -show search \
-  -dpi 0 \
   -theme ${dir}/${theme}.rasi \
   -modi search:rofi-web-search
