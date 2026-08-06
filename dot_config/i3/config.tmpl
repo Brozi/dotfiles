@@ -177,7 +177,11 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Open rofi launcher 
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher_t1
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-run
+# Open rofi search
+bindsym $mod+s exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-browser
+# Open rofi calculator
+bindsym $mod+$alt+c exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-calc
 # Open rofi powermenu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1 
 # Open the screenshot Menu
