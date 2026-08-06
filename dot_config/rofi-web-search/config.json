@@ -1,0 +1,5 @@
+{
+  "SEARCH_ENGINE": "google",
+  "BROWSER": "firefox",
+  "TERMINAL": ["gnome-terminal", "--"]
+}
