@@ -19,4 +19,4 @@ rofi \
   -show search \
   -dpi 0 \
   -theme ${dir}/${theme}.rasi \
-  -modi search
+  -modi search:rofi-web-search
