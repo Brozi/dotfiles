@@ -19,4 +19,4 @@ rofi \
   -show drun \
   -dpi 0 \
   -theme ${dir}/${theme}.rasi \
-  -modi drun,run
+  -modi search
