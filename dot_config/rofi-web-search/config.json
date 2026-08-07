@@ -1,5 +1,5 @@
 {
-  "SEARCH_ENGINE": "google",
-  "BROWSER": "firefox",
-  "TERMINAL": ["gnome-terminal", "--"]
+  "SEARCH_ENGINE": "startpage",
+  "BROWSER": "vivaldi",
+  "TERMINAL": ["kitty", "--"]
 }
