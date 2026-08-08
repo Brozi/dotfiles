@@ -6,10 +6,12 @@
  * Rofi Theme File
  * Rofi Version: 1.7.3
  **/
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
+    dpi:              {{ $host.dpi }};
 }
 
 /*****----- Global Properties -----*****/
