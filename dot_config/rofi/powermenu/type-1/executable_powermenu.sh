@@ -31,7 +31,6 @@ rofi_cmd() {
   rofi -dmenu \
     -p "$host" \
     -mesg "Uptime: $uptime" \
-    -dpi 1 \
     -theme ${dir}/${theme}.rasi
 }
 
