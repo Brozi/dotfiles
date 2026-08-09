@@ -573,6 +573,8 @@ fi
 eval "$(zoxide init zsh)"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
+eval "$(fzf --zsh)"
+
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
