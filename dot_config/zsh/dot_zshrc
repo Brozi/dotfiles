@@ -296,7 +296,6 @@ alias las='ls -A'
 alias lls='ls -l'
 
 alias cd='z'
-alias ccd='/bin/cd'
 alias cdi='zi'
 
 alias yazi='y'
