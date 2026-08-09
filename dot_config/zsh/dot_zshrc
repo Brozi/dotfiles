@@ -178,6 +178,25 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # Enable caching for completions to speed up slow commands
 zstyle ':completion::complete:*' use-cache on
 
+# 2. Inject Vim-style navigation (Ctrl-J and Ctrl-K) directly into fzf-tab's fzf instance
+zstyle ':fzf-tab:*' fzf-flags '--bind=ctrl-j:down,ctrl-k:up'
+
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+
+# preview directory's content with lsd instead of eza
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 --color=always $realpath'
+
 # autoload the build-in edit-command-line function
 autoload -Uz edit-command-line
 
