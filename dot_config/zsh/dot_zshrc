@@ -76,7 +76,7 @@ export PATH="$PATH:/home/brozi/.deno/env"
 #######################################################
 
 # Load OMZ plugins
-plugins=(git kitty zsh-autosuggestions zsh-completions vi-mode zsh-syntax-highlighting)
+plugins=(git kitty zsh-autosuggestions zsh-completions vi-mode fzf-tab zsh-syntax-highlighting)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
