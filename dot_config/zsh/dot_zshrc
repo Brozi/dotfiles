@@ -197,11 +197,11 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 
 # preview directory's content with lsd instead of eza
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
 
 # preview directory's content with lsd instead of eza
-zstyle ':fzf-tab:complete:z:*' fzf-preview 'lsd -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z' fzf-preview 'lsd -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'ls -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z' fzf-preview 'ls -1 --color=always $realpath'
 
 # autoload the build-in edit-command-line function
 autoload -Uz edit-command-line
