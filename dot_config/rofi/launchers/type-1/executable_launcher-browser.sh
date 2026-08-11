@@ -17,7 +17,7 @@ theme='style-6'
 ## Run
 rofi \
   -show search \
+  -lines 10 \
+  -padding 0 \
   -theme ${dir}/${theme}.rasi \
-  - lines 10 \
-  - padding 0 \
   -modi search:rofi-web-search
