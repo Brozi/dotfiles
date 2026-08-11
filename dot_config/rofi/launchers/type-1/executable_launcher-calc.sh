@@ -18,4 +18,5 @@ theme='style-6'
 rofi \
   -show calc \
   -theme ${dir}/${theme}.rasi \
+  -no-show-icons \
   -modi calc
