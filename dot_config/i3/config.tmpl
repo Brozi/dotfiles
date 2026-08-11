@@ -83,15 +83,14 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 # Enable touchpad 
 {{ if $host.has_touchpad -}}
 # Hardware: Enable laptop touchpad tap-to-click
-exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 348 1
-exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 346 1
-# Enable drag lock for constrained surface area
-exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 352 1
-# enable natural scrolling
-exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 321 1
-exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" 319 1
-{{- end }}
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" "libinput Tapping Enabled" 1
 
+# Enable drag lock for constrained surface area
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" "libinput Tapping Drag Lock Enabled" 1
+
+# Enable natural scrolling
+exec_always --no-startup-id xinput set-prop "{{ $host.touchpad_name }}" "libinput Natural Scrolling Enabled" 1
+{{- end }}
 ### --- Workspace definitions --- ###
 
 # Define names for default workspaces for which we configure key bindings later on.
