@@ -1,5 +1,15 @@
 {
-  "SEARCH_ENGINE": "startpage",
+  "SEARCH_ENGINES": {
+    "!g": "google",
+    "!d": "duckduckgo",
+    "!s": "startpage",
+    "!y": "youtube",
+    "!gh": "github",
+    "!r": "reddit",
+    "!b": "brave-search"
+  },
+  "DEFAULT_SEARCH_ENGINE": "startpage",
   "BROWSER": "vivaldi",
-  "TERMINAL": ["kitty", "--"]
+  "TERMINAL": "kitty",
+  "TERMINAL_ARG": "--"
 }
