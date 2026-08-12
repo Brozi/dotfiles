@@ -190,7 +190,7 @@ bindsym $mod+$alt+v exec --no-startup-id ~/.config/rofi/scripts/volume
 # Open the networking menu
 bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 # Open the topgrade update script
-bindsym $mod+u exec --no-startup-id run-topgrade
+bindsym $mod+u exec --no-startup-id env FROM_ROFI=1 kitty --hold -- "$HOME/.local/bin/run-topgrade"
 
 # change focus
 bindsym $mod+h focus left
