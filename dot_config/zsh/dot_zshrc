@@ -554,17 +554,6 @@ trim() {
     echo -n "$var"
 }
 
-gcom() {
-    git add .
-    git commit -m "$1"
-}
-
-lazyg() {
-    git add .
-    git commit -m "$1"
-    git push
-}
-
 # Yazi changes your cwd to the one you were in before quitting it
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
