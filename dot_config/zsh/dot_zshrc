@@ -437,11 +437,6 @@ up() {
     cd $d
 }
 
-# chpwd hook
-chpwd() {
-# run ls whenever changing the directory
-    ls
-}
 autoload -Uz add-zsh-hook
 
 # autovenv function
