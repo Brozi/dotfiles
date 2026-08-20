@@ -478,12 +478,13 @@ function auto_ls_safe() {
   files=(*(N)) 
 
   # Safety limit: Skip the print if there are more than 50 files
-  if (( ${#files} > 50 )); then
-    echo "Directory contains ${#files} items; skipping auto-ls to prevent lag."
-  else
-    # Output file list in columns with colors
-    ls 
-  fi
+  # if (( ${#files} > 50 )); then
+  #   echo "Directory contains ${#files} items; skipping auto-ls to prevent lag."
+  # else
+  #   # Output file list in columns with colors
+  #   ls 
+  # fi
+  ls
 }
 
 add-zsh-hook chpwd auto_venv
