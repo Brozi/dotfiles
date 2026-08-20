@@ -139,9 +139,9 @@ show_distribution_summary = true
 [commands]
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
+"chezmoi update" = "chezmoi update"
 "chezmoi re-add" = "chezmoi re-add"
 "Local Packags" = "list-local-pkgs"
-
 
 
 [python]
