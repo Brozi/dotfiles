@@ -180,7 +180,7 @@ bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-run
 # Open rofi search
 bindsym $mod+s exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-browser
 # Open rofi calculator
-bindsym $mod+shift+c exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-calc
+bindsym $mod+$alt+c exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-calc
 # Open rofi powermenu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1 
 # Open the screenshot Menu
@@ -190,7 +190,6 @@ bindsym $mod+v exec --no-startup-id ~/.config/rofi/scripts/volume
 # Open the networking menu
 bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 # Open the topgrade update script
-bindsym $mod+u exec --no-startup-id env FROM_ROFI=1 kitty --hold -- "$HOME/.local/bin/run-topgrade"
 
 # change focus
 bindsym $mod+h focus left
@@ -268,6 +267,11 @@ assign [class="^vivaldi-stable$"] $ws2
 
 # Window rule
 for_window [class="scrtch|monitor"] \
+floating enable, \
+move scratchpad, \
+resize set 1400 830
+
+for_window [class="upgrade"] \
 floating enable, \
 move scratchpad, \
 resize set 1400 830
