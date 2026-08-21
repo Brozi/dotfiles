@@ -178,15 +178,15 @@ bindsym $mod+Shift+q kill
 # Open rofi launcher 
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-run
 # Open rofi search
-bindsym $mod+$alt+s exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-browser
+bindsym $mod+s exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-browser
 # Open rofi calculator
-bindsym $mod+$alt+c exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-calc
+bindsym $mod+shift+c exec --no-startup-id ~/.config/rofi/scripts/launcher-t1-calc
 # Open rofi powermenu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu_t1 
 # Open the screenshot Menu
 bindsym Print exec --no-startup-id ~/.config/rofi/scripts/screenshot
 # Open the sound Menu
-bindsym $mod+$alt+v exec --no-startup-id ~/.config/rofi/scripts/volume
+bindsym $mod+v exec --no-startup-id ~/.config/rofi/scripts/volume
 # Open the networking menu
 bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 # Open the topgrade update script
@@ -217,18 +217,18 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+g split h
+bindsym $mod+z split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+x split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+$alt+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+shift+s layout stacking
+bindsym $mod+shift+t layout tabbed
+bindsym $mod+shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -284,13 +284,16 @@ exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class m
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
 exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch' || kitty --class kitty-scrtch
+exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch2' || kitty --class kitty-scrtch2
 exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --class yazi-scrtch -e yazi
-
+exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class upgrade --hold run-topgrade
 
 # Scratchpad binds
-bindsym $mod+shift+grave [class="kitty-scrtch"] $scrtch_display
-bindsym $mod+shift+w [class="monitor"] $scrtch_display
-bindsym $mod+shift+f [class="yazi-scrtch"] $scrtch_display
+bindsym $mod+grave [class="kitty-scrtch"] $scrtch_display
+bindsym $mod+$alt+grave [class="kitty-scrtch2"] $scrtch_display
+bindsym $mod+$alt+w [class="monitor"] $scrtch_display
+bindsym $mod+$alt+f [class="yazi-scrtch"] $scrtch_display
+bindsym $mod+u [class="upgrade"] $scrtch_display
 ### --- Misc keybinds --- ###
 
 # reload the configuration file
