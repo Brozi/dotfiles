@@ -286,10 +286,10 @@ exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class m
 --override remember_window_size=yes \
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
-exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch' || kitty --class kitty-scrtch
-exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch2' || kitty --class kitty-scrtch2
-exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --class yazi-scrtch -e yazi
-exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class upgrade --hold run-topgrade
+exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch$' || kitty --class kitty-scrtch
+exec_always --no-startup-id pgrep -f '^kitty --class kitty-scrtch2$' || kitty --class kitty-scrtch2
+exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch$' || kitty --class yazi-scrtch -e yazi
+exec_always --no-startup-id pgrep -f '^kitty --class upgrade$' || env FROM_ROFI=1 kitty --class upgrade --hold run-topgrade
 
 # Scratchpad binds
 bindsym $mod+grave [class="^kitty-scrtch$"] $scrtch_display
