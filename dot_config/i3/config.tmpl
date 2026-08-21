@@ -297,7 +297,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --cla
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class upgrade --hold run-topgrade
 
 # Scratchpad binds
-bindsym $mod+grave [class="kitty-scrtch"] $scrtch_display
+bindsym $mod+grave [class="^kitty-scrtch$"] $scrtch_display
 bindsym $mod+shift+grave [class="^2kitty-scrtch$"] $scrtch_display
 bindsym $mod+$alt+w [class="monitor"] $scrtch_display
 bindsym $mod+$alt+f [class="yazi-scrtch"] $scrtch_display
