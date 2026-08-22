@@ -225,9 +225,9 @@ bindkey -M vicmd '^v' edit-command-line
 #
 
 # Stop fastfetch from running when the shell is opened from rofi
-  # if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-  # fastfetch
-# fi
+  if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+  fastfetch
+fi
 
 # Allow ctrl-S for history navigation (with ctrl-R)
 [[ $- == *i* ]] && stty -ixon
