@@ -228,8 +228,10 @@ bindsym $mod+x split v
 bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+shift+s layout stacking
-bindsym $mod+shift+t layout tabbed
+# bindsym $mod+shift+s layout stacking
+bindsym $mod+shift+s exec --no-startup-id i3-autolayout stackmode --file-layout /tmp/i3-autolayout-stacked.save
+# bindsym $mod+shift+t layout tabbed
+bindsym $mod+shift+t exec --no-startup-id i3-autolayout tabmode --file-layout /tmp/i3-autolayout-tabbed.save
 bindsym $mod+shift+e layout toggle split
 
 # toggle tiling / floating
