@@ -148,6 +148,12 @@ MODE_INDICATOR=""
 #Autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+ZSH_DISABLE_COMPFIX="true"
+
+# disable update check for faster startup
+DISABLE_AUTO_UPDATE="true"
+
+# source OMZ
 source $ZSH/oh-my-zsh.sh
 # source the zsh syntax highligting theme
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
