@@ -271,12 +271,7 @@ assign [class="^vivaldi-stable$"] $ws2
 ### --- Scratchpads --- ###
 
 # Window rule
-# for_window [class="scrtch|monitor"] \
-# floating enable, \
-# move scratchpad, \
-# resize set 1400 830
-
-for_window [instance="scrtch|monitor"] \
+for_window [class="scrtch|monitor"] \
 floating enable, \
 move scratchpad, \
 resize set 1400 830
@@ -296,15 +291,13 @@ exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class '
 --override remember_window_size=yes \
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
-# exec_always --no-startup-id pgrep -f '^kitty --class 1-scrtch' || kitty --class '1-scrtch'
-exec_always --no-startup-id pgrep -f '^kitty --name 1-scrtch --class kitty' || kitty --name '1-scrtch' --class 'kitty'
+exec_always --no-startup-id pgrep -f '^kitty --class 1-scrtch' || kitty --class '1-scrtch'
 exec_always --no-startup-id pgrep -f '^kitty --class 2-scrtch' || kitty --class '2-scrtch'
 exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --class 'yazi-scrtch' -e yazi
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
 
 # Scratchpad binds
-# bindsym $mod+grave [class="^1-scrtch$"] $scrtch_display
-bindsym $mod+grave [instance="^1-scrtch$"] $scrtch_display
+bindsym $mod+grave [class="^1-scrtch$"] $scrtch_display
 bindsym $mod+shift+grave [class="^2-scrtch$"] $scrtch_display
 bindsym $mod+w [class="monitor"] $scrtch_display
 bindsym $mod+$alt+f [class="yazi-scrtch"] $scrtch_display
