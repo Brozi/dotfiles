@@ -297,7 +297,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class '
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
 # exec_always --no-startup-id pgrep -f '^kitty --class 1-scrtch' || kitty --class '1-scrtch'
-exec_always --no-startup-id pgrep -f '^kitty --name 1-scrtch' || kitty --name '1-scrtch'
+exec_always --no-startup-id pgrep -f '^kitty --name 1-scrtch --class kitty' || kitty --name '1-scrtch' --class 'kitty'
 exec_always --no-startup-id pgrep -f '^kitty --class 2-scrtch' || kitty --class '2-scrtch'
 exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --class 'yazi-scrtch' -e yazi
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
