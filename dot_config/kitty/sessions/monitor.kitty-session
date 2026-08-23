@@ -17,5 +17,4 @@ launch btop -p 2
 launch btop -p 1
 #File managment setup
 new_tab Disk Cleanup
-cd /
-launch ncdu
+launch ncdu /
