@@ -42,11 +42,7 @@ exec --no-startup-id xidlehook \
   --timer {{ $host.suspend_time }} 'systemctl suspend' ''
 
 # Start picom compositor
-exec_always --no-startup-id ~/.config/picom/scripts/launch.sh
-
-# restore opacity of all kitty windows on restart
-exec_always --no-startup-id ~/.config/i3/scripts/restore_opacity.sh
-
+exec --no-startup-id picom -b 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # Disabled it because the cinnamon autostart has already got it
