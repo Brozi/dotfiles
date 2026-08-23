@@ -44,6 +44,9 @@ exec --no-startup-id xidlehook \
 # Start picom compositor
 exec_always --no-startup-id ~/.config/picom/scripts/launch.sh
 
+# restore opacity of all kitty windows on restart
+exec_always --no-startup-id ~/.config/i3/scripts/restore_opacity.sh
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # Disabled it because the cinnamon autostart has already got it
@@ -71,10 +74,6 @@ exec --no-startup-id /usr/bin/flatpak run --branch=stable --arch=x86_64 --comman
 # start clipboard daemon
 exec --no-startup-id killall xfce4-clipman
 exec --no-startup-id bash -c "sleep 6 && /usr/bin/xfce4-clipman > /tmp/clipman_boot.log 2>&1"
-
-# restore opacity of all kitty windows on restart
-exec_always --no-startup-id ~/.config/i3/scripts/restore_opacity.sh
-
 ### --- Mouse and keyboard settings --- ###
 
 # Keyboard repeat interval
