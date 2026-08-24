@@ -9,3 +9,11 @@ vim.g.lazyvim_python_ruff = "ruff"
 
 -- disable mouse support for nvim
 vim.opt.mouse = ""
+
+vim.opt.spelllang = "en_us"
+-- set spelllang
+vim.opt.spell = true
+-- enable spellchecking
+vim.opt.wrap = true
+-- enable line wrapping
+vim.opt.linebreak = true -- Wraps visually at words, not at strict character limits
