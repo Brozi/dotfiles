@@ -17,3 +17,5 @@ vim.opt.spell = false
 vim.opt.wrap = true
 -- enable line wrapping
 vim.opt.linebreak = true -- Wraps visually at words, not at strict character limits
+-- add persistance for spellchecking
+vim.opt.sessionoptions:append("localoptions")
