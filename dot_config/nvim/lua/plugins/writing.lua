@@ -1,5 +1,7 @@
 return {
   {
+    -- add word count to the lualine
+    -- for markdown and txt files
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local function wordcount()
