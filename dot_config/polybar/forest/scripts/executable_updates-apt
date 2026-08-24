@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt_updates=$(apt list --upgradable 2>/dev/null | grep -i upgradable)
+apt_updates=$(mintupdate-cli list 2>/dev/null)
 apt_updates_num=$(echo "$apt_updates" | grep -c -v "^$")
 
 if [ "$apt_updates_num" -gt 0 ]; then
