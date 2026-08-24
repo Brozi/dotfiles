@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt_updates=$(apt list --upgradable 2>/dev/null | grep -i upgradable)
+apt_updates=$(mintupdate-cli list 2>/dev/null)
 flatpak_updates=$(flatpak remote-ls --updates 2>/dev/null)
 apt_updates_num=$(echo "$apt_updates" | grep -c -v "^$")
 flatpak_updates_num=$(echo "$flatpak_updates" | grep -c -v "^$")
