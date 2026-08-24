@@ -12,7 +12,7 @@ vim.opt.mouse = ""
 
 vim.opt.spelllang = "en_us"
 -- set spelllang
-vim.opt.spell = true
+vim.opt.spell = false
 -- enable spellchecking
 vim.opt.wrap = true
 -- enable line wrapping
