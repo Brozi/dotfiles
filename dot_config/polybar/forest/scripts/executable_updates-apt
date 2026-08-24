@@ -1,22 +1,8 @@
 #!/bin/sh
 
-apt_updates=$(apt list --upgradable 2> /dev/null | grep -i upgradable);
-flatpak_updates=$(flatpak remote-ls --updates 2> /dev/null);
+apt_updates=$(apt list --upgradable 2>/dev/null | grep -i upgradable)
 apt_updates_num=$(echo "$apt_updates" | grep -c -v "^$")
-flatpak_updates_num=$(echo "$flatpak_updates" | grep -c -v "^$")
 
-
-if [ $((apt_updates_num + flatpak_updates_num)) -gt 0 ]; then
-  
-  if [ "$apt_updates_num" -gt 0 ]; then
-    echo "$apt_updates"
-  fi 
-
-  if [ "$flatpak_updates_num" -gt 0 ]; then
-    echo "$flatpak_updates"
-  fi 
-
-# else
-   # echo ""
+if [ "$apt_updates_num" -gt 0 ]; then
+  echo "$apt_updates"
 fi
-
