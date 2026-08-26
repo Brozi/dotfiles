@@ -39,7 +39,7 @@ export VISUAL=nvim
 
 # Export manpager - set it to bat
 export MANROFFOPT="-c"
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Colors for ls and grep
 export CLICOLOR=1
@@ -257,8 +257,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias update-all='topgrade'
 
 #colorize help messages (like cp --help | batcat -plhelp)
-alias -g -- -h='-h 2>&1 | batcat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | batcat --language=help --style=plain'
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # Edit this .zshrc file
 # alias ezrc='nvim ~/.config/zsh/.zshrc'
@@ -278,8 +278,7 @@ alias cls='clear'
 alias multitail='multitail --no-repeat -c'
 alias svi='sudo vi'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
-alias cat='batcat'
-alias bat='batcat'
+alias cat='bat'
 alias ccat='/bin/cat'
 alias c='chezmoi'
 alias ce='c edit'
