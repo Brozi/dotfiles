@@ -38,7 +38,8 @@ export SUDO_EDITOR=nvim
 export VISUAL=nvim
 
 # Export manpager - set it to bat
-export MANPAGER='batcat -plman'
+export MANROFFOPT="-c"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 # Colors for ls and grep
 export CLICOLOR=1
