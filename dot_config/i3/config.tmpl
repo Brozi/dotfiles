@@ -282,7 +282,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class '
 
 exec_always --no-startup-id pgrep -f '^kitty --class 1-scrtch' || kitty --class '1-scrtch'
 exec_always --no-startup-id pgrep -f '^kitty --class 2-scrtch' || kitty --class '2-scrtch'
-exec_always --no-startup-id pgrep -f '^kitty --class yazi-scrtch' || kitty --class 'yazi-scrtch' -e yazi
+exec_always --no-startup-id pgrep -f '^kitty --class "yazi-scrtch" zsh -ic "exec y"' || kitty --class 'yazi-scrtch' zsh -ic "exec y"
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
 
 # Scratchpad binds
