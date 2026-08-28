@@ -1,3 +1,4 @@
+#:schema https://yazi-rs.github.io/schemas/yazi.json
 [mgr]
 mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
 show_symlink = false
