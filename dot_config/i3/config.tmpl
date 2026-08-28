@@ -258,13 +258,6 @@ floating enable, \
 move scratchpad, \
 resize set 1400 830
 
-for_window [class="MintUpdate.py"] \
-floating enable, \
-move position center, \
-resize set 1400 830, \
-move scratchpad, \
-scratchpad show
-
 for_window [class="upgrade"] \
 floating enable, \
 move scratchpad, \
@@ -291,7 +284,6 @@ bindsym $mod+shift+grave [class="^2-scrtch$"] $scrtch_display
 bindsym $mod+w [class="monitor"] $scrtch_display
 bindsym $mod+$alt+f [class="yazi-scrtch"] $scrtch_display
 bindsym $mod+u [class="upgrade"] $scrtch_display
-bindsym $mod+shift+u [class="MintUpdate.py"] $scrtch_display
 ### --- Misc keybinds --- ###
 
 # reload the configuration file
