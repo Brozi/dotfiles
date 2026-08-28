@@ -1,7 +1,8 @@
 #:schema https://yazi-rs.github.io/schemas/yazi.json
 [mgr]
 mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
-show_symlink = false
+sort_by = "mtime"
+sort_sensitive = "false"
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"
