@@ -71,7 +71,7 @@ desc = "Open $SHELL here"
 
 [[mgr.prepend_keymap]]
 on = "<C-g>"
-run = 'shell -- rofi -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+run = 'shell -- rofi -modi filebrowser -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
 desc = "Grid view"
 
 # toggle pane plugin
