@@ -120,3 +120,9 @@ desc = "Maximize or restore the preview pane"
 on = "T"
 run = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
+
+# pandoc plugin
+[[manager.prepend_keymap]]
+on   = [ "c", "p" ]
+run  = "plugin pandoc"
+desc = "Pandoc: Interactive Convert"
