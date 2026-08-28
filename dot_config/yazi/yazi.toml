@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
 show_symlink = false
 [[plugin.prepend_fetchers]]
