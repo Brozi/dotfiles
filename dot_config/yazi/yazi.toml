@@ -2,7 +2,7 @@
 [mgr]
 mouse_events = [ "click", "scroll", "touch", "move", "drag" ]
 sort_by = "mtime"
-sort_sensitive = "false"
+sort_sensitive = false
 [[plugin.prepend_fetchers]]
 url   = "*"
 run   = "git"
