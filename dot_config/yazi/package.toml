@@ -28,5 +28,15 @@ use = "imsi32/yatline-catppuccin"
 rev = "6c3f166"
 hash = "e1d5b1c34c53c4c4661d910eb3a6fd95"
 
+[[plugin.deps]]
+use = "barbanevosa/linemode-plus"
+rev = "4d0d034"
+hash = "5d0ac26725d9a975bef1d0887374f10e"
+
+[[plugin.deps]]
+use = "lmnek/pandoc"
+rev = "fd2798b"
+hash = "5af4b06948bb7b825a243131eea2075c"
+
 [flavor]
 deps = []
