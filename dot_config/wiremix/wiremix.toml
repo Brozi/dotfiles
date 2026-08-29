@@ -10,6 +10,8 @@ mouse = true
 # set initial tab
 tab = "output"
 
+lazy_capture = true
+
 # Catppuccin Mocha Theme Definition
 [themes.catppuccin_mocha]
 # Mauve for default markers
