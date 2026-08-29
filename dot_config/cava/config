@@ -1,0 +1,18 @@
+[general]
+# Auto reload config if the configuration file has changed. 1 = on, 0 = off.
+live-config = 1
+# 'autosens' will attempt to decrease sensitivity if the bars peak and increase slowly as
+# long as the bars don't peak. 0 = off, 1 = normal, 2..n = more aggressive.
+# increase to make sensitivity increase even faster.
+autosens = 1
+
+[color]
+gradient = 1
+gradient_color_1 = '#94e2d5'
+gradient_color_2 = '#89dceb'
+gradient_color_3 = '#74c7ec'
+gradient_color_4 = '#89b4fa'
+gradient_color_5 = '#cba6f7'
+gradient_color_6 = '#f5c2e7'
+gradient_color_7 = '#eba0ac'
+gradient_color_8 = '#f38ba8'
