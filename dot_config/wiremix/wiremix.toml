@@ -1,0 +1,68 @@
+# Main Options
+theme = "catppuccin_mocha"
+
+# Character set to use (see Character Sets section)
+char_set = "mocha_chars"
+
+# Catppuccin Mocha Theme Definition
+[themes.catppuccin_mocha]
+# Mauve for default markers
+default_device = { fg = "#cba6f7" }
+default_stream = { fg = "#cba6f7" }
+
+# Blue for active selections and UI borders
+selector = { fg = "#89b4fa", add_modifier = "BOLD" }
+tab_selected = { fg = "#89b4fa", add_modifier = "BOLD" }
+tab_marker = { fg = "#89b4fa" }
+dropdown_border = { fg = "#89b4fa" }
+help_border = { fg = "#89b4fa" }
+
+# Subtext0 for inactive tabs
+tab = { fg = "#a6adc8" }
+
+# Overlay0 for 'more' indicators
+list_more = { fg = "#6c7086" }
+dropdown_more = { fg = "#6c7086" }
+help_more = { fg = "#6c7086" }
+
+# Text for primary text, Subtext1 for secondary text
+node_title = { fg = "#cdd6f4" }
+node_target = { fg = "#bac2de" }
+volume = { fg = "#cdd6f4" }
+config_device = { fg = "#cdd6f4" }
+config_profile = { fg = "#bac2de" }
+dropdown_item = { fg = "#cdd6f4" }
+help_item = { fg = "#cdd6f4" }
+
+# Base text on Blue background for the active dropdown selection
+dropdown_selected = { fg = "#1e1e2e", bg = "#89b4fa", add_modifier = "BOLD" }
+dropdown_icon = { fg = "#cba6f7" }
+
+# Surface2 for empty bars, Blue for filled bars
+volume_empty = { fg = "#585b70" }
+volume_filled = { fg = "#89b4fa" }
+
+# Surface1 for inactive meters, Green for active, Red for overload
+meter_inactive = { fg = "#45475a" }
+meter_active = { fg = "#a6e3a1" }
+meter_overload = { fg = "#f38ba8" }
+meter_center_inactive = { fg = "#45475a" }
+meter_center_active = { fg = "#a6e3a1" }
+
+[char_sets.mocha_chars]
+inherit = "default"
+
+# Option A: Minimalist vertical bar (Cleaner, less intrusive than the default blocks)
+selector_top = "┃"
+selector_middle = " "
+selector_bottom = " "
+
+# Option B: A sharp pointer (Requires your terminal line height to not look disjointed)
+# selector_top = " "
+# selector_middle = "▶"
+# selector_bottom = " "
+
+# Option C: The ultra-compatible fallback (If your font breaks on Unicode)
+# selector_top = "-"
+# selector_middle = ">"
+# selector_bottom = "-"
