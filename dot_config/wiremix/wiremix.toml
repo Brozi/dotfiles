@@ -4,6 +4,12 @@ theme = "catppuccin_mocha"
 # Character set to use (see Character Sets section)
 char_set = "mocha_chars"
 
+# enable mouse support
+mouse = true
+
+# set initial tab
+tab = "output"
+
 # Catppuccin Mocha Theme Definition
 [themes.catppuccin_mocha]
 # Mauve for default markers
