@@ -1,40 +1,50 @@
 return {
   {
     "nvim-mini/mini.surround",
-    -- Define all mappings at startup so `gs` behaves consistently.
     lazy = false,
     opts = {
       mappings = {
-        delete = "gsdd",
-        find = "gsff",
-        find_left = "gsFF",
-        highlight = "gshh",
-        replace = "gsrr",
+        -- Internal mappings, kept away from the visible WhichKey menu.
+        delete = "gsD",
+        find = "gs>",
+        find_left = "gs<",
+        highlight = "gsH",
+        replace = "gsR",
       },
     },
     config = function(_, opts)
       require("mini.surround").setup(opts)
 
-      local function alias(mode, lhs, rhs, desc)
-        vim.keymap.set(mode, lhs, rhs, { remap = true, desc = desc })
+      local function alias(mode, lhs, target, desc)
+        local source = vim.fn.maparg(target, mode, false, true)
+
+        vim.keymap.set(mode, lhs, source.callback, {
+          desc = desc,
+          expr = source.expr == 1,
+        })
       end
 
-      -- Keep `gsd`, `gsr`, `gsf`, `gsF`, and `gsh` as WhichKey prefixes.
-      -- Their second key selects the target: current, previous, or next.
-      alias("n", "gsdl", "gsddl", "Delete previous surrounding")
-      alias("n", "gsdn", "gsddn", "Delete next surrounding")
+      alias("n", "gsdd", "gsD", "Delete current surrounding")
+      alias("n", "gsdl", "gsDl", "Delete previous surrounding")
+      alias("n", "gsdn", "gsDn", "Delete next surrounding")
 
-      alias("n", "gsrl", "gsrrl", "Replace previous surrounding")
-      alias("n", "gsrn", "gsrrn", "Replace next surrounding")
+      alias("n", "gsrr", "gsR", "Replace current surrounding")
+      alias("n", "gsrl", "gsRl", "Replace previous surrounding")
+      alias("n", "gsrn", "gsRn", "Replace next surrounding")
 
-      alias({ "n", "x", "o" }, "gsfl", "gsffl", "Find previous right surrounding")
-      alias({ "n", "x", "o" }, "gsfn", "gsffn", "Find next right surrounding")
+      alias("n", "gshh", "gsH", "Highlight current surrounding")
+      alias("n", "gshl", "gsHl", "Highlight previous surrounding")
+      alias("n", "gshn", "gsHn", "Highlight next surrounding")
 
-      alias({ "n", "x", "o" }, "gsFl", "gsFFl", "Find previous left surrounding")
-      alias({ "n", "x", "o" }, "gsFn", "gsFFn", "Find next left surrounding")
+      for _, mode in ipairs({ "n", "x", "o" }) do
+        alias(mode, "gsff", "gs>", "Find current right surrounding")
+        alias(mode, "gsfl", "gs>l", "Find previous right surrounding")
+        alias(mode, "gsfn", "gs>n", "Find next right surrounding")
 
-      alias("n", "gshl", "gshhl", "Highlight previous surrounding")
-      alias("n", "gshn", "gshhn", "Highlight next surrounding")
+        alias(mode, "gsFF", "gs<", "Find current left surrounding")
+        alias(mode, "gsFl", "gs<l", "Find previous left surrounding")
+        alias(mode, "gsFn", "gs<n", "Find next left surrounding")
+      end
     end,
   },
 }
