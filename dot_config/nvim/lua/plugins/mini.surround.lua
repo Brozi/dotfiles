@@ -45,6 +45,33 @@ return {
         alias(mode, "gsFl", "gs<l", "Find previous left surrounding")
         alias(mode, "gsFn", "gs<n", "Find next left surrounding")
       end
+      -- Keep gsD / gsR / gsH / gs> / gs< as final WhichKey entries.
+      -- Remove only their previous/next children.
+      local function remove(mode, lhs)
+        pcall(vim.keymap.del, mode, lhs)
+      end
+
+      for _, lhs in ipairs({
+        "gsDl",
+        "gsDn",
+        "gsRl",
+        "gsRn",
+        "gsHl",
+        "gsHn",
+      }) do
+        remove("n", lhs)
+      end
+
+      for _, mode in ipairs({ "n", "x", "o" }) do
+        for _, lhs in ipairs({
+          "gs>l",
+          "gs>n",
+          "gs<l",
+          "gs<n",
+        }) do
+          remove(mode, lhs)
+        end
+      end
     end,
   },
 }
