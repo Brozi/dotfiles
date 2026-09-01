@@ -59,7 +59,7 @@
       "type": "gpu",
       "keyColor": "#f5c2e7",
       "key": "󰢮",
-      "format": "{name} {dedicated-total} ",
+      "format": "{name} {shared-total} ",
     },
     //    {
     //      "type": "disk",
