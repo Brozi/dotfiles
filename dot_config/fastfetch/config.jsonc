@@ -60,7 +60,7 @@
       "keyColor": "#f5c2e7",
       "key": "󰢮",
       "driverSpecific": true,
-      "format": "{name} {dedicated-total} ",
+      "format": "{name} {shared-total} ",
     },
     //    {
     //      "type": "disk",
