@@ -5,6 +5,14 @@
 dir="$HOME/.config/polybar"
 themes=($(ls --hide="launch.sh" $dir))
 
+# Dynamically find the AMD CPU temperature sensor
+for i in /sys/class/hwmon/hwmon*/temp*_input; do
+  if [ "$(<$(dirname $i)/name)" = "k10temp" ]; then
+    export CPU_TEMP_PATH="$i"
+    break
+  fi
+done
+
 launch_bar() {
   # Terminate already running bar instances
   killall -q polybar
