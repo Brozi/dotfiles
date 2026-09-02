@@ -997,6 +997,16 @@ ramp-3 = 
 ramp-4 = 
 ramp-foreground = ${color.cyan}
 
+[module/gpu-temperature]
+type = custom/script
+exec = ~/.config/polybar/forest/scripts/gpu-temp.sh
+interval = 0.5
+
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${color.cyan}
+label = %output%
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/cpu-fan]
