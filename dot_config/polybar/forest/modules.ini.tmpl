@@ -1008,7 +1008,7 @@ exec = cat /sys/class/drm/card0/device/gpu_busy_percent
 {{- end }}
 interval = 0.5
 format = <label>
-format-prefix = "󰢮 "
+format-prefix = "%{T5}󰢮 %{T-}"
 format-prefix-foreground = ${color.green}
 label = " %output%%"
 
