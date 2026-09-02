@@ -1019,7 +1019,7 @@ type = custom/script
 exec = nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader
 {{- else if eq $host.gpu_vendor "amd" }}
 ; AMD Laptop command (requires dividing by 1000, so we use a quick inline math command)
-exec = awk '{print $1/1000}' /sys/class/drm/card0/device/hwmon/hwmon*/temp1_input
+exec = awk '{print $1/1000}' /sys/devices/pci0000:00/0000:00:08.1/0000:03:00.0/hwmon/hwmon*/temp1_input
 {{- end }}
 interval = 0.5
 format = <label>
