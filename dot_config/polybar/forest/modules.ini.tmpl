@@ -1004,7 +1004,7 @@ type = custom/script
 exec = nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits
 {{- else if eq $host.gpu_vendor "amd" }}
 ; AMD Laptop command
-exec = cat /sys/class/drm/card0/device/gpu_busy_percent
+exec = cat /sys/class/drm/card*/device/gpu_busy_percent
 {{- end }}
 interval = 0.5
 format = <label>
