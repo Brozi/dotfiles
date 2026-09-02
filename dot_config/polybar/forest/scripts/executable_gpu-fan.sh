@@ -1,5 +1,5 @@
 #!/bin/bash
-speed=$(nvidia-settings -qt GPUCurrentFanSpeedRPM)
+speed=$(nvidia-settings -q -t GPUCurrentFanSpeedRPM)
 
 if [ "$speed" != "" ]; then
   echo "$speed RPM"
