@@ -17,6 +17,7 @@ side_monitor_name = "DP-1"
 network_interface_name = "enp9s0"
 screensaver_time = 1200
 suspend_time = 1200
+gpu_vendor = "nvidia"
 
 [hosts."brozi-laptop"]
 dpi = 120
@@ -36,6 +37,7 @@ side_monitor_name = ""
 network_interface_name = "wlp1s0"
 screensaver_time = 600
 suspend_time = 300
+gpu_vendor = "amd"
 
 [hosts."brozi-desktop"]
 dpi = 96
@@ -54,3 +56,4 @@ side_monitor_name = "DP-1"
 network_interface_name = "enp9s0"
 screensaver_time = 1200
 suspend_time = 1200
+gpu_vendor = "nvidia"
