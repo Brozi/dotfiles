@@ -30,7 +30,7 @@ launch_bar() {
     {{ if gt $host.monitor_count 1 -}}
     polybar -q main -c "$dir/$style/config.ini" &
     polybar -q side -c "$dir/$style/config.ini" &
-    sleep 2
+    # sleep 2
     polybar -q side2 -c "$dir/$style/config.ini" &
     {{- else -}}
     polybar -q main -c "$dir/$style/config.ini" &
