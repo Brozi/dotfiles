@@ -32,10 +32,10 @@
 disable = ["firmware"]
 
 # Run these steps before all others
-first = ["chezmoi update"]
+first = ["chezmoi"]
 
 # Run these steps after all others
-last = ["chezmoi"]
+# last = ["chezmoi"]
 
 # Ignore failures for these steps
 ignore_failures = ["jetbrains_toolbox", "jetbrains_pycharm"]
@@ -141,6 +141,7 @@ show_distribution_summary = true
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "chezmoi update" = "chezmoi update"
 "chezmoi re-add" = "chezmoi re-add"
+"chezmoi update2" = "chezmoi update"
 "Local Packags" = "list-local-pkgs"
 
 
