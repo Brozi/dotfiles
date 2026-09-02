@@ -1034,9 +1034,8 @@ type = custom/script
 exec = nvidia-smi --query-gpu=memory.used --format=csv,noheader
 {{- else if eq $host.gpu_vendor "amd" }}
 ; AMD Laptop: Converts raw bytes from sysfs to MiB
-exec = awk '{printf "%.0f MiB\n", $1/1024/1024}' /sys/class/drm/card*/device/mem_info_vram_used 2>/dev/null
+exec = awk '{a[NR]=$1/1048576} END {printf "%.0f / %.0f MiB\n", a[1], a[2]}' /sys/class/drm/card0/device/mem_info_vram_used /sys/class/drm/card0/device/mem_info_vram_total 2>/dev/null
 {{- end }}
-
 interval = 1
 format = <label>
 format-prefix = " "
