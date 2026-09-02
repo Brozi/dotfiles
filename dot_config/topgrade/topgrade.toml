@@ -32,7 +32,7 @@
 disable = ["firmware"]
 
 # Run these steps before all others
-# first = ["chezmoi"]
+first = ["chezmoi update"]
 
 # Run these steps after all others
 last = ["chezmoi"]
