@@ -1,8 +1,8 @@
 #!/bin/bash
-speed=$(nvidia-smi --query-gpu=fan.speed --format=csv,noheader,nounits)
+speed=$(nvidia-settings -qt GPUCurrentFanSpeedRPM)
 
 if [ "$speed" != "" ]; then
-  echo "$speed %"
+  echo "$speed"
 else
   echo "FAN ERROR"
 fi
