@@ -142,6 +142,7 @@ show_distribution_summary = true
 "chezmoi update" = "chezmoi update"
 "chezmoi re-add" = "chezmoi re-add"
 "chezmoi update2" = "chezmoi update"
+"chezmoi upgrade" = "chezmoi upgrade"
 "Local Packags" = "list-local-pkgs"
 
 
