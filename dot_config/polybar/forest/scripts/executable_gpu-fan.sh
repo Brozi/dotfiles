@@ -2,7 +2,7 @@
 speed=$(nvidia-settings -qt GPUCurrentFanSpeedRPM)
 
 if [ "$speed" != "" ]; then
-  echo "$speed"
+  echo "$speed RPM"
 else
   echo "FAN ERROR"
 fi
