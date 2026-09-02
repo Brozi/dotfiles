@@ -273,11 +273,26 @@ inherit = bar/main
 monitor = "{{ $host.side_monitor_name }}"
 
 modules-right = 
-modules-left = i3 sep title sep cpu temperature cpu-fan case-fan memory sep gpu-usage vram gpu-temperature gpu-fan
+modules-left = i3 sep title 
 ; modules-left = i3 sep i3window-side
 modules-center = 
 
 tray-position = right
+
+[bar/side2]
+; Use either of the following command to list available outputs:
+; If unspecified, the application will pick the first one it finds.
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+inherit = bar/main
+monitor = "{{ $host.side_monitor_name }}"
+
+modules-right = 
+modules-left = cpu temperature cpu-fan case-fan memory sep gpu-usage vram gpu-temperature gpu-fan
+; modules-left = i3 sep i3window-side
+modules-center = 
+
+tray-position = none
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
