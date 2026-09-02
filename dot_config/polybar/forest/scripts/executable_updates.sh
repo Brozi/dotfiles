@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 NOTIFY_ICON=/usr/share/icons/Papirus/32x32/apps/system-software-update.svg
-REFRESH_SEC=7200 # 2 hours in seconds
 
 get_total_updates() {
   UPDATES=$(~/.config/polybar/forest/scripts/updates-apt 2>/dev/null | wc -l)
@@ -31,6 +30,6 @@ while true; do
     echo "None"
   fi
 
-  # Sleep reliably without relying on external desktop schemas
-  sleep "$REFRESH_SEC"
+  # Wait 2 hours OR wake up instantly if the package database is modified
+  inotifywait -e modify /var/lib/dpkg/status -t 7200 >/dev/null 2>&1
 done
