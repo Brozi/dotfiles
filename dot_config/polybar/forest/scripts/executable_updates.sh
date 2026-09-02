@@ -1,21 +1,7 @@
 #!/usr/bin/env bash
 
 NOTIFY_ICON=/usr/share/icons/Papirus/32x32/apps/system-software-update.svg
-
-get_mint_interval_seconds() {
-  # Fetch values and strictly strip out any non-numeric characters (like "uint32 ")
-  local mins=$(gsettings get org.linuxmint.updates refresh-minutes 2>/dev/null | tr -cd '0-9')
-  local hours=$(gsettings get org.linuxmint.updates refresh-hours 2>/dev/null | tr -cd '0-9')
-  local days=$(gsettings get org.linuxmint.updates refresh-days 2>/dev/null | tr -cd '0-9')
-
-  # Enforce default integer fallbacks if the variables end up empty
-  mins=${mins:-0}
-  hours=${hours:-2}
-  days=${days:-0}
-
-  # Calculate total interval in seconds
-  echo $(((days * 86400) + (hours * 3600) + (mins * 60)))
-}
+REFRESH_SEC=7200 # 2 hours in seconds
 
 get_total_updates() {
   UPDATES=$(~/.config/polybar/forest/scripts/updates-apt 2>/dev/null | wc -l)
@@ -23,12 +9,6 @@ get_total_updates() {
 
 while true; do
   get_total_updates
-  REFRESH_SEC=$(get_mint_interval_seconds)
-
-  # Validate that REFRESH_SEC is actually a number, and enforce the 10-minute minimum
-  if ! [[ "$REFRESH_SEC" =~ ^[0-9]+$ ]] || ((REFRESH_SEC < 600)); then
-    REFRESH_SEC=3600
-  fi
 
   # Notify user of updates
   if hash notify-send &>/dev/null; then
@@ -51,6 +31,6 @@ while true; do
     echo "None"
   fi
 
-  # Wait for the exact duration
+  # Sleep reliably without relying on external desktop schemas
   sleep "$REFRESH_SEC"
 done
