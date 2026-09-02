@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 speed=$(nvidia-settings -q GPUCurrentFanSpeedRPM -t)
 
 if [ "$speed" != "" ]; then
