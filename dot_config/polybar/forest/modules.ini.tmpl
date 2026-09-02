@@ -1037,9 +1037,9 @@ exec = nvidia-smi --query-gpu=memory.used --format=csv,noheader
 exec = awk '{printf "%.0f MiB\n", $1/1024/1024}' /sys/class/drm/card*/device/mem_info_vram_used 2>/dev/null
 {{- end }}
 
-interval = 2
+interval = 1
 format = <label>
-format-prefix = "󰍛 "
+format-prefix = " "
 format-prefix-foreground = ${color.purple}
 label = " %output%"
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
