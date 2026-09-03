@@ -19,3 +19,7 @@ vim.opt.wrap = true
 vim.opt.linebreak = true -- Wraps visually at words, not at strict character limits
 -- add persistance for spellchecking
 vim.opt.sessionoptions:append("localoptions")
+
+-- data science options
+vim.env.JUPYTER_RUNTIME_DIR = vim.fn.expand("~/.local/share/jupyter/runtime")
+vim.env.PYDEVD_DISABLE_FILE_VALIDATION = "1"
