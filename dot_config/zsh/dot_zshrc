@@ -644,6 +644,8 @@ eval "$(zoxide init zsh)"
 
 eval "$(fzf --zsh)"
 
+eval "$(tmuxifier init -)"
+
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
