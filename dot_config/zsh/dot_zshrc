@@ -247,6 +247,9 @@ fi
 # ALIASES
 #######################################################
 
+# alias for nvim-ds
+alias nvds='NVIM_APPNAME=nvim-ds nvim'
+
 # Start sortty
 alias sortty='python3 ~/.local/bin/sortty-bin/sortty.py'
 
