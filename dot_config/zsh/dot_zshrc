@@ -260,7 +260,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias update-all='topgrade'
 
 #colorize help messages (like cp --help | batcat -plhelp)
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # Edit this .zshrc file
