@@ -29,7 +29,7 @@
 
 # Disable specific steps - same options as the command line flag
 # disable = ["system", "emacs"]
-disable = ["firmware"]
+disable = ["firmware", "antigravity"]
 
 # Run these steps before all others
 first = ["chezmoi"]
