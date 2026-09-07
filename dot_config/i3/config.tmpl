@@ -2,12 +2,12 @@
 # this file and re-run i3-config-wizard(1).
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 
 ### --- Variables --- ###
 set $monitor1 "{{ $host.main_monitor_name }}"
 set $monitor2 "{{ $host.side_monitor_name }}"
 set $scrtch_display scratchpad show; move position center;
-{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 
 ### --- Autostart --- ###
 
