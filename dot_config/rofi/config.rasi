@@ -179,5 +179,9 @@ configuration {
 	me-accept-entry: "MouseDPrimary";
 	me-accept-custom: "Control+MouseDPrimary";
 */
+  kb-row-up: "Up,Control+k";
+  kb-row-down: "Down,Control+j";
+  kb-row-left: "Control+h";
+  kb-row-right: "Control+l";
 }
 @theme "~/.config/rofi/launchers/type-1/style-6.rasi"
