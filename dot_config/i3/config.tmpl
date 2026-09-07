@@ -4,8 +4,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 ### --- Variables --- ###
-set $monitor1 "HDMI-1"
-set $monitor2 "DP-1"
+set $monitor1 "{{ $host.main_monitor_name }}"
+set $monitor2 "{{ $host.side_monitor_name }}"
 set $scrtch_display scratchpad show; move position center;
 {{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 
@@ -112,12 +112,21 @@ workspace $ws5 output $monitor1
 workspace $ws6 output $monitor1
 
 # Bind workspaces 7-12 to the secondary monitor
+{{- if gt $host.monitor_count 1 -}}
 workspace $ws7 output $monitor2
 workspace $ws8 output $monitor2
 workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
 workspace $ws11 output $monitor2
 workspace $ws12 output $monitor2
+{{- else -}}
+workspace $ws7 output $monitor1
+workspace $ws8 output $monitor1
+workspace $ws9 output $monitor1
+workspace $ws10 output $monitor1
+workspace $ws11 output $monitor1
+workspace $ws12 output $monitor1
+{{- end }}
 
 # Set outer gaps to 0 for all workspaces on secondary monitor
 workspace $ws6 gaps outer -6
@@ -130,14 +139,13 @@ workspace $ws12 gaps outer -6
 
 
 ### --- Keybinds --- ###
-
 # set modifier keys
-set $mod Mod4
 # Super key
-set $numlock Mod2
+set $mod Mod4
 # numlock key
-set $alt Mod1
+set $numlock Mod2
 # alt key
+set $alt Mod1
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
