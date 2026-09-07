@@ -34,7 +34,6 @@ launch_bar() {
     # polybar -q side2 -c "$dir/$style/config.ini" &
     {{- else -}}
     polybar -q main -c "$dir/$style/config.ini" &
-    sleep 2
     polybar -q aux -c "$dir/$style/config.ini" &
     {{- end }}
   fi
