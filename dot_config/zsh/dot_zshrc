@@ -364,6 +364,8 @@ alias docker-clean=' \
   docker network prune -f ; \
   docker volume prune -f '
 
+alias jupyter-init="jupyter --set-formats ipynb,md"
+
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
