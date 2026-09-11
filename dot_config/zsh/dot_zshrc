@@ -358,14 +358,13 @@ alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
 
 alias kssh="kitty +kitten ssh"
 
+alias jupyter-init="jupyter --set-formats ipynb,md"
+
 alias docker-clean=' \
   docker container prune -f ; \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
-
-alias jupyter-init="jupyter --set-formats ipynb,md"
-
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
