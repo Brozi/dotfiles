@@ -35,8 +35,8 @@ hash = "5d0ac26725d9a975bef1d0887374f10e"
 
 [[plugin.deps]]
 use = "lmnek/pandoc"
-rev = "fd2798b"
-hash = "5af4b06948bb7b825a243131eea2075c"
+rev = "6a1e07d"
+hash = "281da099c07ca923cc54623235ca75a5"
 
 [flavor]
 deps = []
