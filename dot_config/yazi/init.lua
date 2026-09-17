@@ -1,9 +1,14 @@
+-- rounded border
 require("full-border"):setup({
 	type = ui.Border.ROUNDED,
 })
 require("git"):setup({
 	-- Order of status signs showing in the linemode
 	order = 1500,
+})
+-- update zoxides database on yazi cwd
+require("zoxide"):setup({
+	update_db = true,
 })
 require("linemode-plus"):setup({
 	-- Date formatting mode
