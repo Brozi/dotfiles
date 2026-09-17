@@ -113,11 +113,11 @@ desc = "Sort by size (reverse)"
 
 # toggle pane plugin
 [[mgr.prepend_keymap]]
-on = "t"
+on = "<C-p>"
 run = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
 [[mgr.prepend_keymap]]
-on = "T"
+on = "<C-P>"
 run = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
 
