@@ -76,53 +76,53 @@ desc = "Grid view"
 
 [[mgr.prepend_keymap]]
 # linemode-plus plugin
-on = [ "m", "c" ]
-run = "linemode size_mtime" 
+on = ["m", "c"]
+run = "linemode size_mtime"
 desc = "Linemode: size+mtime"
 
 # Sorting does not override linemode (recommended) 
 [[mgr.prepend_keymap]]
-on = [ ",", "m" ] 
-run = [ "sort mtime --reverse=no" ]
-desc = "Sort by modified time" 
+on = [",", "m"]
+run = ["sort mtime --reverse=no"]
+desc = "Sort by modified time"
 
 [[mgr.prepend_keymap]]
-on = [ ",", "M" ] 
-run = [ "sort mtime --reverse=yes" ] 
-desc = "Sort by modified time (reverse)" 
+on = [",", "M"]
+run = ["sort mtime --reverse=yes"]
+desc = "Sort by modified time (reverse)"
 
 [[mgr.prepend_keymap]]
-on = [ ",", "b" ] 
-run = [ "sort btime --reverse=no" ] 
-desc = "Sort by birth time" 
+on = [",", "b"]
+run = ["sort btime --reverse=no"]
+desc = "Sort by birth time"
 
 [[mgr.prepend_keymap]]
-on = [ ",", "B" ] 
-run = [ "sort btime --reverse=yes" ] 
+on = [",", "B"]
+run = ["sort btime --reverse=yes"]
 desc = "Sort by birth time (reverse)"
 
 [[mgr.prepend_keymap]]
-on = [ ",", "s" ] 
-run = [ "sort size --reverse=no" ] 
+on = [",", "s"]
+run = ["sort size --reverse=no"]
 desc = "Sort by size"
 
 [[mgr.prepend_keymap]]
-on = [ ",", "S" ] 
-run = [ "sort size --reverse=yes" ] 
+on = [",", "S"]
+run = ["sort size --reverse=yes"]
 desc = "Sort by size (reverse)"
 
 # toggle pane plugin
-[[mgr.prepend_keymap]]
+[[mgr.append_keymap]]
 on = "t"
 run = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
-[[mgr.prepend_keymap]]
+[[mgr.append_keymap]]
 on = "T"
 run = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
 
 # pandoc plugin
 [[manager.prepend_keymap]]
-on   = [ "c", "p" ]
-run  = "plugin pandoc"
+on = ["c", "p"]
+run = "plugin pandoc"
 desc = "Pandoc: Interactive Convert"
