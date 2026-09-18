@@ -8,7 +8,7 @@ vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 
 -- disable mouse support for nvim
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
 vim.opt.spelllang = "en_us"
 -- set spelllang
