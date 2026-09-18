@@ -177,13 +177,13 @@ CORRECT_IGNORE='_*'
 # map shortcut to accept autosuggestions
 bindkey -M viins '^f' autosuggest-accept
 # Accept one word of the autosuggestion at a time using Ctrl+l
-bindkey -M viins '^l' forward-word
+bindkey -M viins '^[l' forward-word
 # Bind j and k in Normal mode to search history based on typed prefix
-bindkey -M viins '^k' history-search-backward
-bindkey -M viins '^j' history-search-forward
+bindkey -M viins '^[k' history-search-backward
+bindkey -M viins '^[j' history-search-forward
 
 # bind ctrl+l to clear screen in normal mode
-bindkey -M vicmd '^l' clear-screen
+bindkey -M vicmd '^[l' clear-screen
 
 # Bind alt c to clear screen in insert mode
 bindkey -M viins '^[c' clear-screen
