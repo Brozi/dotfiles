@@ -197,7 +197,7 @@ zstyle ':completion::complete:*' use-cache on
 # FZF-TAB config
 
 # Use Tab and Shift-Tab to navigate the fzf menu
-zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=tab:down,btab:up'
+zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=ctrl-n:down,ctrl-p:up'
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
