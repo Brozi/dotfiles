@@ -199,8 +199,8 @@ zstyle ':completion::complete:*' use-cache on
 
 # FZF-TAB config
 
-# 2. Inject Vim-style navigation (Ctrl-J and Ctrl-K) directly into fzf-tab's fzf instance
-# zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=ctrl-j:down,ctrl-k:up'
+# Use Tab and Shift-Tab to navigate the fzf menu
+zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=tab:down,btab:up'
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
