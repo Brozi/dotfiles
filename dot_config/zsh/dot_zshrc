@@ -179,8 +179,8 @@ bindkey -M viins '^f' autosuggest-accept
 # Accept one word of the autosuggestion at a time using Ctrl+l
 bindkey -M viins '^[l' forward-word
 # Bind j and k in Normal mode to search history based on typed prefix
-bindkey -M viins '^[k' history-search-backward
-bindkey -M viins '^[j' history-search-forward
+bindkey -M viins '^k' history-search-backward
+bindkey -M viins '^j' history-search-forward
 
 # bind ctrl+l to clear screen in normal mode
 bindkey -M vicmd '^[l' clear-screen
@@ -200,7 +200,7 @@ zstyle ':completion::complete:*' use-cache on
 # FZF-TAB config
 
 # 2. Inject Vim-style navigation (Ctrl-J and Ctrl-K) directly into fzf-tab's fzf instance
-zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=ctrl-j:down,ctrl-k:up'
+zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS} '--bind=alt-j:down,alt-k:up'
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
