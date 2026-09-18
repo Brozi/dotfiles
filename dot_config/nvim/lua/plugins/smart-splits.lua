@@ -32,34 +32,5 @@ return {
       end,
       desc = "Move to right window",
     },
-    -- Resizing
-    {
-      "<A-h>",
-      function()
-        require("smart-splits").resize_left()
-      end,
-      desc = "Resize window left",
-    },
-    {
-      "<A-j>",
-      function()
-        require("smart-splits").resize_down()
-      end,
-      desc = "Resize window down",
-    },
-    {
-      "<A-k>",
-      function()
-        require("smart-splits").resize_up()
-      end,
-      desc = "Resize window up",
-    },
-    {
-      "<A-l>",
-      function()
-        require("smart-splits").resize_right()
-      end,
-      desc = "Resize window right",
-    },
   },
 }
