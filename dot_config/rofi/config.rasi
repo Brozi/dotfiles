@@ -179,8 +179,8 @@ configuration {
 	// me-accept-entry: "MouseDPrimary";
 	// me-accept-custom: "Control+MouseDPrimary";
 
-  kb-row-up: "Up,Control+n";
-  kb-row-down: "Down,Control+p";
+  kb-row-up: "Up,Control+p";
+  kb-row-down: "Down,Control+n";
   kb-row-left: "Control+h";
   kb-row-right: "Control+l";
 }
