@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = false })
 vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = false })
+vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = false })
 
 -- Cycle spelllang between English and Polish
 vim.keymap.set("n", "<leader>uy", function()
