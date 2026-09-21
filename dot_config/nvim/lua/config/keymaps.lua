@@ -1,10 +1,6 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = false })
-vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = false })
-vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = false })
-
 -- Cycle spelllang between English and Polish
 vim.keymap.set("n", "<leader>uy", function()
   local current_lang = vim.bo.spelllang
