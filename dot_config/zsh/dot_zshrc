@@ -628,6 +628,11 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+# special version of the apt list command
+aptls() {
+    apt list "*$1*"
+}
+
 #######################################################
 # ENV & PROMPT
 #######################################################
