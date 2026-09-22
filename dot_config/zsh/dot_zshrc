@@ -630,7 +630,17 @@ function y() {
 
 # special version of the apt list command
 aptls() {
-    apt list "*$1*"
+    local args=()
+    for arg in "$@"; do
+        if [[ "$arg" == -* ]]; then
+            # Keep flags like -i or --upgradable exactly as they are
+            args+=("$arg")
+        else
+            # Wrap anything that isn't a flag in wildcards
+            args+=("*${arg}*")
+        fi
+    done
+    apt list "${args[@]}"
 }
 
 #######################################################
