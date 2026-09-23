@@ -74,6 +74,7 @@ selector_bottom = " "
 # selector_top = "-"
 # selector_middle = ">"
 # selector_bottom = "-"
+
 keybindings = [
   { key = { Char = "!" }, action = { SelectTab = 0 } },
   { key = { Char = "@" }, action = { SelectTab = 1 } },
