@@ -12,6 +12,14 @@ tab = "output"
 
 lazy_capture = true
 
+keybindings = [
+  { key = { Char = "!" }, action = { SelectTab = 0 } },
+  { key = { Char = "@" }, action = { SelectTab = 1 } },
+  { key = { Char = "#" }, action = { SelectTab = 2 } },
+  { key = { Char = "$" }, action = { SelectTab = 3 } },
+  { key = { Char = "%" }, action = { SelectTab = 4 } },
+]
+
 # Catppuccin Mocha Theme Definition
 [themes.catppuccin_mocha]
 # Mauve for default markers
@@ -74,11 +82,3 @@ selector_bottom = " "
 # selector_top = "-"
 # selector_middle = ">"
 # selector_bottom = "-"
-
-keybindings = [
-  { key = { Char = "!" }, action = { SelectTab = 0 } },
-  { key = { Char = "@" }, action = { SelectTab = 1 } },
-  { key = { Char = "#" }, action = { SelectTab = 2 } },
-  { key = { Char = "$" }, action = { SelectTab = 3 } },
-  { key = { Char = "%" }, action = { SelectTab = 4 } },
-]
