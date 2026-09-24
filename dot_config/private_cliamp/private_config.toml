@@ -1,6 +1,11 @@
 theme = "catppuccin"
 
 repeat = "All"
+
+shuffle = true
+
+provider = "tidal"
+
 [tidal]
 enabled = true
 quality = "lossless"
