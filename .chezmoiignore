@@ -1,3 +1,4 @@
 *.ovpn
 .config/mpv/.keep
 .config/cliamp/tidal_credentials.json
+.config/cliamp/cliaml.log
