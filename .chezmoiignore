@@ -1,1 +1,3 @@
 *.ovpn
+~/.config/eza/.keep
+~/.config/cliamp/tidal_credentials.json
