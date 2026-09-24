@@ -3,3 +3,6 @@ theme = "catppuccin"
 [tidal]
 enabled = true
 quality = "lossless"
+
+[ytmusic]
+cookies_from = "chrome:~/.config/vivaldi"
