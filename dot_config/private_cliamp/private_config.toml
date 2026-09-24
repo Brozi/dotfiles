@@ -1,5 +1,6 @@
 theme = "catppuccin"
 
+repeat = "All"
 [tidal]
 enabled = true
 quality = "lossless"
