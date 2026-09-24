@@ -1,4 +1,4 @@
-theme = ""
+theme = "catppuccin"
 
 [tidal]
 enabled = true
