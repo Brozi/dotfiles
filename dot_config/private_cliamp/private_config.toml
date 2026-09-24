@@ -5,4 +5,4 @@ enabled = true
 quality = "lossless"
 
 [ytmusic]
-cookies_from = "chromium+gnomekeyring:/home/brozi/.config/vivaldi/Default"
+cookies_from = "vivaldi+gnomekeyring:/home/brozi/.config/vivaldi/Default"
