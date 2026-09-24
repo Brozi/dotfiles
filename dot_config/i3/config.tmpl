@@ -251,7 +251,12 @@ assign [instance="^web.whatsapp.com$"] $ws4
 ### --- Scratchpads --- ###
 
 # Window rules
-for_window [class="scrtch|monitor"] \
+for_window [class="scrtch"] \
+floating enable, \
+move scratchpad, \
+resize set 1400 830
+
+for_window [class="kitty-monitor"] \
 floating enable, \
 move scratchpad, \
 resize set 1400 830
@@ -266,7 +271,7 @@ resize set 1600 900, \
 move position center
 
 # Scratchpad programs
-exec_always --no-startup-id pgrep -f '^kitty --class monitor' || kitty --class 'monitor' \
+exec_always --no-startup-id pgrep -f '^kitty --class kitty-monitor' || kitty --class 'kitty-monitor' \
 --override window_margin_width=0 \
 --override remember_window_size=yes \
 --session ~/.config/kitty/sessions/monitor.kitty-session
