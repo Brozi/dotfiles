@@ -256,7 +256,7 @@ floating enable, \
 move scratchpad, \
 resize set 1400 830
 
-for_window [class="kitty-monitor"] \
+for_window [class="^kitty-monitor$"] \
 floating enable, \
 move scratchpad, \
 resize set 1400 830
@@ -281,6 +281,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class 2-scrtch' || kitty --class 
 exec_always --no-startup-id pgrep -f '^kitty --class 'yazi-scrtch'' || kitty --class 'yazi-scrtch' zsh -ic "exec y"
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
 exec_always --no-startup-id pgrep -f '^kitty --class wiremix-scrtch' || kitty --class 'wiremix-scrtch' wiremix
+exec_always --no-startup-id pgrep -f '^kitty --class cliamp-scrtch' || kitty --class 'cliamp-scrtch' cliamp --provider tidal
 
 # Scratchpad binds
 bindsym $mod+grave [class="^1-scrtch$"] $scrtch_display
