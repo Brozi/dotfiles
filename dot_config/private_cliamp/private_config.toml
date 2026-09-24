@@ -5,4 +5,4 @@ enabled = true
 quality = "lossless"
 
 [ytmusic]
-cookies_from = "chromium:~/.config/vivaldi"
+cookies_from = "chromium"
