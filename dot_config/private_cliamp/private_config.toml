@@ -6,4 +6,5 @@ enabled = true
 quality = "lossless"
 
 [ytmusic]
+enabled = true
 cookies_from = "vivaldi+gnomekeyring:/home/brozi/.config/vivaldi/Default"
