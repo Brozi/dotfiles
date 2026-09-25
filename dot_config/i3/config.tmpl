@@ -75,6 +75,12 @@ exec_always --no-startup-id xset r rate 500 33
 exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput Accel Speed"  0.20172043010752688
 exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput Accel Profile Enabled" 0 1 0
 
+{{ if $host.has_touchpad -}}
+
+exec_always --no-startup-id sleep 10 && syndaemon -i 1.0 -K -R -t
+
+{{- end }}
+
 ### --- Workspace definitions --- ###
 
 # Define names for default workspaces for which we configure key bindings later on.
