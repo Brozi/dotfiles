@@ -276,6 +276,10 @@ for_window [class="(?i)todoist"] floating enable, \
 resize set 1600 900, \
 move position center
 
+for_window [class="^discord$"] layout stacking 
+for_window [instance="^www.messenger.com$"] layout stacking
+for_window [instance="^web.whatsapp.com$"] layout stacking
+
 # Scratchpad programs
 exec_always --no-startup-id pgrep -f '^kitty --class kitty-monitor' || kitty --class 'kitty-monitor' \
 --override window_margin_width=0 \
