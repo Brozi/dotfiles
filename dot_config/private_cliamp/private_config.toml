@@ -1,6 +1,6 @@
 theme = "catppuccin"
 
-repeat = "All"
+repeat = "One"
 
 shuffle = true
 
