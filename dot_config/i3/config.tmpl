@@ -77,7 +77,7 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 
 {{ if $host.has_touchpad -}}
 
-exec --no-startup-id sleep 10 && syndaemon -i 1.0 -K -R -t
+exec --no-startup-id sleep 10 && syndaemon -i 0.5 -K -R -t
 
 {{- end }}
 
