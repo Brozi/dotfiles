@@ -16,7 +16,7 @@ configuration files for Linux machines I use.
 - [License](#license)
 
 > [!WARNING]
-> **USE AT YOUR OWN RISK**
+> **USE AT YOUR OWN RISK**  
 > These config files are tailored strictly to my personal preferences, machines
 > and workflow. It is almost certain that they wont function correctly on your
 > machine, especially regarding the .chezmoidata.toml file. Please proceed with
