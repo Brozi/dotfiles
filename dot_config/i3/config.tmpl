@@ -55,6 +55,9 @@ exec_always --no-startup-id ~/.config/scripts/screenlayout/monitor.sh
 # restore the wallpaper
 exec --no-startup-id nitrogen --restore
 
+# playerctl daemon for media key support
+exec --no-startup-id playerctld daemon
+
 # new catppuccin polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
