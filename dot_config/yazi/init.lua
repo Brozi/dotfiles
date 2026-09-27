@@ -62,16 +62,14 @@ require("relative-motions"):setup({
 	-- any other configuration options you use
 })
 
--- 2. Wrap the plugin's number rendering method directly
 local old_entity_number = Entity.number
 
 Entity.number = function(self, index, total, file, hovered)
 	local span = old_entity_number(self, index, total, file, hovered)
 
 	if hovered == index then
-		-- :bg("reset") forces the cell to use the terminal's default background,
-		-- overriding the inherited blue row highlight.
-		return span:style(ui.Style():fg("#888888"):bg("reset"))
+		-- Apply only the background reset so the text inherits your default terminal color
+		return span:style(ui.Style():bg("reset"))
 	end
 
 	return span
