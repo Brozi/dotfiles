@@ -71,7 +71,7 @@ Entity.number = function(self, index, total, file, hovered)
 	if hovered == index then
 		-- :bg("reset") forces the cell to use the terminal's default background,
 		-- overriding the inherited blue row highlight.
-		return span:style(ui.Style():fg("reset"):bg("reset"))
+		return span:style(ui.Style():fg("#888888"):bg("reset"))
 	end
 
 	return span
