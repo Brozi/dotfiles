@@ -56,24 +56,19 @@ require("linemode-plus"):setup({
 -- relative motions config
 require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
 
--- 2. Wrap the plugin's number rendering method
-ya.sync(function()
-	-- Store the original function created by the plugin
-	local old_entity_number = Entity.number
+-- 2. Wrap the plugin's number rendering method directly
+local old_entity_number = Entity.number
 
-	-- Redefine it to intercept the returned span
-	Entity.number = function(self, index, total, file, hovered)
-		-- Call the original plugin function to preserve its formatting and local variables
-		local span = old_entity_number(self, index, total, file, hovered)
+Entity.number = function(self, index, total, file, hovered)
+	-- Call the original plugin function to preserve its formatting
+	local span = old_entity_number(self, index, total, file, hovered)
 
-		-- Emulate the plugin's hover check
-		if hovered == index then
-			-- Override the highlighted background by forcing a custom style.
-			-- Adjust the hex code to match the standard unselected text color of your terminal.
-			-- If your terminal inherits backgrounds aggressively, you may also need to append :bg("#your_bg_hex")
-			return span:style(ui.Style():fg("#888888"))
-		end
-
-		return span
+	-- Emulate the plugin's hover check
+	if hovered == index then
+		-- Override the highlighted background by forcing a foreground-only style
+		-- Adjust the hex code to match your standard unselected text color
+		return span:style(ui.Style():fg("#888888"))
 	end
-end)()
+
+	return span
+end
