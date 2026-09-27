@@ -52,3 +52,5 @@ require("linemode-plus"):setup({
 		year_digits = 4,
 	},
 })
+
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
