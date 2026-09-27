@@ -22,7 +22,7 @@ for = "unix"
 run = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
 # # Vim motions plugin
-#
+
 # [[mgr.prepend_keymap]]
 # on = ["1"]
 # run = "plugin relative-motions 1"
@@ -67,6 +67,7 @@ desc = "Open $SHELL here"
 # on = ["9"]
 # run = "plugin relative-motions 9"
 # desc = "Move in relative steps"
+
 # Rofi grid image preview
 
 [[mgr.prepend_keymap]]
@@ -74,8 +75,8 @@ on = "<C-g>"
 run = 'shell -- rofi -config ~/.config/rofi/rofi-gridview.rasi -modi filebrowser -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
 desc = "Grid view"
 
-[[mgr.prepend_keymap]]
 # linemode-plus plugin
+[[mgr.prepend_keymap]]
 on = ["m", "c"]
 run = "linemode size_mtime"
 desc = "Linemode: size+mtime"
@@ -120,6 +121,17 @@ desc = "Maximize or restore the preview pane"
 on = "<C-P>"
 run = "plugin toggle-pane min-preview"
 desc = "Show or hide the preview pane"
+
+# Custom Downloads directory 
+[[mgr.prepend_keymap]]
+on = ["g", "d"]
+run = "cd ~/Pobrane"
+desc = "Go to ~/Pobrane"
+
+[[mgr.prepend_keymap]]
+on = ["g", "D"]
+run = "cd ~/data"
+desc = "Go to ~/data"
 
 # pandoc plugin
 [[manager.prepend_keymap]]
