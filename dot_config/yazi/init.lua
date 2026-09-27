@@ -77,11 +77,17 @@ Current.redraw = function(self)
 		linemodes[#linemodes + 1] = Linemode:new(f):redraw()
 
 		local entity = Entity:new(f)
-		-- Apply the hover style strictly to entity:redraw(), isolating the number
+		local num_span = Entity:number(i, #self._folder.files, f, hovered_index)
+		-- Explicitly punch a transparent hole through the parent's background
+		if f.is_hovered then
+			num_span = num_span:bg("reset")
+		end
+
+		-- Apply the style back to the ui.Line wrapper so it stretches across the screen
 		entities[#entities + 1] = ui.Line({
-			Entity:number(i, #self._folder.files, f, hovered_index),
-			entity:redraw():style(entity:style()),
-		})
+			num_span,
+			entity:redraw(),
+		}):style(entity:style())
 	end
 
 	return {
