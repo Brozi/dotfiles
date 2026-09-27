@@ -56,18 +56,22 @@ require("linemode-plus"):setup({
 -- relative motions config
 require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
 
+-- 1. Initialize the plugin first
+require("relative-motions"):setup({
+	show_numbers = "relative",
+	-- any other configuration options you use
+})
+
 -- 2. Wrap the plugin's number rendering method directly
 local old_entity_number = Entity.number
 
 Entity.number = function(self, index, total, file, hovered)
-	-- Call the original plugin function to preserve its formatting
 	local span = old_entity_number(self, index, total, file, hovered)
 
-	-- Emulate the plugin's hover check
 	if hovered == index then
-		-- Override the highlighted background by forcing a foreground-only style
-		-- Adjust the hex code to match your standard unselected text color
-		return span:style(ui.Style():fg("#888888"))
+		-- :bg("reset") forces the cell to use the terminal's default background,
+		-- overriding the inherited blue row highlight.
+		return span:style(ui.Style():fg("#888888"):bg("reset"))
 	end
 
 	return span
