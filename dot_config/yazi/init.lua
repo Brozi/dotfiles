@@ -2,14 +2,15 @@
 require("full-border"):setup({
 	type = ui.Border.ROUNDED,
 })
+-- Order of status signs showing in the linemode
 require("git"):setup({
-	-- Order of status signs showing in the linemode
 	order = 1500,
 })
 -- update zoxides database on yazi cwd
 require("zoxide"):setup({
 	update_db = true,
 })
+-- linemode-plus configuration
 require("linemode-plus"):setup({
 	-- Date formatting mode
 	-- Available options:
@@ -52,5 +53,5 @@ require("linemode-plus"):setup({
 		year_digits = 4,
 	},
 })
-
+-- relative motions config
 require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
