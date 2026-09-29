@@ -52,9 +52,6 @@ exec --no-startup-id picom -b
 # automatically configure multimonitor setup
 exec_always --no-startup-id ~/.config/scripts/screenlayout/monitor.sh
 
-# restore the wallpaper
-exec --no-startup-id ~/.fehbg
-
 # playerctl daemon for media key support
 exec --no-startup-id playerctld daemon
 
@@ -66,6 +63,9 @@ exec_always --no-startup-id ~/.config/i3/scripts/autolayout.sh
 
 # startup todoist
 exec --no-startup-id /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=todoist --file-forwarding com.todoist.Todoist --hidden @@u %U @@
+
+# restore the wallpaper
+exec --no-startup-id ~/.fehbg
 
 # start clipboard daemon
 exec --no-startup-id killall xfce4-clipman
