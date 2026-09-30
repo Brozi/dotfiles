@@ -64,9 +64,6 @@ exec_always --no-startup-id ~/.config/i3/scripts/autolayout.sh
 # startup todoist
 exec --no-startup-id /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=todoist --file-forwarding com.todoist.Todoist --hidden @@u %U @@
 
-# restore the wallpaper
-exec --no-startup-id ~/.fehbg
-
 # start clipboard daemon
 exec --no-startup-id killall xfce4-clipman
 exec --no-startup-id bash -c "sleep 4 && /usr/bin/xfce4-clipman > /tmp/clipman_boot.log 2>&1"
@@ -83,6 +80,9 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 exec --no-startup-id sleep 10 && syndaemon -i 0.25 -t -K -R -d
 
 {{- end }}
+
+# restore the wallpaper
+exec --no-startup-id ~/.fehbg
 
 ### --- Workspace definitions --- ###
 
