@@ -1,0 +1,20 @@
+theme = "catppuccin"
+
+volume = -30
+
+repeat = "All"
+
+shuffle = false
+
+provider = "tidal"
+
+visualizer = "BarsDot"
+hide_settings_pane = false
+audio_device = alsa_output.pci-0000_0b_00.1.hdmi-stereo
+[tidal]
+enabled = true
+quality = "lossless"
+
+[ytmusic]
+enabled = true
+cookies_from = "vivaldi+gnomekeyring:/home/brozi/.config/vivaldi/Default"
