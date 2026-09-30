@@ -53,7 +53,7 @@ exec --no-startup-id picom -b
 exec_always --no-startup-id ~/.config/scripts/screenlayout/monitor.sh
 
 # playerctl daemon for media key support
-exec --no-startup-id playerctld daemon
+exec --no-startup-id sleep 0.5 && playerctld daemon
 
 # new catppuccin polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
