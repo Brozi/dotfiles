@@ -82,7 +82,7 @@ exec --no-startup-id sleep 10 && syndaemon -i 0.25 -t -K -R -d
 {{- end }}
 
 # restore the wallpaper
-exec --no-startup-id ~/.fehbg
+exec --no-startup-id sleep 0.5 && ~/.fehbg
 
 ### --- Workspace definitions --- ###
 
