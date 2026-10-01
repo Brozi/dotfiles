@@ -54,6 +54,9 @@ exec_always --no-startup-id ~/.config/scripts/screenlayout/monitor.sh
 # playerctl daemon for media key support
 exec --no-startup-id sleep 0.5 && playerctld daemon
 
+# Start smart audio idle preventer
+exec --no-startup-id sleep 1 && ~/.config/i3/scripts/smart-audio-idle.sh
+
 # new catppuccin polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
