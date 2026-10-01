@@ -37,7 +37,6 @@ exec --no-startup-id xss-lock -l -- i3lock -n -e
 # a video in one line
 exec --no-startup-id xidlehook \
   --not-when-fullscreen \
-  --not-when-audio \
   --timer {{ $host.screensaver_time }} 'loginctl lock-session && xset dpms force off' '' \
   --timer {{ $host.suspend_time }} 'systemctl suspend' ''
 
