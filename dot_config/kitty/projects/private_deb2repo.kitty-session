@@ -1,0 +1,40 @@
+
+new_tab Code
+layout splits
+enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 1}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
+cd /home/brozi/coding/deb2repo
+
+launch 'kitty-unserialize-data={"id": 1}'
+focus
+
+new_tab Code #2
+layout splits
+enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 4}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [4], "window_groups": [{"id": 4, "window_ids": [4]}]}}
+cd /home/brozi/coding/deb2repo
+
+launch 'kitty-unserialize-data={"id": 4}'
+focus
+
+new_tab Git & Python
+layout splits
+enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 2, "two": 3}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [2, 3], "window_groups": [{"id": 2, "window_ids": [2]}, {"id": 3, "window_ids": [3]}]}}
+cd /home/brozi/coding/deb2repo
+
+launch 'kitty-unserialize-data={"id": 2}'
+focus
+launch 'kitty-unserialize-data={"id": 3}'
+
+new_tab SHH & Host stacks
+layout splits
+enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 5, "two": 7}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [5, 7], "window_groups": [{"id": 5, "window_ids": [5]}, {"id": 7, "window_ids": [7]}]}}
+cd /home/brozi/server-stacks/deb2repo
+
+launch 'kitty-unserialize-data={"id": 5}'
+focus
+launch 'kitty-unserialize-data={"id": 7, "cmd_at_shell_startup": ["kitten", "ssh", "--kitten=cwd=/opt/stacks/deb2repo", "broziadmin@192.168.100.50"]}'
+
+focus_tab 0

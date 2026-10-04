@@ -1,0 +1,12 @@
+new_tab Polybar peaky blinders theme project
+layout splits
+enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
+set_layout_state {"pairs": {"one": 1, "two": {"horizontal": false, "one": 2, "two": 3}}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [1, 2, 3], "window_groups": [{"id": 1, "window_ids": [1]}, {"id": 2, "window_ids": [2]}, {"id": 3, "window_ids": [3]}]}}
+cd /home/brozi/.config/polybar/forest
+
+launch 'kitty-unserialize-data={"id": 1}'
+focus
+launch 'kitty-unserialize-data={"id": 2}'
+launch 'kitty-unserialize-data={"id": 3, "cmd_at_shell_startup": "nvim"}' '--var=IS_NVIM=1 '
+
+focus_tab 0
