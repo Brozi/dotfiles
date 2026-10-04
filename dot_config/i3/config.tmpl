@@ -309,7 +309,7 @@ bindsym $mod+v [class="wiremix-scrtch"] $scrtch_display
 bindsym $mod+m [class="cliamp-scrtch"] $scrtch_display
 bindsym $mod+$alt+b exec --no-startup-id "pgrep -f '^kitty --class bluetui-scrtch' \
 && i3-msg '[class=\"bluetui-scrtch\"] scratchpad show; move position center' || \
-(kitty --class 'bluetui-scrtch' bluetui & sleep 0.3 && \ 
+(kitty --class 'bluetui-scrtch' bluetui & sleep 0.3 && \
 i3-msg '[class=\"bluetui-scrtch\"] scratchpad show; move position center')"
 
 ### --- Misc keybinds --- ###
