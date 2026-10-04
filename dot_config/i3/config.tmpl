@@ -298,6 +298,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class 'yazi-scrtch'' || kitty --c
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
 exec_always --no-startup-id pgrep -f '^kitty --class wiremix-scrtch' || kitty --class 'wiremix-scrtch' wiremix
 exec_always --no-startup-id pgrep -f '^kitty --class cliamp-scrtch' || kitty --class 'cliamp-scrtch' cliamp
+exec_always --no-startup-id ~/.config/i3/scripts/bluetui-start.sh
 
 # Scratchpad binds
 bindsym $mod+grave [class="^1-scrtch$"] $scrtch_display
