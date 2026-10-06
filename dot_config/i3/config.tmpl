@@ -80,6 +80,11 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 {{ if $host.has_touchpad -}}
 
 exec_always --no-startup-id xinput set-prop "12" "libinput Disable While Typing Enabled" 1
+exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop "12" "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Drag Enabled" 1
+exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Drag Lock Enabled" 1
+exec_always --no-startup-id xinput set-prop "12" "libinput Disable While Typing Enabled" 1
 {{- end }}
 
 # restore the wallpaper
