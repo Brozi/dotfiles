@@ -4,6 +4,7 @@ layout splits
 enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
 set_layout_state {"pairs": {"one": 1}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
 cd /home/brozi/coding/deb2repo
+source .venv/bin/activate
 
 launch 'kitty-unserialize-data={"id": 1}'
 focus
@@ -13,6 +14,7 @@ layout splits
 enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
 set_layout_state {"pairs": {"one": 4}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [4], "window_groups": [{"id": 4, "window_ids": [4]}]}}
 cd /home/brozi/coding/deb2repo
+source .venv/bin/activate
 
 launch 'kitty-unserialize-data={"id": 4}'
 focus
