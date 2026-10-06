@@ -12,7 +12,6 @@ layout splits
 enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
 set_layout_state {"pairs": {"one": 4}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [4], "window_groups": [{"id": 4, "window_ids": [4]}]}}
 cd /home/brozi/coding/deb2repo
-launch 'source /home/brozi/coding/deb2repo/.venv/bin/activate'
 
 launch 'kitty-unserialize-data={"id": 4, "cmd_at_shell_startup": ["source", ".venv/bin/activate"]}'
 focus
