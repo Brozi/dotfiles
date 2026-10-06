@@ -32,7 +32,7 @@ enabled_layouts splits,stack,tall,fat,grid,horizontal,vertical
 set_layout_state {"pairs": {"one": 5, "two": 7}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n", "proportional": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [5, 7], "window_groups": [{"id": 5, "window_ids": [5]}, {"id": 7, "window_ids": [7]}]}}
 cd /home/brozi/server-stacks/deb2repo
 
-launch 'kitty-unserialize-data={"id": 5, "cmd_at_shell_startup": ["sshfs", "broziadmin@192.168.100.50:/opt/stacks", "~/server-stacks"]}'
+launch 'kitty-unserialize-data={"id": 5, "cmd_at_shell_startup": ["sshfs", "broziadmin@192.168.100.50:/opt/stacks", "home/brozi/server-stacks"]}'
 focus
 launch 'kitty-unserialize-data={"id": 7, "cmd_at_shell_startup": ["kitten", "ssh", "--kitten=cwd=/opt/stacks/deb2repo", "broziadmin@192.168.100.50"]}'
 
