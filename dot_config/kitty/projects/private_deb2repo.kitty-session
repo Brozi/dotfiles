@@ -24,7 +24,7 @@ cd /home/brozi/coding/deb2repo
 
 launch 'kitty-unserialize-data={"id": 2}'
 focus
-launch 'kitty-unserialize-data={"id": 3}'
+launch 'kitty-unserialize-data={"id": 3, "cmd_at_shell_startup": ["source", ".venv/bin/activate"]}'
 
 new_tab SHH & Host stacks
 layout splits
