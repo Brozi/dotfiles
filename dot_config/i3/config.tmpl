@@ -294,7 +294,9 @@ for_window [class="^ferdium$"] layout stacking
 # Scratchpad programs
 exec_always --no-startup-id pgrep -f '^kitty --class kitty-monitor' || kitty --class 'kitty-monitor' \
 --override window_margin_width=0 \
---override remember_window_size=yes \
+--override remember_window_size=no \
+--override initial_window_width=1400 \
+--override initial_window_height=830 \
 --session ~/.config/kitty/sessions/monitor.kitty-session
 
 exec_always --no-startup-id pgrep -f '^kitty --class 1-scrtch' || kitty --class '1-scrtch'
