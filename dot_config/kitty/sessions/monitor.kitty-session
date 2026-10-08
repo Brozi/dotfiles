@@ -2,21 +2,19 @@ new_tab System Managment
 #Monitoring terminal setup
 layout tall
 #Launch cpu monitoring
-launch sh -c "sleep 2 && btop -p 1"
+launch btop -p 1
 #Launch gpu monitoring
-launch sh -c "sleep 2 && nvtop"
+launch nvtop
 #Launch memory monitoring
-launch sh -c "sleep 2 && btop -p 2"
+launch btop -p 2
 #Launch net monitoring
-launch sh -c "sleep 2 && btop -p 4"
-
+launch btop -p 4
 #Process managment tab
 new_tab Process Managment
 layout tall
-launch sh -c "sleep 2 && btop -p 3"
-launch sh -c "sleep 2 && btop -p 2"
-launch sh -c "sleep 2 && btop -p 1"
-
+launch btop -p 3
+launch btop -p 2
+launch btop -p 1
 #File managment setup
 new_tab Disk Cleanup
-launch sh -c "sleep 2 && ncdu /"
+launch ncdu /
