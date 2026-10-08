@@ -20,8 +20,8 @@ hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [[plugin.deps]]
 use = "imsi32/yatline"
-rev = "c5d4b48"
-hash = "e6e98d12b1648d1894c2b560d85eeaa7"
+rev = "dc44b73"
+hash = "fa488655544e367e5439a9748d28519e"
 
 [[plugin.deps]]
 use = "imsi32/yatline-catppuccin"
