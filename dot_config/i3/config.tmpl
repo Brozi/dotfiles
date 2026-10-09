@@ -10,6 +10,8 @@ set $monitor2 "{{ $host.side_monitor_name }}"
 set $scrtch_display scratchpad show; move position center;
 
 ### --- Autostart --- ###
+exec --no-startup-id xsettingsd
+exec --no-startup-id bash -c 'export XDG_CURRENT_DESKTOP=xapp; dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP'
 
 # update dbus environment the moment i3 starts
 exec --no-startup-id dbus-update-activation-environment --systemd --all
