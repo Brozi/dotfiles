@@ -2,9 +2,18 @@ return {
   "mrjones2014/smart-splits.nvim",
   build = "./kitty/install-kittens.bash",
   lazy = false,
+  dependencies = {
+    {
+      "smart-splits-nvim/backend-kitty",
+      main = "smart-splits-backend-kitty",
+      opts = {
+        --[[ backend-specific options go here ]]
+      },
+    },
+  },
   opts = {
     mux = {
-      backend = "kitty",
+      backend = "smart-splits-backend-kitty",
     },
   },
   keys = {
