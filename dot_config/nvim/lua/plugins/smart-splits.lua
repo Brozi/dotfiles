@@ -2,6 +2,9 @@ return {
   "mrjones2014/smart-splits.nvim",
   build = "./kitty/install-kittens.bash",
   lazy = false,
+  opts = {
+    multiplexer_integration = "kitty",
+  },
   keys = {
     -- Tmux navigation bindings (Ctrl + hjkl)
     {
