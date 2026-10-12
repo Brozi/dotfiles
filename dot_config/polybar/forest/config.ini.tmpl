@@ -149,10 +149,16 @@ font-4 = "Iosevka Nerd Font:size=17;4"
 ;   modules-right = ipc clock
 
 ; modules-left = launcher sep i3 sep ixwindow
+
+{{ if gt $host.monitor_count 1 -}}
+modules-left = launcher sep i3
+modules-center = title
+{{ else }}
 modules-left = launcher sep i3 sep title
+modules-center = date
+{{ end }}
 ; modules-left = launcher sep i3 sep i3window-main
 ; modules-center = mpd sep date
-modules-center = date
 {{ if $host.has_battery -}}
 modules-right = bluetooth network battery updates sep volume backlight sep powermenu
 {{- else -}}
