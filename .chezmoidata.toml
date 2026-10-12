@@ -22,7 +22,7 @@ suspend_time = 1200
 gpu_vendor = "nvidia"
 
 [hosts."brozi-laptop"]
-dpi = 120
+dpi = 108
 cursor_size = 26
 rofi_font_size = 10
 rofi_icon_size = "35px"
