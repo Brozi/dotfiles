@@ -279,6 +279,21 @@ modules-center =
 
 tray-position = right
 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+[bar/left]
+; Use either of the following command to list available outputs:
+; If unspecified, the application will pick the first one it finds.
+; $ polybar -m | cut -d ':' -f 1
+; $ xrandr -q | grep " connected" | cut -d ' ' -f1
+inherit = bar/main
+monitor = "{{ $host.leftside_monitor_name }}"
+
+modules-right = i3 sep
+modules-left = 
+modules-center = date
+
+tray-position = right
+
 [bar/side2]
 ; Use either of the following command to list available outputs:
 ; If unspecified, the application will pick the first one it finds.
