@@ -590,6 +590,8 @@ label-mode-background = ${color.red}
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
+{{ if gt $host.monitor_count 1 -}}
+; config for desktop
 label-focused = "%{F#cba6f7}%name%%{F-} %{T4}%icon%%{T-}%{O5.5}"
 label-focused-foreground = ${color.text}
 label-focused-background = ${color.base}
@@ -608,6 +610,46 @@ label-urgent-foreground = ${color.red}
 label-urgent-background = ${color.base}
 label-urgent-underline = ${color.red}
 label-urgent-padding = 2
+
+{{- else -}}
+; config for laptop
+label-focused ="%{T4}%icon%%{T-}%{O5.5}"
+label-focused-foreground = ${color.text}
+label-focused-background = ${color.base}
+label-focused-underline = ${color.maroon}
+label-focused-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-unfocused = "%{T4}%icon%%{T-}%{O5.5}"
+label-unfocused-padding = 2
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-visible = "%{T4}%icon%%{T-}%{O5.5}"
+label-visible-underline = ${color.surface0}
+label-visible-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-urgent = "%{T4}%icon%%{T-}%{O5.5}"
+label-urgent-foreground = ${color.red}
+label-urgent-background = ${color.base}
+label-urgent-underline = ${color.red}
+label-urgent-padding = 2
+
+{{- end }}
 
 ; Separator in between workspaces
 label-separator = ""
