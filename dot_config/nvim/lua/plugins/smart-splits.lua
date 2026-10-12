@@ -3,7 +3,9 @@ return {
   build = "./kitty/install-kittens.bash",
   lazy = false,
   opts = {
-    multiplexer_integration = "kitty",
+    mux = {
+      backend = "kitty",
+    },
   },
   keys = {
     -- Tmux navigation bindings (Ctrl + hjkl)
