@@ -7,6 +7,7 @@
 ### --- Variables --- ###
 set $monitor1 "{{ $host.main_monitor_name }}"
 set $monitor2 "{{ $host.side_monitor_name }}"
+set $monitor3 "{{ $host.left_side_monitor_name }}"
 set $scrtch_display scratchpad show; move position center;
 
 ### --- Autostart --- ###
@@ -134,16 +135,6 @@ workspace $ws10 output $monitor1
 workspace $ws11 output $monitor1
 workspace $ws12 output $monitor1
 {{- end }}
-
-# Set outer gaps to 0 for all workspaces on secondary monitor
-workspace $ws6 gaps outer -6
-workspace $ws7 gaps outer -6
-workspace $ws8 gaps outer -6
-workspace $ws9 gaps outer -6
-workspace $ws10 gaps outer -6
-workspace $ws11 gaps outer -6
-workspace $ws12 gaps outer -6
-
 
 ### --- Keybinds --- ###
 # set modifier keys
