@@ -9,6 +9,7 @@ set $monitor1 "{{ $host.main_monitor_name }}"
 set $monitor2 "{{ $host.side_monitor_name }}"
 set $monitor3 "{{ $host.leftside_monitor_name }}"
 set $scratchpad_size {{ $host.scratchpad_size }}
+set $todoist_size {{ $host.todoist_size }}
 set $scrtch_display scratchpad show; move position center;
 
 ### --- Autostart --- ###
@@ -275,7 +276,7 @@ move scratchpad, \
 resize set $scratchpad_size
 
 for_window [class="(?i)todoist"] floating enable, \
-resize set 1600 900, \
+resize set $todoist_size, \
 move position center
 
 for_window [class="^discord$"] layout stacking 
