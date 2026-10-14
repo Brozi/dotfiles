@@ -10,12 +10,12 @@ local function setup()
 	ps.sub("ind-sort", function(opt)
 		local cwd = cx.active.current.cwd
 
-		if in_folder(cwd, "Downloads") then
+		if in_folder(cwd, "Pobrane") then
 			-- Modyfikujemy obiekt opt dla spójności
 			opt.by, opt.reverse, opt.dir_first = "mtime", true, false
 			-- Wymuszamy sortowanie z użyciem API Yazi
 			ya.emit("sort", { "mtime", reverse = true, dir_first = false })
-		elseif in_folder(cwd, "Pictures") then
+		elseif in_folder(cwd, "Obrazy") then
 			opt.by, opt.reverse, opt.dir_first = "extension", false, true
 			ya.emit("sort", { "extension", reverse = false, dir_first = true })
 		else
