@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+rfkill unblock bluetooth
+
+sleep 1
+
 # Check if bluetui is already running so we don't spawn duplicates
 if ! pgrep -f '^kitty --class bluetui-scrtch' >/dev/null; then
   # 1. Launch bluetui in the background
@@ -10,5 +14,4 @@ if ! pgrep -f '^kitty --class bluetui-scrtch' >/dev/null; then
 
   # 3. Force the adapter back off
   bluetoothctl power off
-  rfkill unblock bluetooth
 fi
