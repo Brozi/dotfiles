@@ -10,4 +10,8 @@ if ! pgrep -f '^kitty --class bluetui-scrtch' >/dev/null; then
 
   # 3. Force the adapter back off
   bluetoothctl power off
+
+  sleep 1
+
+  rfkill unblock bluetooth
 fi
