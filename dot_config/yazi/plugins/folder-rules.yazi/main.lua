@@ -1,9 +1,14 @@
-local function in_folder(cwd_url, target_name)
-	local path = tostring(cwd_url):lower():gsub("\\", "/")
+local function in_folder(url, name)
+	-- Convert path to lowercase string and normalize all Windows/Unix slashes to '/'
+	local path = tostring(url):lower():gsub("\\", "/")
+
+	-- Append a trailing slash to ensure uniform directory boundary matching
 	if path:sub(-1) ~= "/" then
 		path = path .. "/"
 	end
-	return path:find("/" .. target_name:lower() .. "/", 1, true) ~= nil
+
+	-- Use plain text search (true flag) to find '/foldername/' anywhere in the path
+	return path:find("/" .. name:lower() .. "/", 1, true) ~= nil
 end
 
 local function setup()
@@ -11,16 +16,15 @@ local function setup()
 		local cwd = cx.active.current.cwd
 
 		if in_folder(cwd, "Pobrane") then
-			-- Modyfikujemy obiekt opt dla spójności
+			-- Applies to Downloads and all subfolders inside it
 			opt.by, opt.reverse, opt.dir_first = "mtime", true, false
-			-- Wymuszamy sortowanie z użyciem API Yazi
-			ya.emit("sort", { "mtime", reverse = true, dir_first = false })
 		elseif in_folder(cwd, "Obrazy") then
+			-- Applies to Pictures and all subfolders inside it
 			opt.by, opt.reverse, opt.dir_first = "extension", false, true
-			ya.emit("sort", { "extension", reverse = false, dir_first = true })
 		else
+			-- MANDATORY FALLBACK: You must explicitly define your default
+			-- sorting rules here to reset the tab when you leave a custom folder.
 			opt.by, opt.reverse, opt.dir_first = "natural", false, true
-			ya.emit("sort", { "natural", reverse = false, dir_first = true })
 		end
 	end)
 end
