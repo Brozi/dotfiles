@@ -76,3 +76,6 @@ Entity.number = function(self, index, total, file, hovered)
 
 	return span
 end
+
+-- set up my custom sorting rules plugin
+require("folder-rules"):setup()
