@@ -15,8 +15,11 @@ set $scrtch_display scratchpad show; move position center;
 ### --- Autostart --- ###
 exec --no-startup-id xsettingsd
 
+# new catppuccin polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
+
 # update dbus environment the moment i3 starts
-exec --no-startup-id bash -c 'export XDG_CURRENT_DESKTOP=xapp; dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP'
+exec --no-startup-id bash -c 'export XDG_CURRENT_DESKTOP=i3:GNOME; dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP'
 
 # startup the polkit agent 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
@@ -60,9 +63,6 @@ exec --no-startup-id sleep 0.5 && playerctld daemon
 
 # Start smart audio idle preventer
 exec --no-startup-id sleep 1 && ~/.config/i3/scripts/smart-audio-idle.sh
-
-# new catppuccin polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
 # i3autolayout
 exec_always --no-startup-id ~/.config/i3/scripts/autolayout.sh
