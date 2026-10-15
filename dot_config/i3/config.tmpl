@@ -19,7 +19,7 @@ exec --no-startup-id xsettingsd
 exec_always --no-startup-id ~/.config/polybar/launch.sh --forest
 
 # update dbus environment the moment i3 starts
-exec --no-startup-id bash -c 'export XDG_CURRENT_DESKTOP=i3:GNOME; dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP'
+exec --no-startup-id bash -c 'dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP'
 
 # startup the polkit agent 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
