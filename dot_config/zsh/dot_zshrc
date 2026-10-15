@@ -655,11 +655,6 @@ if [[ $- == *i* ]]; then
 fi
 
 
-# Force Kitty Shell Integration
-if [ -n "$KITTY_INSTALLATION_DIR" ]; then
-    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
-fi
-
 if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
