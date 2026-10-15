@@ -300,7 +300,7 @@ exec_always --no-startup-id pgrep -f '^kitty --class 2-scrtch' || kitty --class 
 exec_always --no-startup-id pgrep -f '^kitty --class 'yazi-scrtch'' || kitty --class 'yazi-scrtch' zsh -ic "exec y"
 exec_always --no-startup-id pgrep -f '^kitty --class upgrade' || env FROM_ROFI=1 kitty --class 'upgrade' --hold run-topgrade
 exec_always --no-startup-id pgrep -f '^kitty --class wiremix-scrtch' || kitty --class 'wiremix-scrtch' wiremix
-exec_always --no-startup-id pgrep -f '^kitty --class cliamp-scrtch' || kitty --class 'cliamp-scrtch' cliamp
+exec_always --no-startup-id pgrep -f '^kitty --class cliamp-scrtch' || bash -c 'for i in $(seq 1 20); do playerctl --list-all &>/dev/null && break; sleep 0.25; done; kitty --class cliamp-scrtch cliamp'
 exec_always --no-startup-id ~/.config/i3/scripts/bluetui-start.sh
 
 # Scratchpad binds
