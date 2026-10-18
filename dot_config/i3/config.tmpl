@@ -75,7 +75,7 @@ exec --no-startup-id killall xfce4-clipman
 exec --no-startup-id bash -c "sleep 1 && /usr/bin/xfce4-clipman > /tmp/clipman_boot.log 2>&1"
 
 # launch notion electron
-exec --no-startup-id bash -c "rm -f ~/.config/notion-electron/Singleton* && sleep 2 && notion-electron"
+exec --no-startup-id bash -c "rm -f ~/.config/notion-electron/Singleton* && sleep 2 && notion-electron &"
 
 ### --- Mouse and keyboard settings --- ###
 
