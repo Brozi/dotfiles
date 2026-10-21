@@ -283,8 +283,6 @@ alias ps='ps auxf'
 alias ping='ping -c 3'
 alias less='less -R'
 alias cls='clear'
-alias multitail='multitail --no-repeat -c'
-alias svi='sudo vi'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias cat='bat'
 alias ccat='/bin/cat'
@@ -294,8 +292,6 @@ alias e='exit'
 alias nv='nvim'
 alias v='vim'
 
-alias home='cd ~'
-alias cd..='cd ..'
 
 alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
@@ -338,29 +334,6 @@ alias f="find . | grep "
 
 # Fixed substring extraction for Zsh compatibility
 alias countfiles="for t in files links directories; do echo \$(find . -type \${t[1,1]} 2>/dev/null | wc -l) \$t; done"
-
-alias checkcommand="type"
-alias openports='netstat -nape --inet'
-alias rebootsafe='sudo shutdown -r now'
-alias rebootforce='sudo shutdown -r -n now'
-
-alias diskspace="du -S | sort -n -r |more"
-alias folders='du -h --max-depth=1'
-alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-alias tree='tree -CAhF --dirsfirst'
-alias treed='tree -CAFd'
-alias mountedinfo='df -hT'
-
-alias mktar='tar -cvf'
-alias mkbz2='tar -cvjf'
-alias mkgz='tar -cvzf'
-alias untar='tar -xvf'
-alias unbz2='tar -xvjf'
-alias ungz='tar -xvzf'
-
-alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-alias sha1='openssl sha1'
-alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
 
 alias kssh="kitty +kitten ssh"
 alias kdiff="kitten diff"
@@ -513,7 +486,7 @@ pwdtail() {
     pwd | awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
 }
 
-distribution () {
+distro () {
     local dtype="unknown" 
     if [ -r /etc/os-release ]; then
         source /etc/os-release
