@@ -486,7 +486,7 @@ pwdtail() {
     pwd | awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
 }
 
-distro () {
+distribution () {
     local dtype="unknown" 
     if [ -r /etc/os-release ]; then
         source /etc/os-release
