@@ -69,9 +69,6 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 # Add rofi scripts directory to path
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
-# Add deno to path
-export PATH="$PATH:/home/brozi/.deno/env"
-
 # Add the npm global dir to path
 export PATH=~/.npm-global/bin:$PATH
 
