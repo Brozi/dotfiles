@@ -1,6 +1,6 @@
 -- rounded border
 require("full-border"):setup({
-	type = ui.Border.ROUNDED,
+	set = "rounded",
 })
 -- Order of status signs showing in the linemode
 require("git"):setup({
