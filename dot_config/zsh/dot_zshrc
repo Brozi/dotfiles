@@ -335,7 +335,7 @@ alias countfiles="for t in files links directories; do echo \$(find . -type \${t
 alias kssh="kitty +kitten ssh"
 alias kdiff="kitten diff"
 
-alias copy="cat $0 | xclip -se c"
+alias copy="xclip -se c"
 
 alias jupyter-init="jupytext --set-formats ipynb,md"
 
