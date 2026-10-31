@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-BOOT_FILE="/mnt/system/win-boot.txt"
+BOOT_FILE="/mnt/system/Users/Public/win-boot.txt"
 
 if [ ! -f "$BOOT_FILE" ]; then
   echo "Not mounted"
