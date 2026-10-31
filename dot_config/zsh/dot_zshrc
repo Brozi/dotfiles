@@ -274,13 +274,15 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='trash -v'
+
+trash --version > /dev/null 2>&1 && 
+  alias rm='trash -v'
+
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 3'
 alias less='less -R'
 alias cls='clear'
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias cat='bat'
 alias ccat='/bin/cat'
 alias c='chezmoi'
@@ -288,8 +290,6 @@ alias ce='c edit'
 alias e='exit'
 alias nv='nvim'
 
-
-alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
 
 alias ls='lsd -AFh'
@@ -301,11 +301,6 @@ alias cdi='zi'
 alias yazi='y'
 
 alias mx='chmod +x'
-alias 000='chmod -R 000'
-alias 644='chmod -R 644'
-alias 666='chmod -R 666'
-alias 755='chmod -R 755'
-alias 777='chmod -R 777'
 
 alias h="history | grep -i"
 alias p="ps aux | grep "
