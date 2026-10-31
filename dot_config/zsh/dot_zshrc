@@ -592,6 +592,18 @@ aptls() {
     apt list "${args[@]}"
 }
 
+untiny() {
+	local url=$1
+
+	while [[ -n $url ]]; do
+		echo "-> $url"
+		url=$(curl -sSI -o /dev/null -w '%header{location}' "$url") \
+		    || return 1
+	done
+
+	return 0
+}
+
 #######################################################
 # ENV & PROMPT
 #######################################################
