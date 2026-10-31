@@ -20,4 +20,4 @@ DAYS=$((DIFF / 86400))
 HOURS=$(((DIFF % 86400) / 3600))
 MINS=$(((DIFF % 3600) / 60))
 
-echo "${DAYS} days since last win boot"
+echo "${DAYS} days since last  boot"
