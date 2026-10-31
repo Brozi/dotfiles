@@ -293,22 +293,7 @@ alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm --recursive --force --verbose '
 
 alias ls='lsd -AFh'
-alias la='ls -Alh'
-alias lx='ls -lXBh'
-alias lk='ls -lSrh'
-alias lc='ls -ltcrh'
-alias lu='ls -lturh'
-alias lr='ls -lRh'
-alias lt='ls -ltrh'
-alias lm='ls -alh |more'
-alias lw='ls -xAh'
-alias ll='ls -FlS'
-alias labc='ls -lap'
-alias lf="ls -l | egrep -v '^d'"
-alias ldir="ls -l | egrep '^d'"
-alias lla='ls -Al'
-alias las='ls -A'
-alias lls='ls -l'
+alias la='ls -AlFh'
 
 alias cd='z'
 alias cdi='zi'
