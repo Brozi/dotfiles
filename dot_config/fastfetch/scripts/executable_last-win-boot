@@ -7,7 +7,7 @@ if [ ! -f "$BOOT_FILE" ]; then
 fi
 
 # 1-second timeout prevents terminal freezes if the drive hangs
-WIN_EPOCH=$(timeout 1 cat "$BOOT_FILE" 2>/dev/null)
+WIN_EPOCH=$(timeout 1 cat "$BOOT_FILE" 2>/dev/null | tr -d '\r')
 if [ -z "$WIN_EPOCH" ]; then
   echo "Read timeout"
   exit 1
