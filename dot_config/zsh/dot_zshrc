@@ -274,10 +274,7 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 
 alias cp='cp -i'
 alias mv='mv -i'
-
-# trash --version > /dev/null 2>&1 && 
-#   alias rm='trash -v'
-
+alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 3'
