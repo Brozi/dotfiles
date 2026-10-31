@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+BOOT_FILE="/mnt/system/win-boot.txt"
+
+if [ ! -f "$BOOT_FILE" ]; then
+  echo "Not mounted"
+  exit 1
+fi
+
+# 1-second timeout prevents terminal freezes if the drive hangs
+WIN_EPOCH=$(timeout 1 cat "$BOOT_FILE" 2>/dev/null)
+if [ -z "$WIN_EPOCH" ]; then
+  echo "Read timeout"
+  exit 1
+fi
+
+NOW=$(date +%s)
+DIFF=$((NOW - WIN_EPOCH))
+
+DAYS=$((DIFF / 86400))
+HOURS=$(((DIFF % 86400) / 3600))
+MINS=$(((DIFF % 3600) / 60))
+
+echo "${DAYS} days since last win boot"
