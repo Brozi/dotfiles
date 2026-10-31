@@ -149,6 +149,12 @@
       "key": "",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
     },
+    {
+      "type": "command",
+      "key": "",
+      "keyColor": "#f5c2e7",
+      "text": "/home/brozi/.config/fastfetch/scripts/last-win-boot",
+    },
     //    {
     //      "type": "locale",
     //      "keyColor": "#f5c2e7"
