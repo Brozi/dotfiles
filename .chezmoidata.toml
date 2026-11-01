@@ -21,7 +21,7 @@ side_monitor_name = ""
 leftside_monitor_name = ""
 network_interface_name = ""
 screensaver_time = 1200
-suspend_time = 1200
+suspend_time = 1500
 gpu_vendor = "nvidia"
 
 [hosts."brozi-laptop"]
@@ -68,5 +68,5 @@ side_monitor_name = "HDMI-0"
 leftside_monitor_name = "HDMI-1"
 network_interface_name = "enp9s0"
 screensaver_time = 1200
-suspend_time = 1200
+suspend_time = 1500
 gpu_vendor = "nvidia"
