@@ -28,6 +28,7 @@ $haskell\
 $python\
 [](fg:green bg:sapphire)\
 $conda\
+$docker_context\
 [](fg:sapphire bg:lavender)\
 $time\
 ${env_var.yazi_level}\
@@ -126,6 +127,7 @@ style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [php]
+disabled = true
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
@@ -156,6 +158,7 @@ style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
 [conda]
+disabled = true
 symbol = "  "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
