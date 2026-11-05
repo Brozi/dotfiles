@@ -56,7 +56,7 @@ bind_up_arrow = false
 ## To use workspace mode by default when available, set filter_mode to
 ## "workspace" or leave it unspecified and set search.filters to include
 ## "workspace" before other filter modes.
-# workspaces = true
+workspaces = true
 
 ## which display style to use
 ## possible values: auto, full, compact
@@ -293,7 +293,7 @@ autostart = true
 ## config: everything sourced before it runs again inside the proxy.
 ## Safe to combine with an existing `atuin pty-proxy init` line — the proxy only
 ## starts once.
-# enabled = false
+enabled = true
 
 [theme]
 ## Color theme to use for rendering in the terminal.
