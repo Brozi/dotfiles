@@ -1,11 +1,18 @@
 return {
-  "mrjones2014/smart-splits.nvim",
-  build = "./kitty/install-kittens.bash",
+  "smart-splits-nvim/smart-splits.nvim",
   lazy = false,
   dependencies = {
     {
+      "smart-splits-nvim/backend-tmux",
+      main = "smart-splits-backend-tmux",
+      opts = {
+        --[[ backend-specific options go here ]]
+      },
+    },
+    {
       "smart-splits-nvim/backend-kitty",
       main = "smart-splits-backend-kitty",
+      build = "./kitten/install_relative_resize.lua",
       opts = {
         --[[ backend-specific options go here ]]
       },
@@ -13,7 +20,12 @@ return {
   },
   opts = {
     mux = {
-      backend = "smart-splits-backend-kitty",
+      -- tmux is listed first because it is the inner multiplexer when nested
+      -- inside a terminal such as Kitty.
+      backend = {
+        "smart-splits-backend-tmux",
+        backend = "smart-splits-backend-kitty",
+      },
     },
   },
   keys = {
