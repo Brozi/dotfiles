@@ -439,4 +439,4 @@ name = "catppuccin-mocha-lavender"
 
 ## Syntax highlight commands in the search results, using the theme's colors.
 ## Not available on all platforms (e.g. Windows).
-# syntax_highlight = true
+syntax_highlight = true
