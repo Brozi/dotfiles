@@ -238,9 +238,14 @@ bindkey -M vicmd '^v' edit-command-line
 # For a full list of active aliases, run `alias`.
 #
 
-# Stop fastfetch from running when the shell is opened from rofi or atuin's PTY proxy
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" && "$TERM_PROGRAM" != "atuin" && "$(ps -o comm= -p $PPID 2>/dev/null)" != "atuin" ]]; then
-    fastfetch
+# Stop fastfetch from running twice due to atuin, but allow manual runs
+# Reads directly from /proc to avoid the startup lag of the 'ps' command
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
+        export ATUIN_CHILD_STARTED=1
+    else
+        fastfetch
+    fi
 fi
 
 # Allow ctrl-S for history navigation (with ctrl-R)
