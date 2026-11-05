@@ -238,13 +238,13 @@ bindkey -M vicmd '^v' edit-command-line
 # For a full list of active aliases, run `alias`.
 #
 
-# Stop fastfetch from running when the shell is opened from rofi
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-fastfetch
+# Stop fastfetch from running when the shell is opened from rofi or atuin's PTY
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" && -z "$ATUIN_SESSION" ]]; then
+    fastfetch
 fi
 
 # Allow ctrl-S for history navigation (with ctrl-R)
-[[ $- == *i* ]] && stty -ixon
+# [[ $- == *i* ]] && stty -ixon
 
 
 #######################################################
