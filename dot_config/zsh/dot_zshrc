@@ -637,6 +637,8 @@ eval "$(fzf --zsh)"
 eval "$(tmuxifier init -)"
 
 eval "$(atuin init zsh)"
+# ensure ctrl+r is bound to atuin in vi command mode
+bindkey -M vicmd '^r' _atuin_search_widget
 
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
