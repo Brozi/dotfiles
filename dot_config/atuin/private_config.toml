@@ -93,11 +93,11 @@ inline_height = 30
 
 ## use ctrl instead of alt as the shortcut modifier key for numerical UI shortcuts
 ## alt-0 .. alt-9
-# ctrl_n_shortcuts = false
+ctrl_n_shortcuts = true
 
 ## Show numeric shortcuts (1..9) beside list items in the TUI
 ## set to false to hide the moving numbers if you find them distracting
-# show_numeric_shortcuts = true
+show_numeric_shortcuts = true
 
 ## default history list format - can also be specified with the --format arg
 # history_format = "{time}\t{command}\t{duration}"
@@ -190,7 +190,7 @@ keymap_cursor = { emacs = "blink-block", vim_insert = "blink-bar", vim_normal = 
 
 ## Set this to true and Atuin will minimize motion in the UI - timers will not update live, etc.
 ## Alternatively, set env NO_MOTION=true
-# prefers_reduced_motion = false
+prefers_reduced_motion = true
 
 ## Defaults to true. Configures whether to store commands that failed (those with non-zero exit status) or not.
 # store_failed = true
