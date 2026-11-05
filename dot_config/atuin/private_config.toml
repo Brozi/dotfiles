@@ -56,7 +56,7 @@ bind_up_arrow = false
 ## To use workspace mode by default when available, set filter_mode to
 ## "workspace" or leave it unspecified and set search.filters to include
 ## "workspace" before other filter modes.
-workspaces = true
+# workspaces = true
 
 ## which display style to use
 ## possible values: auto, full, compact
@@ -173,7 +173,7 @@ keymap_mode = "vim-normal"
 ## Cursor style in each keymap mode. If specified, the cursor style is changed
 ## in entering the cursor shape. Available values are "default" and
 ## "{blink,steady}-{block,underline,bar}".
-keymap_cursor = { emacs = "blink-block", vim_insert = "blink-block", vim_normal = "steady-block" }
+keymap_cursor = { emacs = "blink-block", vim_insert = "blink-block", vim_normal = "steady-bar" }
 
 # network_connect_timeout = 5
 # network_timeout = 30
@@ -440,3 +440,6 @@ name = "catppuccin-mocha-lavender"
 ## Syntax highlight commands in the search results, using the theme's colors.
 ## Not available on all platforms (e.g. Windows).
 syntax_highlight = true
+
+[output]
+enabled = true
