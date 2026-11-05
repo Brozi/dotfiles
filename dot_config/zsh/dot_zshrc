@@ -630,6 +630,8 @@ eval "$(fzf --zsh)"
 
 eval "$(tmuxifier init -)"
 
+eval "$(atuin init zsh)"
+
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
