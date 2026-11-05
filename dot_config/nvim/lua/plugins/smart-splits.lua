@@ -24,7 +24,7 @@ return {
       -- inside a terminal such as Kitty.
       backend = {
         "smart-splits-backend-tmux",
-        backend = "smart-splits-backend-kitty",
+        "smart-splits-backend-kitty",
       },
     },
   },
