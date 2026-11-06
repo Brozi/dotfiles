@@ -19,7 +19,7 @@ update_check = false
 # update_channel = "stable"
 
 ## address of the sync server
-# sync_address = "https://api.atuin.sh"
+sync_address = "http://100.118.115.47:3016"
 
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
