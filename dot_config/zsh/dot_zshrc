@@ -78,7 +78,7 @@ export PATH=~/.npm-global/bin:$PATH
 #######################################################
 
 # Load OMZ plugins
-plugins=(git kitty zsh-autosuggestions zsh-completions vi-mode fzf-tab zsh-syntax-highlighting)
+plugins=(git kitty zsh-autosuggestions zsh-completions zsh-vi-mode fzf-tab zsh-syntax-highlighting)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -144,8 +144,6 @@ ZSH_THEME=""
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Configure vi mode plugin
-VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-MODE_INDICATOR=""
 
 #Autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -154,6 +152,15 @@ ZSH_DISABLE_COMPFIX="true"
 
 # disable update check for faster startup
 DISABLE_AUTO_UPDATE="true"
+
+# ==========================================
+# NEOVIM TERMINAL KILL-SWITCH
+# ==========================================
+# If this Zsh instance is running inside Neovim's terminal emulator, 
+# forcefully revert to standard Emacs keybindings to prevent Vim-in-Vim hell.
+if [[ -n "$NVIM" || -n "$NVIM_LISTEN_ADDRESS" ]]; then
+  export ZVM_INIT_MODE=snooze
+fi
 
 # source OMZ
 source $ZSH/oh-my-zsh.sh
@@ -636,10 +643,16 @@ eval "$(fzf --zsh)"
 
 eval "$(tmuxifier init -)"
 
-eval "$(atuin init zsh)"
-# ensure ctrl+r is bound to atuin in vi command mode
-bindkey -M vicmd '^r' _atuin_search_widget
-
+zvm_after_init_commands+=(
+  'eval "$(atuin init zsh)"'
+  'bindkey -M viins "^f" autosuggest-accept'
+  'bindkey -M viins "^g" forward-word'
+  'bindkey -M viins "^k" history-search-backward'
+  'bindkey -M viins "^j" history-search-forward'
+  'bindkey -M viins "^[c" clear-screen'
+  'bindkey -M vicmd "vv" edit-command-line'
+  'bindkey -M vicmd "^v" edit-command-line'
+)
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
@@ -664,11 +677,6 @@ fi
 # Eliminate the mode-switching delay enforced by Oh My Zsh
 # 1 = 10ms. Do not set to 0, or arrow keys will break.
 export KEYTIMEOUT=1
-# ==========================================
-# NEOVIM TERMINAL KILL-SWITCH
-# ==========================================
-# If this Zsh instance is running inside Neovim's terminal emulator, 
-# forcefully revert to standard Emacs keybindings to prevent Vim-in-Vim hell.
 if [[ -n "$NVIM" || -n "$NVIM_LISTEN_ADDRESS" ]]; then
     bindkey -e
 fi
