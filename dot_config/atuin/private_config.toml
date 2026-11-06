@@ -443,5 +443,5 @@ enabled = true
 
 [ai]
 enabled = true
-endpoint = "http://100.118.115.47:3015"
-model = "qwen3b"
+# endpoint = "http://100.118.115.47:3015"
+# model = "qwen3b"
