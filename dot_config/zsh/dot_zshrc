@@ -649,7 +649,7 @@ zvm_after_init_commands+=(
   'bindkey -M viins "^g" forward-word'
   'bindkey -M viins "^k" history-search-backward'
   'bindkey -M viins "^j" history-search-forward'
-  'bindkey -M viins "^[c" clear-screen'
+  'bindkey -M viins "^[c" clear'
   'bindkey -M vicmd "vv" edit-command-line'
   'bindkey -M vicmd "^v" edit-command-line'
 )
