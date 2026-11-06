@@ -1165,6 +1165,17 @@ content = " "
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/systray]
+type = internal/tray
+
+tray-size = {{ $host.polybar_tray_size }}
+
+tray-spacing = 0
+
+format-background = ${color.background}
+
+format-margin = 0
+
 [module/workspaces]
 type = internal/xworkspaces
 
