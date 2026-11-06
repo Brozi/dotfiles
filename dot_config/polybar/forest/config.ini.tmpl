@@ -245,7 +245,7 @@ cursor-scroll =
 inherit = bar/main
 monitor = "{{ $host.side_monitor_name }}"
 
-modules-right = 
+modules-right = systray
 modules-left = i3 sep cpu temperature cpu-fan case-fan memory sep gpu-usage vram gpu-temperature gpu-fan
 ; modules-left = i3 sep i3window-side
 modules-center = 
@@ -288,7 +288,7 @@ inherit = bar/main
 monitor = "{{ $host.main_monitor_name }}"
 height = {{ $host.polybar_aux_height }}
 
-modules-right = 
+modules-right = systray
 modules-left = cpu temperature memory sep gpu-usage vram gpu-temperature 
 ; modules-left = i3 sep i3window-side
 modules-center = 
