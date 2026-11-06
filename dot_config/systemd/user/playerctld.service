@@ -1,0 +1,13 @@
+[Unit]
+Description=Keep track of media player activity
+Documentation=man:playerctld(1)
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.mpris.MediaPlayer2.playerctld
+ExecStart=/usr/bin/playerctld
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
