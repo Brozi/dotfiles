@@ -7,4 +7,4 @@ echo "Applying keyd configuration..."
 sudo ln -sf {{ .chezmoi.homeDir }}/.config/keyd/default.conf /etc/keyd/default.conf
 
 # Reload the daemon so changes take effect immediately
-sudo systemctl reload keyd
+sudo systemctl restart keyd
