@@ -1,0 +1,12 @@
+[Unit]
+Description=Restart playerctld after system resume
+After=suspend.target
+
+[Service]
+User=%i
+Type=oneshot
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
+ExecStart=/usr/bin/systemctl --user restart playerctld.service
+
+[Install]
+WantedBy=suspend.target
