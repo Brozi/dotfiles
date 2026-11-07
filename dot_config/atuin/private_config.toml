@@ -141,7 +141,7 @@ history_filter = ["^ls$", "^cd$", "^z$"]
 ## only be hidden if there are fewer than this count of lines available, and does not affect the use
 ## of keyboard shortcuts to switch tab. 0 to never auto-hide, default is 8 (lines).
 ## This is ignored except in `compact` mode.
-# auto_hide_height = 8
+auto_hide_height = 10
 
 ## Defaults to true. This matches history against a set of default regex, and will not save it if we get a match. Defaults include
 ## 1. AWS key id
