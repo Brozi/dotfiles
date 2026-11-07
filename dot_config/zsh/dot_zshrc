@@ -9,7 +9,19 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
-export atuin_config_dir="$XDG_CONFIG_HOME/atuin"
+export ATUIN_CONFIG_DIR="$XDG_CONFIG_HOME/atuin"
+
+# Stop fastfetch from running twice due to atuin, but allow manual runs
+# Reads directly from /proc to avoid the startup lag of the 'ps' command
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
+        export ATUIN_CHILD_STARTED=1
+    else
+        fastfetch
+    fi
+fi
+eval "$(atuin pty-proxy init zsh)"
+
 
 export LINUXTOOLBOXDIR="$HOME/linuxtoolbox"
 
@@ -640,20 +652,6 @@ zvm_after_init_commands+=(
   'bindkey -M vicmd "vv" edit-command-line'
   'bindkey -M vicmd "^v" edit-command-line'
 )
-
-
-# Stop fastfetch from running twice due to atuin, but allow manual runs
-# Reads directly from /proc to avoid the startup lag of the 'ps' command
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
-        export ATUIN_CHILD_STARTED=1
-    else
-        fastfetch
-    fi
-fi
-
-eval "$(atuin pty-proxy init zsh)"
-
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
