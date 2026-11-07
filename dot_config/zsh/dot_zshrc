@@ -230,16 +230,6 @@ bindkey -M vicmd '^v' edit-command-line
 # For a full list of active aliases, run `alias`.
 #
 
-# Stop fastfetch from running twice due to atuin, but allow manual runs
-# Reads directly from /proc to avoid the startup lag of the 'ps' command
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
-        export ATUIN_CHILD_STARTED=1
-    else
-        fastfetch
-    fi
-fi
-
 # Allow ctrl-S for history navigation (with ctrl-R)
 # [[ $- == *i* ]] && stty -ixon
 
@@ -639,6 +629,18 @@ zvm_after_init_commands+=(
   'bindkey -M vicmd "vv" edit-command-line'
   'bindkey -M vicmd "^v" edit-command-line'
 )
+
+
+# Stop fastfetch from running twice due to atuin, but allow manual runs
+# Reads directly from /proc to avoid the startup lag of the 'ps' command
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
+        export ATUIN_CHILD_STARTED=1
+    else
+        fastfetch
+    fi
+fi
+
 # ==========================================
 # JETBRAINS VENV ACTIVATION HOOK
 # ==========================================
