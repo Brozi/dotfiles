@@ -255,6 +255,8 @@ zvm_after_init_commands+=(
   'bindkey -M viins "^[c" zvm_clear_screen'
   'bindkey -M vicmd "vv" edit-command-line'
   'bindkey -M vicmd "^v" edit-command-line'
+  # Restore Ctrl+R to redo in normal mode
+  'bindkey -M vicmd "^r" redo'
 )
 
 #######################################################
