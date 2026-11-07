@@ -290,7 +290,7 @@ autostart = true
 ## config: everything sourced before it runs again inside the proxy.
 ## Safe to combine with an existing `atuin pty-proxy init` line — the proxy only
 ## starts once.
-enabled = true
+enabled = false
 
 [theme]
 ## Color theme to use for rendering in the terminal.
