@@ -33,7 +33,7 @@ inotifywait -m -e moved_to --format "%w%f" "$WATCH_DIR" | while read -r FILE; do
 
     # Execute ffmpeg command (modify encoding settings as needed)
 
-    if ffmpeg -nostdin -y -i "$FILE" -fps-mode cfr -c:v h264_nvenc -c:a copy "$OUTPUT_DIR/${FILENAME}_cfr.mp4"; then
+    if ffmpeg -nostdin -y -i "$FILE" -fps-mode cfr -c:v h264_nvenc -c:a copy "$DATE_OUTPUT_DIR/${FILENAME}_cfr.mp4"; then
       echo "Processing complete. Deleting original file: $BASENAME"
       rm "$FILE"
     else
