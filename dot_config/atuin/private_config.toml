@@ -261,7 +261,7 @@ enabled = true
 autostart = true
 
 ## How often the daemon should sync in seconds
-# sync_frequency = 300
+sync_frequency = 300
 
 ## The path to the unix socket used by the daemon (on unix systems)
 ## linux/mac default:
@@ -323,7 +323,7 @@ name = "catppuccin-mocha-lavender"
 ##
 ## - array of strings: show commands run by any shell in the array; "" includes
 ##   commands that have no recorded shell
-# shells = "auto"
+shells = "auto"
 
 [threads]
 ## Threads are your AI coding agents' sessions (Claude Code, Codex, opencode and Pi),
