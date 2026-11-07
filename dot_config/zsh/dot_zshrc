@@ -233,6 +233,17 @@ bindkey -M vicmd '^v' edit-command-line
 # Allow ctrl-S for history navigation (with ctrl-R)
 # [[ $- == *i* ]] && stty -ixon
 
+zvm_after_init_commands+=(
+  'eval "$(atuin init zsh)"'
+  'bindkey -M viins "^f" autosuggest-accept'
+  'bindkey -M viins "^g" forward-word'
+  'bindkey -M viins "^k" history-search-backward'
+  'bindkey -M viins "^j" history-search-forward'
+  # Alt+C (safe ZVM clear)
+  'bindkey -M viins "^[c" zvm_clear_screen'
+  'bindkey -M vicmd "vv" edit-command-line'
+  'bindkey -M vicmd "^v" edit-command-line'
+)
 
 #######################################################
 # ALIASES
