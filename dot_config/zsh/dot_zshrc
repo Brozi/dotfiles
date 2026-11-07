@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+zmodload zsh/zprof
+
 #######################################################
 # EXPORTS
 #######################################################
@@ -681,3 +683,5 @@ export KEYTIMEOUT=1
 if [[ -n "$NVIM" || -n "$NVIM_LISTEN_ADDRESS" ]]; then
     bindkey -e
 fi
+
+zprof
