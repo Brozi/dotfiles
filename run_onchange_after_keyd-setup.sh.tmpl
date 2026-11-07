@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# default.conf hash: {{ include "dot_config/keyd/default.conf" | sha256sum }}
+
+echo "Applying keyd configuration..."
+
+# Using chezmoi's built-in home directory variable is safer than a tilde (~)
+sudo ln -sf {{ .chezmoi.homeDir }}/.config/keyd/default.conf /etc/keyd/default.conf
+
+# Reload the daemon so changes take effect immediately
+sudo systemctl reload keyd

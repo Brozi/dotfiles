@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# This hash ensures the script only triggers when the service file changes.
+# resume-playerctld@.service hash: {{ include ".system-files/systemd/resume-playerctld@.service" | sha256sum }}
+
+echo "Deploying global systemd services..."
+
+# Copy the file using sudo
+sudo cp {{ joinPath .chezmoi.sourceDir ".system-files/systemd/resume-playerctld@.service" }} /etc/systemd/system/
+
+# Reload the systemd daemon so the system recognizes it
+sudo systemctl daemon-reload
