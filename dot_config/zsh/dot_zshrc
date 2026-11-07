@@ -178,17 +178,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 CORRECT_IGNORE_FILE='.*'
 CORRECT_IGNORE='_*'
 
-# map shortcut to accept autosuggestions
-bindkey -M viins '^f' autosuggest-accept
-# Accept one word of the autosuggestion at a time using Ctrl+l
-bindkey -M viins '^g' forward-word
-# # Bind j and k in Normal mode to search history based on typed prefix
-bindkey -M viins '^k' history-search-backward
-bindkey -M viins '^j' history-search-forward
-
-# Bind alt c to clear screen in insert mode
-bindkey -M viins '^[c' clear-screen
-
 setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY
 unsetopt BEEP
@@ -228,9 +217,6 @@ autoload -Uz edit-command-line
 
 # Register it as a ZLE (ZSH line editor) widget
 zle -N edit-command-line
-
-# Map 'vv' to open Neovim, preserving standard 'v' for visual mode
-bindkey -M vicmd 'vv' edit-command-line
 
 # Alternatively, map Ctrl+V in Normal mode to open Neovim
 bindkey -M vicmd '^v' edit-command-line
