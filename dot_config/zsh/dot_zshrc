@@ -164,7 +164,7 @@ fi
 # source OMZ
 source $ZSH/oh-my-zsh.sh
 # source the zsh syntax highligting theme
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # Load the completion list module
 zmodload zsh/complist
@@ -453,8 +453,8 @@ function auto_venv() {
 function auto_ls_safe() {
   # Use Zsh's internal array building to count files safely
   # The (N) flag prevents errors if the directory is completely empty
-  local -a files
-  files=(*(N)) 
+  # local -a files
+  # files=(*(N)) 
 
   # Safety limit: Skip the print if there are more than 50 files
   # if (( ${#files} > 50 )); then
