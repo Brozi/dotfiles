@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+WATCH_DIR="$HOME/data/table-tennis/coaching/recordings/raw/"
+OUTPUT_DIR="$HOME/data/table-tennis/coaching/recordings/raw/converted/"
+
+# Ensure directories exist
+mkdir -p "$WATCH_DIR"
+mkdir -p "$OUTPUT_DIR"
+
+echo "Watching $WATCH_DIR for atomically moved files..."
+
+# -m: monitor continuously
+# -e moved_to: only trigger when a file is moved INTO the directory (atomic)
+# --format "%w%f": output the full file path
+inotifywait -m -e moved_to --format "%w%f" "$WATCH_DIR" | while read -r FILE; do
+  # Verify it is a regular file
+  if [ -f "$FILE" ]; then
+    echo "Detected atomic move: $FILE"
+
+    # Extract filename without extension
+    BASENAME=$(basename "$FILE")
+    FILENAME="${BASENAME%.*}"
+
+    FILE_DATE=$(ffprobe -v quiet -show_entries format_tags=creation_time -of default=noprint_wrappers=1:nokey=1 "$FILE" | head -n 1 | cut -d'T' -f1)
+
+    if [ -z "$FILE_DATE" ]; then
+      echo "No internal metadata date found for $BASENAME. Falling back to modification date."
+      FILE_DATE=$(date -r "$FILE" +"%Y-%m-%d")
+    fi
+
+    DATE_OUTPUT_DIR="$OUTPUT_DIR/$FILE_DATE"
+    mkdir -p "$DATE_OUTPUT_DIR"
+
+    # Execute ffmpeg command (modify encoding settings as needed)
+
+    if ffmpeg -nostdin -y -i "$FILE" -fps-mode cfr -c:v h264_nvenc -c:a copy "$OUTPUT_DIR/${FILENAME}_cfr.mp4"; then
+      echo "Processing complete. Deleting original file: $BASENAME"
+      rm "$FILE"
+    else
+      echo "Error processing $BASENAME. Original file left in watched folder."
+    fi
+  fi
+done
