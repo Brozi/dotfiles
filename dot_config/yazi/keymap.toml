@@ -1,150 +1,127 @@
-# Zoxide and fzf
-[[mgr.prepend_keymap]]
-on = "z"
-run = "plugin zoxide"
-desc = "Jump to a directory via zoxide"
+[mgr]
+prepend_keymap = [
+  # Zoxide and fzf
+  { on = "z", run = "plugin zoxide", desc = "Jump to a directory via zoxide" },
+  { on = "Z", run = "plugin fzf", desc = "Jump to a file/directory via fzf" },
 
-[[mgr.prepend_keymap]]
-on = "Z"
-run = "plugin fzf"
-desc = "Jump to a file/directory via fzf"
-# Smart enter plugin
+  # Smart enter plugin
+  { on = "l", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
-[[mgr.prepend_keymap]]
-on = "l"
-run = "plugin smart-enter"
-desc = "Enter the child directory, or open the file"
-# Drop to shell vanilla function
+  # Drop to shell vanilla function
+  { on = "!", for = "unix", run = 'shell "$SHELL" --block', desc = "Open $SHELL here" },
 
-[[mgr.prepend_keymap]]
-on = "!"
-for = "unix"
-run = 'shell "$SHELL" --block'
-desc = "Open $SHELL here"
-# Vim motions plugin
+  # Vim motions plugin
+  { on = [
+    "1",
+  ], run = "plugin relative-motions 1", desc = "Move in relative steps" },
+  { on = [
+    "2",
+  ], run = "plugin relative-motions 2", desc = "Move in relative steps" },
+  { on = [
+    "3",
+  ], run = "plugin relative-motions 3", desc = "Move in relative steps" },
+  { on = [
+    "4",
+  ], run = "plugin relative-motions 4", desc = "Move in relative steps" },
+  { on = [
+    "5",
+  ], run = "plugin relative-motions 5", desc = "Move in relative steps" },
+  { on = [
+    "6",
+  ], run = "plugin relative-motions 6", desc = "Move in relative steps" },
+  { on = [
+    "7",
+  ], run = "plugin relative-motions 7", desc = "Move in relative steps" },
+  { on = [
+    "8",
+  ], run = "plugin relative-motions 8", desc = "Move in relative steps" },
+  { on = [
+    "9",
+  ], run = "plugin relative-motions 9", desc = "Move in relative steps" },
 
-[[mgr.prepend_keymap]]
-on = ["1"]
-run = "plugin relative-motions 1"
-desc = "Move in relative steps"
+  # Rofi grid image preview
+  { on = "<C-g>", run = 'shell -- rofi -config ~/.config/rofi/rofi-gridview.rasi -modi filebrowser -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"', desc = "Grid view" },
 
-[[mgr.prepend_keymap]]
-on = ["2"]
-run = "plugin relative-motions 2"
-desc = "Move in relative steps"
+  # linemode-plus plugin
+  { on = [
+    "m",
+    "c",
+  ], run = "linemode size_mtime", desc = "Linemode: size+mtime" },
 
-[[mgr.prepend_keymap]]
-on = ["3"]
-run = "plugin relative-motions 3"
-desc = "Move in relative steps"
+  # Sorting does not override linemode (recommended) 
+  { on = [
+    ",",
+    "m",
+  ], run = [
+    "sort mtime --reverse=no",
+  ], desc = "Sort by modified time" },
+  { on = [
+    ",",
+    "M",
+  ], run = [
+    "sort mtime --reverse=yes",
+  ], desc = "Sort by modified time (reverse)" },
+  { on = [
+    ",",
+    "b",
+  ], run = [
+    "sort btime --reverse=no",
+  ], desc = "Sort by birth time" },
+  { on = [
+    ",",
+    "B",
+  ], run = [
+    "sort btime --reverse=yes",
+  ], desc = "Sort by birth time (reverse)" },
+  { on = [
+    ",",
+    "s",
+  ], run = [
+    "sort size --reverse=no",
+  ], desc = "Sort by size" },
+  { on = [
+    ",",
+    "S",
+  ], run = [
+    "sort size --reverse=yes",
+  ], desc = "Sort by size (reverse)" },
 
-[[mgr.prepend_keymap]]
-on = ["4"]
-run = "plugin relative-motions 4"
-desc = "Move in relative steps"
+  # toggle pane plugin
+  { on = "<C-p>", run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
+  { on = "<C-P>", run = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
 
-[[mgr.prepend_keymap]]
-on = ["5"]
-run = "plugin relative-motions 5"
-desc = "Move in relative steps"
+  # Custom Downloads directory 
+  { on = [
+    "g",
+    "d",
+  ], run = "cd ~/Pobrane", desc = "Go to ~/Pobrane" },
+  { on = [
+    "g",
+    "D",
+  ], run = "cd ~/data", desc = "Go to ~/data" },
+  { on = [
+    "g",
+    "C",
+  ], run = "cd ~/coding", desc = "Go to ~/coding" },
+  { on = [
+    "g",
+    "s",
+  ], run = "cd ~/src", desc = "Go to ~/src" },
 
-[[mgr.prepend_keymap]]
-on = ["6"]
-run = "plugin relative-motions 6"
-desc = "Move in relative steps"
+  # pandoc plugin
+  { on = [
+    "c",
+    "p",
+  ], run = "plugin pandoc", desc = "Pandoc: Interactive Convert" },
 
-[[mgr.prepend_keymap]]
-on = ["7"]
-run = "plugin relative-motions 7"
-desc = "Move in relative steps"
-
-[[mgr.prepend_keymap]]
-on = ["8"]
-run = "plugin relative-motions 8"
-desc = "Move in relative steps"
-
-[[mgr.prepend_keymap]]
-on = ["9"]
-run = "plugin relative-motions 9"
-desc = "Move in relative steps"
-
-# Rofi grid image preview
-
-[[mgr.prepend_keymap]]
-on = "<C-g>"
-run = 'shell -- rofi -config ~/.config/rofi/rofi-gridview.rasi -modi filebrowser -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
-desc = "Grid view"
-
-# linemode-plus plugin
-[[mgr.prepend_keymap]]
-on = ["m", "c"]
-run = "linemode size_mtime"
-desc = "Linemode: size+mtime"
-
-# Sorting does not override linemode (recommended) 
-[[mgr.prepend_keymap]]
-on = [",", "m"]
-run = ["sort mtime --reverse=no"]
-desc = "Sort by modified time"
-
-[[mgr.prepend_keymap]]
-on = [",", "M"]
-run = ["sort mtime --reverse=yes"]
-desc = "Sort by modified time (reverse)"
-
-[[mgr.prepend_keymap]]
-on = [",", "b"]
-run = ["sort btime --reverse=no"]
-desc = "Sort by birth time"
-
-[[mgr.prepend_keymap]]
-on = [",", "B"]
-run = ["sort btime --reverse=yes"]
-desc = "Sort by birth time (reverse)"
-
-[[mgr.prepend_keymap]]
-on = [",", "s"]
-run = ["sort size --reverse=no"]
-desc = "Sort by size"
-
-[[mgr.prepend_keymap]]
-on = [",", "S"]
-run = ["sort size --reverse=yes"]
-desc = "Sort by size (reverse)"
-
-# toggle pane plugin
-[[mgr.prepend_keymap]]
-on = "<C-p>"
-run = "plugin toggle-pane max-preview"
-desc = "Maximize or restore the preview pane"
-[[mgr.prepend_keymap]]
-on = "<C-P>"
-run = "plugin toggle-pane min-preview"
-desc = "Show or hide the preview pane"
-
-# Custom Downloads directory 
-[[mgr.prepend_keymap]]
-on = ["g", "d"]
-run = "cd ~/Pobrane"
-desc = "Go to ~/Pobrane"
-
-[[mgr.prepend_keymap]]
-on = ["g", "D"]
-run = "cd ~/data"
-desc = "Go to ~/data"
-
-[[mgr.prepend_keymap]]
-on = ["g", "C"]
-run = "cd ~/coding"
-desc = "Go to ~/coding"
-
-[[mgr.prepend_keymap]]
-on = ["g", "s"]
-run = "cd ~/src"
-desc = "Go to ~/src"
-
-# pandoc plugin
-[[manager.prepend_keymap]]
-on = ["c", "p"]
-run = "plugin pandoc"
-desc = "Pandoc: Interactive Convert"
+  # tab switching
+  { on = "<C-1>", run = "tab_switch 0", desc = "Switch to first tab" },
+  { on = "<C-2>", run = "tab_switch 1", desc = "Switch to second tab" },
+  { on = "<C-3>", run = "tab_switch 2", desc = "Switch to third tab" },
+  { on = "<C-4>", run = "tab_switch 3", desc = "Switch to fourth tab" },
+  { on = "<C-5>", run = "tab_switch 4", desc = "Switch to fifth tab" },
+  { on = "<C-6>", run = "tab_switch 5", desc = "Switch to sixth tab" },
+  { on = "<C-7>", run = "tab_switch 6", desc = "Switch to seventh tab" },
+  { on = "<C-8>", run = "tab_switch 7", desc = "Switch to eighth tab" },
+  { on = "<C-9>", run = "tab_switch 8", desc = "Switch to ninth tab" },
+]
