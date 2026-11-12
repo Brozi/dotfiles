@@ -451,7 +451,10 @@ enabled = true
 [ai]
 enabled = true
 endpoint = "http://100.118.115.47:3015"
-model = "qwen3b"
+model = "llama3.2"
+
+[ai.opening]
+send_last_command = true
 
 [ai.capabilities]
 enable_history_output = false
