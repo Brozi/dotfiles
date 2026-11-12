@@ -454,7 +454,7 @@ endpoint = "http://100.118.115.47:3015"
 model = "phi4-fast"
 
 [ai.opening]
-send_last_command = true
+send_last_command = false
 
 [ai.capabilities]
 enable_history_output = false
