@@ -451,7 +451,7 @@ enabled = true
 [ai]
 enabled = true
 endpoint = "http://100.118.115.47:3015"
-model = "llama3.2"
+model = "phi4-fast"
 
 [ai.opening]
 send_last_command = false
