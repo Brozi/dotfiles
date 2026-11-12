@@ -449,8 +449,9 @@ syntax_highlight = true
 enabled = true
 
 [ai]
-enabled = false
-# enabled = true
-# endpoint = "http://100.118.115.47:3015"
-# model = "qwen3b"
-# history_count = 10
+enabled = true
+endpoint = "http://100.118.115.47:3015"
+model = "qwen3b"
+
+[ai.capabilities]
+enable_history_output = true
