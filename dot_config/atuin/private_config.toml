@@ -458,3 +458,4 @@ send_last_command = true
 
 [ai.capabilities]
 enable_history_output = false
+enable_history_search = false
