@@ -16,3 +16,12 @@
 [core]
 	untrackedCache = true
 	fsmonitor = true
+
+[diff]
+    tool = kitty
+
+[difftool]
+    prompt = false
+
+[difftool "kitty"]
+    cmd = kitty +kitten diff "$LOCAL" "$REMOTE"
