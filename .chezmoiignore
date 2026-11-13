@@ -3,7 +3,10 @@
 .config/cliamp/tidal_credentials.json
 .config/cliamp/cliamp.log
 
+{{- $role := index . "role" | default "desktop" -}}
+
 {{- if ne .role "desktop" }}
+# server-only exclusions go here
 
 # X11 / window-manager stack
 .Xresources
