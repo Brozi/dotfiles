@@ -246,7 +246,7 @@ bindkey -M vicmd '^v' edit-command-line
 # [[ $- == *i* ]] && stty -ixon
 
 zvm_after_init_commands+=(
-  'eval "$(atuin init zsh)"'
+  'command -v atuin >/dev/null && eval "$(atuin init zsh)"'
   'bindkey -M viins "^f" autosuggest-accept'
   'bindkey -M viins "^g" forward-word'
   'bindkey -M viins "^k" history-search-backward'
@@ -530,36 +530,6 @@ ver() {
     esac
 }
 
-install_zshrc_support() {
-    local dtype
-    dtype=$(distribution)
-
-    # Note: changed bash-completion to zsh-completions
-    case $dtype in
-        "redhat")
-            sudo yum install multitail tree zoxide trash-cli fzf zsh-completions fastfetch
-            ;;
-        "suse")
-            sudo zypper install multitail tree zoxide trash-cli fzf zsh-completions fastfetch
-            ;;
-        "debian")
-            sudo apt-get install multitail tree zoxide trash-cli fzf zsh-completions
-            FASTFETCH_URL=$(curl -s https://api.github.com/repos/fastfetch-cli/fastfetch/releases/latest | grep "browser_download_url.*linux-amd64.deb" | cut -d '"' -f 4)
-            curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
-            sudo apt-get install /tmp/fastfetch_latest_amd64.deb
-            ;;
-        "arch")
-            sudo paru multitail tree zoxide trash-cli fzf zsh-completions fastfetch
-            ;;
-        "slackware")
-            echo "No install support for Slackware"
-            ;;
-        *)
-            echo "Unknown distribution"
-            ;;
-    esac
-}
-
 alias whatismyip="whatsmyip"
 function whatsmyip () {
     if command -v ip &> /dev/null; then
@@ -635,12 +605,12 @@ if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
 
-eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null &&& eval "$(zoxide init zsh)"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-eval "$(fzf --zsh)"
+command -v fzf > /dev/null && eval "$(fzf --zsh)"
 
-eval "$(tmuxifier init -)"
+command -v tmuxifier >/dev/null && eval "$(tmuxifier init -)"
 
 unalias run-help 2>/dev/null
 autoload run-help
