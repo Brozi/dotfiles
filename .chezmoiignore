@@ -1,4 +1,35 @@
 *.ovpn
 .config/mpv/.keep
 .config/cliamp/tidal_credentials.json
-.config/cliamp/cliaml.log
+.config/cliamp/cliamp.log
+
+{{- if ne .role "desktop" }}
+
+# X11 / window-manager stack
+.Xresources
+.config/i3/**
+.config/polybar/**
+.config/picom/**
+.config/rofi/**
+.config/dunst/**
+.config/feh/**
+.config/kitty/**
+.config/plank/**
+.local/share/plank/**
+.icons/**
+
+# Desktop utilities and graphical assets
+.config/caffeine/**
+.config/imv/**
+.config/networkmanager-dmenu/**
+.config/wiremix/**
+.config/wallpapers/**
+.config/scripts/apps/**
+.config/scripts/screenlayout/**
+.config/kitty/sessions/**
+
+# Local-input configuration and desktop-only privileged hooks
+.config/keyd/**
+keyd-setup.sh
+install-global-services.sh
+{{- end }}

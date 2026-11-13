@@ -1,9 +1,9 @@
 {{- $email := promptStringOnce . "email" "What is your git email address" -}}
-{{- $machineType := promptStringOnce . "machineType" "Is this a (w)ork or (p)ersonal machine" -}}
+{{- $role := promptStringOnce . "role" "Machine role (desktop or server)" -}}
 
 [data]
     email = {{ $email | quote }}
-    machineType = {{ $machineType | quote }}
+    role = {{ $role | quote }}
 
 [merge]
     command = "nvim"
