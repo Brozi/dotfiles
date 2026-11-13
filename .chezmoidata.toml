@@ -22,7 +22,7 @@ leftside_monitor_name = ""
 network_interface_name = ""
 screensaver_time = 1200
 suspend_time = 1500
-gpu_vendor = "nvidia"
+gpu_vendor = ""
 
 [hosts."brozi-laptop"]
 dpi = 120
