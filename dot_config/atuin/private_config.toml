@@ -112,7 +112,13 @@ show_numeric_shortcuts = true
 ## with ^ or end with $, they'll match anywhere in the command.
 ## For details on the supported regular expression syntax, see
 ## https://docs.rs/regex/latest/regex/#syntax
-history_filter = ["^ls$", "^cd$", "^z$"]
+history_filter = [
+  "^ls($|\\s)",
+  "^cd($|\\s)",
+  "^z($|\\s)",
+  "^pushd($|\\s)",
+  "^popd($|\\s)",
+]
 
 ## prevent commands run with cwd matching any of these regexes from being written
 ## to history. Note that these regular expressions are unanchored, i.e. if they don't

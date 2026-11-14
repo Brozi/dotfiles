@@ -12,17 +12,12 @@ export ATUIN_CONFIG_DIR="$XDG_CONFIG_HOME/atuin"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="${ZSH_CUSTOM:-$ZSH/custom}"
 
-# Stop fastfetch from running twice due to atuin, but allow manual runs
-# Reads directly from /proc to avoid the startup lag of the 'ps' command
-if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
-    if [[ -r "/proc/$PPID/comm" && "$(< /proc/$PPID/comm)" == "atuin" && -z "$ATUIN_CHILD_STARTED" ]]; then
-        export ATUIN_CHILD_STARTED=1
-    else
-        fastfetch
-    fi
-fi
+# Re-exec into pty-proxy immediately before running slow startup commands
 command -v atuin >/dev/null && eval "$(atuin pty-proxy init zsh)"
-
+# Fastfetch will now only run ONCE inside the proxied shell
+if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
+    fastfetch
+fi
 
 export LINUXTOOLBOXDIR="$HOME/linuxtoolbox"
 
