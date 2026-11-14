@@ -21,7 +21,7 @@ if [[ -f /usr/bin/fastfetch && -z "$FROM_ROFI" ]]; then
         fastfetch
     fi
 fi
-eval "$(atuin pty-proxy init zsh)"
+command -v atuin >/dev/null && eval "$(atuin pty-proxy init zsh)"
 
 
 export LINUXTOOLBOXDIR="$HOME/linuxtoolbox"
@@ -619,7 +619,7 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-command -v fzf > /dev/null && eval "$(fzf --zsh)"
+command -v fzf >/dev/null && eval "$(fzf --zsh)"
 
 command -v tmuxifier >/dev/null && eval "$(tmuxifier init -)"
 
