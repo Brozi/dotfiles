@@ -1,0 +1,8 @@
+# Per-machine overrides. This file is not managed by Chezmoi.
+Include ~/.ssh/config.local
+
+Host kombajn
+    HostName 192.168.100.50
+    User broziadmin
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
