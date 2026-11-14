@@ -1,8 +1,7 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 #######################################################
 # EXPORTS
 #######################################################
+{{- $role := index . "role" | default "desktop" -}}
 
 # Set up XDG folders
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -10,6 +9,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 export ATUIN_CONFIG_DIR="$XDG_CONFIG_HOME/atuin"
+export ZSH_CUSTOM="${ZSH_CUSTOM:-$ZSH/custom}"
 
 # Stop fastfetch from running twice due to atuin, but allow manual runs
 # Reads directly from /proc to avoid the startup lag of the 'ps' command
@@ -89,7 +89,15 @@ export PATH=~/.npm-global/bin:$PATH
 #######################################################
 
 # Load OMZ plugins
-plugins=(git kitty zsh-autosuggestions zsh-completions zsh-vi-mode fzf-tab zsh-syntax-highlighting)
+plugins=(
+  git
+{{ if eq $role "desktop" }}  kitty
+{{ end }}  zsh-autosuggestions
+  zsh-completions
+  zsh-vi-mode
+  fzf-tab
+  zsh-syntax-highlighting
+)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -173,10 +181,11 @@ if [[ -n "$NVIM" || -n "$NVIM_LISTEN_ADDRESS" ]]; then
   export ZVM_INIT_MODE=snooze
 fi
 
-# source OMZ
-source $ZSH/oh-my-zsh.sh
+
 # source the zsh syntax highligting theme
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+# source OMZ
+source $ZSH/oh-my-zsh.sh
 
 # Load the completion list module
 zmodload zsh/complist
