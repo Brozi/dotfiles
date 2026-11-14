@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-{{- $role := index . "role" | default "desktop" -}}
+{{ $role := index . "role" | default "desktop" }}
 
 echo
 echo "== Dotfiles dependency checklist =="
