@@ -84,13 +84,13 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 
 {{ if $host.has_touchpad -}}
 
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Disable While Typing Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Natural Scrolling Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Drag Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Drag Lock Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Disable While Typing Enabled" 1
-exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Scrolling Pixel Distance" 40
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Disable While Typing Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Tapping Drag Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Tapping Drag Lock Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Disable While Typing Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }} " "libinput Scrolling Pixel Distance" 40
 {{- end }}
 
 # restore the wallpaper
