@@ -1,0 +1,38 @@
+[dependencies]
+bootstrap = [
+  "git — required by the Oh My Zsh bootstrap",
+  "zsh — required to use the resulting shell configuration",
+]
+
+common = [
+  "atuin",
+  "starship",
+  "zoxide",
+  "fzf",
+  "tmux",
+  "tmuxifier",
+  "neovim",
+  "fastfetch",
+  "bat",
+  "lsd",
+  "yazi",
+  "btop",
+  "ripgrep",
+  "fd (called fd-find on Debian/Ubuntu)",
+  "ncdu",
+]
+
+desktop = [
+  "kitty",
+  "i3",
+  "polybar",
+  "rofi",
+  "picom",
+  "dunst",
+  "feh",
+  "keyd",
+]
+
+server = [
+  "openssh-server",
+]

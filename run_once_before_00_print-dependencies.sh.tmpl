@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -u
+
+{{- $role := index . "role" | default "desktop" -}}
+
+echo
+echo "== Dotfiles dependency checklist =="
+echo
+echo "Required for the Oh My Zsh bootstrap:"
+{{- range .dependencies.bootstrap }}
+echo "  - {{ . }}"
+{{- end }}
+
+echo
+echo "Expected by the shared shell configuration:"
+{{- range .dependencies.common }}
+echo "  - {{ . }}"
+{{- end }}
+
+{{- if eq $role "desktop" }}
+echo
+echo "Desktop-role tools:"
+{{- range .dependencies.desktop }}
+echo "  - {{ . }}"
+{{- end }}
+{{- else }}
+echo
+echo "Server-role tools:"
+{{- range .dependencies.server }}
+echo "  - {{ . }}"
+{{- end }}
+{{- end }}
+
+echo
+echo "No packages were installed automatically."
+echo
