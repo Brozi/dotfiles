@@ -84,13 +84,13 @@ exec_always --no-startup-id xinput set-prop "pointer:Logitech G703 LS" "libinput
 
 {{ if $host.has_touchpad -}}
 
-exec_always --no-startup-id xinput set-prop "12" "libinput Disable While Typing Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Natural Scrolling Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Drag Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Tapping Drag Lock Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Disable While Typing Enabled" 1
-exec_always --no-startup-id xinput set-prop "12" "libinput Scrolling Pixel Distance" 40
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Disable While Typing Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Drag Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Tapping Drag Lock Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Disable While Typing Enabled" 1
+exec_always --no-startup-id xinput set-prop " {{ $host.touchpad_name }}" "libinput Scrolling Pixel Distance" 40
 {{- end }}
 
 # restore the wallpaper
@@ -232,17 +232,12 @@ bindsym $mod+$alt+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-# bindsym $mod+d focus child
-
 ### --- Launcher keys --- ###
 bindsym $mod+b exec --no-startup-id vivaldi --password-store=gnome-libsecret
 bindsym $mod+f exec --no-startup-id env LAUNCH_YAZI=1 kitty
 ### --- Workspace keybinds --- ###
 
 include ~/.config/i3/normal-no-alt-binds.conf
-# include ~/.config/i3/normal-binds.conf
 
 # throw the current workspace to a specific monitor
 bindsym $mod+control+1 move workspace to output $monitor1
