@@ -605,7 +605,7 @@ if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
 
-command -v zoxide >/dev/null &&& eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 command -v fzf > /dev/null && eval "$(fzf --zsh)"
