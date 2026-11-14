@@ -92,8 +92,7 @@ export PATH=~/.npm-global/bin:$PATH
 # Load OMZ plugins
 plugins=(
   git
-{{ if eq $role "desktop" }}  kitty
-{{ end }}  zsh-autosuggestions
+zsh-autosuggestions
   zsh-completions
   zsh-vi-mode
   fzf-tab
@@ -607,11 +606,6 @@ if [[ $- == *i* ]]; then
     bindkey -s '^s' 'zi\n'
 fi
 
-# Force Kitty Shell Integration
-if [ -n "$KITTY_INSTALLATION_DIR" ]; then
-    source "$KITTY_INSTALLATION_DIR/shell-integration/zsh/kitty.zsh"
-fi
-
 if [[ -o interactive ]] && [[ -z "$ZSH_EXECUTION_STRING" ]]; then
   eval "$(starship init zsh)"
 fi
@@ -619,7 +613,7 @@ fi
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-command -v fzf >/dev/null && eval "$(fzf --zsh)"
+command -v fzf >/dev/null && FZF_CTRL_R_COMMAND= eval "$(fzf --zsh)"
 
 command -v tmuxifier >/dev/null && eval "$(tmuxifier init -)"
 
