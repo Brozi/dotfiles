@@ -184,9 +184,10 @@ fi
 
 
 # source the zsh syntax highligting theme
-source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-# source OMZ
-source $ZSH/oh-my-zsh.sh
+theme_file="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+
+[[ -r "$theme_file" ]] && source "$theme_file"
+[[ -r "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # Load the completion list module
 zmodload zsh/complist
