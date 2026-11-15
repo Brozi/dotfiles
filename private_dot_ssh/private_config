@@ -6,3 +6,9 @@ Host kombajn
     User broziadmin
     IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
+
+Host janbar
+    HostName student.agh.edu.pl 
+    User janbar
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
