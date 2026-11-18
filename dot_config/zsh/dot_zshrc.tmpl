@@ -72,7 +72,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Add .local/bin, flatpak exports/bin, local/share/flatpak/exports/bin, .cargo/bin to path
-export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
+export PATH="$PATH:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
 
 # Add rofi scripts directory to path
 export PATH=$HOME/.config/rofi/scripts:$PATH
