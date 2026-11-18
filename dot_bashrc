@@ -589,7 +589,7 @@ if [[ $- == *i* ]]; then
   bind '"\C-f":"zi\n"'
 fi
 
-export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
+export PATH=$PATH:"/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
 
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init bash)"
