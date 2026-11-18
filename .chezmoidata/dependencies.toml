@@ -10,6 +10,7 @@ common = [
   "zoxide",
   "fzf",
   "tmux",
+  "tpack",
   "tmuxifier",
   "neovim",
   "fastfetch",
