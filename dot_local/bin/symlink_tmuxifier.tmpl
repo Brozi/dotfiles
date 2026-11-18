@@ -1,4 +1,6 @@
+{{- $dataHome := trimSuffix "/" (env "XDG_DATA_HOME" | default (printf "%s/.local/share" .chezmoi.homeDir)) -}}
 {{- $candidates := list
+    (printf "%s/tmux/plugins/tmuxifier*/bin/tmuxifier" $dataHome)
     (printf "%s/.config/tmux/plugins/tmuxifier*/bin/tmuxifier" .chezmoi.homeDir)
     (printf "%s/.tmux/plugins/tmuxifier*/bin/tmuxifier" .chezmoi.homeDir)
     (printf "%s/.tmuxifier/bin/tmuxifier" .chezmoi.homeDir)
