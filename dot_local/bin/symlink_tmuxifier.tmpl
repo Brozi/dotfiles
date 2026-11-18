@@ -1,0 +1,15 @@
+{{- $candidates := list
+    (printf "%s/.config/tmux/plugins/tmuxifier*/bin/tmuxifier" .chezmoi.homeDir)
+    (printf "%s/.tmux/plugins/tmuxifier*/bin/tmuxifier" .chezmoi.homeDir)
+    (printf "%s/.tmuxifier/bin/tmuxifier" .chezmoi.homeDir)
+-}}
+{{- $target := "" -}}
+{{- range $pattern := $candidates -}}
+  {{- if eq $target "" -}}
+    {{- $matches := glob $pattern -}}
+    {{- if gt (len $matches) 0 -}}
+      {{- $target = index $matches 0 -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $target -}}
