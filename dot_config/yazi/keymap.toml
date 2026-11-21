@@ -151,4 +151,7 @@ prepend_keymap = [
     "t",
     "9",
   ], run = "tab_switch 8", desc = "Switch to ninth tab" },
+
+  # Lsblk mount plugin
+  { on = "M", run = "plugin lsblk-mount", desc = "Open the drive mount manager" },
 ]
