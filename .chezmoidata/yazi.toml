@@ -8,4 +8,5 @@ yazi_packages = [
   "barbanevosa/linemode-plus",
   "lmnek/pandoc",
   "Jormala/relative-motions",
+  "PHONE1X/lsblk-mount",
 ]
