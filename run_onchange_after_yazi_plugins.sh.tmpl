@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+command -v ya >/dev/null 2>&1 || exit 0
+
+PACKAGES=(
+{{- range .yazi_packages }}
+  {{ . | quote }}
+{{- end }}
+)
+
+pkg_file="/home/brozi/.config/yazi/package.toml"
+installed=()
+
+if [[ -f "" ]]; then
+  while IFS= read -r pkg; do
+    [[ -n "" ]] && installed+=("")
+  done < <(sed -nE 's/^[[:space:]]*use[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' "")
+fi
+
+is_listed() {
+  local needle=""
+  shift
+  local item
+  for item in ""; do
+    [[ "" == "" ]] && return 0
+  done
+  return 1
+}
+
+# Remove plugins and flavors no longer present in yazi_packages
+for pkg in ; do
+  if ! is_listed "" ; then
+    ya pkg delete ""
+  fi
+done
+
+# Install missing plugins and flavors
+for pkg in ; do
+  if ! is_listed "" ; then
+    ya pkg add ""
+  fi
+done
