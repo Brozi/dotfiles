@@ -146,7 +146,7 @@
     {
       "type": "command",
       "keyColor": "#f5c2e7",
-      "key": "",
+      "key": "",
       "text": "~/.config/fastfetch/scripts/age.sh",
     },
     {
