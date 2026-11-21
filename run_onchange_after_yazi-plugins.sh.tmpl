@@ -9,35 +9,35 @@ PACKAGES=(
 {{- end }}
 )
 
-pkg_file="/home/brozi/.config/yazi/package.toml"
+pkg_file="${XDG_CONFIG_HOME:-$HOME/.config}/yazi/package.toml"
 installed=()
 
-if [[ -f "" ]]; then
+if [[ -f "$pkg_file" ]]; then
   while IFS= read -r pkg; do
-    [[ -n "" ]] && installed+=("")
-  done < <(sed -nE 's/^[[:space:]]*use[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' "")
+    [[ -n "$pkg" ]] && installed+=("$pkg")
+  done < <(sed -nE 's/^[[:space:]]*use[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' "$pkg_file")
 fi
 
 is_listed() {
-  local needle=""
+  local needle="$1"
   shift
   local item
-  for item in ""; do
-    [[ "" == "" ]] && return 0
+  for item in "$@"; do
+    [[ "$item" == "$needle" ]] && return 0
   done
   return 1
 }
 
 # Remove plugins and flavors no longer present in yazi_packages
-for pkg in ; do
-  if ! is_listed "" ; then
-    ya pkg delete ""
+for pkg in ${installed[@]+"${installed[@]}"}; do
+  if ! is_listed "$pkg" ${PACKAGES[@]+"${PACKAGES[@]}"}; then
+    ya pkg delete "$pkg"
   fi
 done
 
 # Install missing plugins and flavors
-for pkg in ; do
-  if ! is_listed "" ; then
-    ya pkg add ""
+for pkg in ${PACKAGES[@]+"${PACKAGES[@]}"}; do
+  if ! is_listed "$pkg" ${installed[@]+"${installed[@]}"}; then
+    ya pkg add "$pkg"
   fi
 done
