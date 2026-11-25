@@ -591,10 +591,19 @@ untiny() {
 	return 0
 }
 
+# Wrapper to redirect 'ya pkg' to yp, passing everything else to the ya binary
+ya() {
+  if [[ "$1" == "pkg" ]]; then
+    shift
+    yp "$@"
+  else
+    command ya "$@"
+  fi
+}
+
 # ya pkg wrapper for syncing yazi packages with chezmoi
 yp() {
-  ya pkg "$@"
-  {
+  command ya pkg "$@" && {
     echo "yazi_packages = ["
     sed -nE 's/^[[:space:]]*use[[:space:]]*=[[:space:]]*("[^"]+").*/  \1,/p' ~/.config/yazi/package.toml
     echo "]"
