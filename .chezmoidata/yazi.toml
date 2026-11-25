@@ -10,4 +10,5 @@ yazi_packages = [
   "Jormala/relative-motions",
   "PHONE1X/lsblk-mount",
   "pirafrank/what-size",
+  "yazi-rs/plugins:smart-paste",
 ]

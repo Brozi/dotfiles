@@ -156,5 +156,11 @@ prepend_keymap = [
   { on = "M", run = "plugin lsblk-mount", desc = "Open the drive mount manager" },
 
   # what-size plugin
-  { on = [".", "s"], run = "plugin what-size", desc = "Calculate size of the selection or cwd"},
+  { on = [
+    ".",
+    "s",
+  ], run = "plugin what-size", desc = "Calculate size of the selection or cwd" },
+
+  # smart paste plugin
+  { on = "p", run = "plugin smart-paste", desc = "Paste into the hovered directory or cwd" },
 ]
