@@ -154,4 +154,7 @@ prepend_keymap = [
 
   # Lsblk mount plugin
   { on = "M", run = "plugin lsblk-mount", desc = "Open the drive mount manager" },
+
+  # what-size plugin
+  { on = [".", "s"], run = "plugin what-size", desc = "Calculate size of the selection or cwd"},
 ]
