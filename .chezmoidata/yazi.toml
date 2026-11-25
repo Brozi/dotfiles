@@ -9,4 +9,5 @@ yazi_packages = [
   "lmnek/pandoc",
   "Jormala/relative-motions",
   "PHONE1X/lsblk-mount",
+  "pirafrank/what-size",
 ]
