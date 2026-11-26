@@ -1,19 +1,30 @@
 #!/usr/bin/env bash
+# Prevent duplicate instances
+LOCKFILE="/tmp/figma-watch.pid"
+if [[ -f "$LOCKFILE" ]] && kill -0 "$(cat "$LOCKFILE" 2>/dev/null)" 2>/dev/null; then
+  echo "figma-watch already running (PID $(cat "$LOCKFILE")). Exiting."
+  exit 0
+fi
+echo "$$" > "$LOCKFILE"
+trap 'rm -f "$LOCKFILE"' EXIT
+
 active_is_figma=0
 
-xprop -spy -root _NET_ACTIVE_WINDOW | while read -r line; do
+xprop -spy -root _NET_ACTIVE_WINDOW 2>/dev/null | while read -r line; do
   win_id=$(echo "$line" | awk '{print $NF}')
   [[ "$win_id" == "0x0" || -z "$win_id" ]] && continue
 
   wm_class=$(xprop -id "$win_id" WM_CLASS 2>/dev/null)
   if [[ "$wm_class" == *"figma-desktop"* || "$wm_class" == *"Figma-desktop"* ]]; then
     if [[ $active_is_figma -eq 0 ]]; then
-      keyd.rvaiya bind "rightalt = layer(polish_altgr)" "leftshift = layer(figma_shift)" "rightshift = layer(figma_shift)"
+      if ! keyd.rvaiya bind "rightalt = layer(polish_altgr)" "leftshift = layer(figma_shift)" "rightshift = layer(figma_shift)" 2>/tmp/keyd-figma-bind.err; then
+        logger -t figma-watch "keyd bind failed: $(cat /tmp/keyd-figma-bind.err 2>/dev/null)"
+      fi
       active_is_figma=1
     fi
   else
     if [[ $active_is_figma -eq 1 ]]; then
-      keyd.rvaiya bind reset
+      keyd.rvaiya bind reset 2>/dev/null
       active_is_figma=0
     fi
   fi
