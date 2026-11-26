@@ -1,5 +1,7 @@
+{{ $host := index .hosts .chezmoi.hostname | default .hosts.default }}
 [ids]
-*
+{{ $host.input_keyboard_1 }}
+{{ $host.input_keyboard_2 }}
 
 [main]
 capslock = escape
